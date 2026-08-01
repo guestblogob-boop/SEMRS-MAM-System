@@ -49,12 +49,13 @@ audience, goal, channels in scope, tone.
 7. Send the brief + research + keywords to the Strategy Agent.
 8. Send the brief + strategy to the Content Agent.
 9. Send everything to the Review Agent.
-10. Prepare prompts/final-approval-summary.md and stop — wait for an
-    actual CEO decision.
-11. Once Final Delivery Approval is recorded, tell the Client
-    Communication Agent to send the "awaiting final approval" message
-    was already sent at step 10 — now send approved content to the
-    Website, Social, WhatsApp, and Email agents for channels in scope.
+10. Prepare prompts/final-approval-summary.md, instruct the Client
+    Communication Agent to send the "awaiting final approval" message,
+    and stop — wait for an actual CEO decision.
+11. After final approval is received, instruct the Client Communication
+    Agent to send the approved content to the Publishing Agent for
+    distribution. (The "awaiting final approval" message was already
+    sent at Step 10 by Client Communication Agent.)
 12. Once the campaign has run, send it to the Analytics Agent.
 13. Combine all outputs into one final delivery package.
 14. Tell the Client Communication Agent to send the completion message.
