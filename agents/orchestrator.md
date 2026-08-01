@@ -52,9 +52,10 @@ audience, goal, channels in scope, tone.
 10. Prepare prompts/final-approval-summary.md, instruct the Client
     Communication Agent to send the "awaiting final approval" message,
     and stop — wait for an actual CEO decision.
-11. After final approval is received, instruct the Client Communication
-    Agent to send the approved content to the Publishing Agent for
-    distribution. (The "awaiting final approval" message was already
+11. After final approval is received, send the approved content to the
+    Website/Blog Draft, Social Content Draft, WhatsApp Draft, and Email
+    Draft agents (whichever channels are in scope) to prepare their
+    final drafts. (The "awaiting final approval" message was already
     sent at Step 10 by Client Communication Agent.)
 12. Once the campaign has run, send it to the Analytics Agent.
 13. Combine all outputs into one final delivery package.
