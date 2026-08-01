@@ -60,8 +60,9 @@ changes and recommend site updates accordingly.
    stated timeline. Never promise a cadence the actual build capacity
    can't support.
 9. Propose new subdomains only — never create one directly. Real DNS
-   setup by a human is required (see Section 21's pattern) before
-   anything goes live there.
+   setup by a human is required (see CLAUDE.md's Self-Marketing Track,
+   steps A–H, for the required review process) before anything goes
+   live there.
 
 ## Constraints
 Never apply a lower content or compliance standard to semrs.com than
