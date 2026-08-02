@@ -27,33 +27,45 @@ their own. SEMRS runs the system, reviews the output internally, and the
 SEMRS CEO gives approval both before work starts AND before anything is
 delivered.
 
-## Delivery Model — Drafts by Default; Direct Publish Only if the Client Opts In
-By default, this system never connects to, posts on, or schedules
-anything on any live platform account. Every channel agent produces a
-finished, formatted DRAFT as a Google Doc with a shareable link. Once
-CEO Final Delivery Approval is granted, the Orchestrator compiles all
-approved draft links (and, once available, the analytics summary) into
-one package and emails it to the CEO at admin@semrs.com, in addition to
-showing it on the dashboard. The CEO manually forwards non-published
-items to the client. The client then publishes the content using their
-own accounts and resources.
+## Delivery Model — Client Chooses: Draft-Only Handoff or SEMRS as Virtual Assistant
+Every client picks, up front, one of two delivery paths — recorded on
+the client brief (see prompts/client-brief.md, "Delivery Path"). Both
+paths pass through the exact same approval gates; the choice only
+changes what happens after CEO Final Delivery Approval, never before
+it.
 
-**Optional exception — client-provided direct publish.** A client may
-choose to speed this up by providing SEMRS, through the dashboard, with
-access to their own platform account(s) — preferably a scoped API token
-or connected-app access they generate themselves, not a raw password
-(see Security & Misuse Guardrails, "Client Credentials & Platform
-Access," for the full handling rules).
-This is off by default and only applies to a specific client who has
-explicitly opted in. When it's on, the Website and Social Draft Agents
-may upload/publish directly to that client's platforms immediately after
-CEO Final Delivery Approval, instead of stopping at a draft — but every
-approval gate still applies exactly as before; opting in changes what
-happens after Final Delivery Approval, never before it. WhatsApp and
-Email drafts remain draft-only by default even for opted-in clients,
-since sending directly "as the client" through their personal accounts
-carries extra sensitivity — only enable this per client if they
-specifically request it and understand what they're authorizing.
+**Path 1 — Draft-Only Handoff (default).** This system never connects
+to, posts on, or schedules anything on any live platform account.
+Every channel agent produces a finished, formatted DRAFT as a Google
+Doc or Google Sheet with a shareable link. Once CEO Final Delivery
+Approval is granted, the Orchestrator compiles all approved draft links
+(and, once available, the analytics summary) into one package and
+emails it to the CEO at admin@semrs.com, in addition to showing it on
+the dashboard. The CEO manually forwards it to the client — by
+whichever channel the client prefers (email, WhatsApp, or the
+dashboard link). The client then publishes the content themselves,
+using their own accounts and resources.
+
+**Path 2 — SEMRS as Virtual Assistant (opt-in).** A client may instead
+authorize SEMRS to manage their channels directly and post on their
+behalf, following their agreed upload/posting plan, rather than
+publishing it themselves. This is off by default and only applies to a
+specific client who has explicitly opted in. To enable it, the client
+provides SEMRS, through the dashboard, with access to their own
+platform account(s) — a scoped API token or connected-app access they
+generate themselves, never a raw password or login credential (see
+Hard Constraint, above — no agent ever handles a real password
+directly, no exceptions — and Security & Misuse Guardrails, "Client
+Credentials & Platform Access," for the full handling rules). When it's
+on, the Website and Social Draft Agents may upload/publish directly to
+that client's platforms immediately after CEO Final Delivery Approval,
+instead of stopping at a draft — but every approval gate still applies
+exactly as before; opting in changes what happens after Final Delivery
+Approval, never before it. WhatsApp and Email drafts remain draft-only
+by default even for opted-in clients, since sending directly "as the
+client" through their personal accounts carries extra sensitivity —
+only enable this per client if they specifically request it and
+understand what they're authorizing.
 
 ## Paid Media (Ads) Model — Client Funds Their Own Ad Accounts, SEMRS Fee Is Always a Separate, Transparent Line Item
 For clients who order ads management, SEMRS never holds, moves, or has
@@ -440,6 +452,114 @@ Instagram, WhatsApp, email-sending tool, or CMS at all.
     from itself).
 19. Client Communication Agent sends the completion/delivery message,
     confirming the package has been finalized and handed to the CEO.
+
+### Organizational Chart
+
+```mermaid
+flowchart TD
+    CEO["SEMRS CEO<br/>(grants all approval checkpoints)"]
+    ORCH["Orchestrator<br/>(coordinates all agents,<br/>never does the work itself)"]
+    CEO --> ORCH
+
+    ORCH --> CC["Client Communication Agent<br/>— the only agent that talks<br/>to the client"]
+
+    subgraph PIPE["Core Content Pipeline"]
+        direction LR
+        RES["Research"] --> SEOG["SEO & GEO"] --> STRAT["Strategy"] --> CONT["Content"] --> VIS["Visual & Video<br/>Content"] --> REV["Review<br/>(internal approval)"]
+    end
+    ORCH --> PIPE
+
+    subgraph DRAFT["Channel Draft Agents (post-approval only)"]
+        direction LR
+        WEB["Website/Blog"]
+        SOC["Social Content"]
+        WA["WhatsApp"]
+        EM["Email"]
+    end
+    ORCH --> DRAFT
+
+    ORCH --> AN["Analytics Agent"]
+
+    subgraph COND["Conditional / Separate-Track Agents"]
+        direction LR
+        ADS["Ads Campaign Agent<br/>(ads-scoped orders only)"]
+        SC["SEMRS Communicator Agent<br/>(semrs.com self-marketing only,<br/>own CEO approval track)"]
+    end
+    ORCH --> COND
+```
+
+### Departmental Chart — Where Each Agent Works
+
+Groups every agent by the team/department it belongs to. Team names
+here (e.g. "Content and Creative") match the ones the Client
+Communication Agent names in real time when a client asks for a status
+update (see Client Communication, above) — the Orchestrator is the
+source of truth for which department is genuinely active.
+
+```mermaid
+flowchart LR
+    subgraph OPS["Operations"]
+        ORCH2["Orchestrator"]
+    end
+    subgraph CR["Client Relations"]
+        CC2["Client Communication Agent"]
+    end
+    subgraph RS["Research & Strategy"]
+        direction TB
+        RES2["Research Agent"]
+        SEOG2["SEO & GEO Agent"]
+        STRAT2["Strategy Agent"]
+    end
+    subgraph CRE["Content and Creative"]
+        direction TB
+        CONT2["Content Agent"]
+        VIS2["Visual & Video Content Agent"]
+    end
+    subgraph QA["Quality Assurance"]
+        REV2["Review Agent"]
+    end
+    subgraph DP["Delivery & Publishing"]
+        direction TB
+        WEB2["Website/Blog Draft Agent"]
+        SOC2["Social Content Draft Agent"]
+        WA2["WhatsApp Draft Agent"]
+        EM2["Email Draft Agent"]
+    end
+    subgraph AR["Analytics & Reporting"]
+        AN2["Analytics Agent"]
+    end
+    subgraph PM["Paid Media (ads-scoped orders only)"]
+        ADS2["Ads Campaign Agent"]
+    end
+    subgraph SM["Self-Marketing (semrs.com only)"]
+        SC2["SEMRS Communicator Agent"]
+    end
+```
+
+### Workflow Diagram
+
+```mermaid
+flowchart TD
+    A["1-2. Orchestrator builds client brief;<br/>Client Communication sends greeting"] --> B["3. Orchestrator prepares<br/>Order Approval Summary"]
+    B --> C{"4. CEO Order Approval<br/>Checkpoint"}
+    C -- Declined --> C1["Client Communication sends decline<br/>message — no further work happens"]
+    C -- Approved --> D["5. Client Communication sends<br/>'work in progress' message"]
+    D --> E["6. Research Agent"]
+    E --> F["7. SEO & GEO Agent"]
+    F --> G["8. Strategy Agent"]
+    G --> H["9. Content Agent"]
+    H --> I["10. Visual & Video Content Agent"]
+    I --> J["11. Review Agent<br/>(SEMRS internal approval)"]
+    J --> K["12. Orchestrator prepares Final<br/>Delivery Approval Summary"]
+    K --> L["13. Client Communication sends<br/>'awaiting final approval' message"]
+    L --> M{"14. CEO Final Delivery<br/>Approval Checkpoint"}
+    M -- Changes requested --> H
+    M -- Approved --> N["15. Website / Social / WhatsApp / Email<br/>Draft Agents (in-scope channels only)"]
+    N --> O["16. Orchestrator compiles final<br/>package, hands to CEO"]
+    O --> P["17. CEO forwards package to client"]
+    P --> Q["18. Analytics Agent reports<br/>(once client shares results back)"]
+    Q --> R["19. Client Communication sends<br/>completion message"]
+```
 
 ## Ads Track (only when the order includes ads management — runs alongside the standard sequence above)
 A. Once Order Approval (gate 1) is granted, the Ads Agent inspects the

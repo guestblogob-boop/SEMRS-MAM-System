@@ -44,6 +44,18 @@ checked here:
 ## Tone
 
 
+## Delivery Path
+Select one (see CLAUDE.md, Delivery Model):
+- [ ] Draft-Only Handoff (default) — client publishes the approved
+      content themselves
+- [ ] SEMRS as Virtual Assistant (opt-in) — client grants scoped
+      platform access (never a raw password) and SEMRS publishes
+      directly per the agreed upload/posting plan
+
+If SEMRS as Virtual Assistant is selected, note the client's granted
+access per platform here once provided:
+
+
 ## Content Ownership/Confidentiality Notes
 Any exceptions to SEMRS's standard policy (see CLAUDE.md, Operational
 Policies — "Content ownership & confidentiality"). Leave blank if none.
