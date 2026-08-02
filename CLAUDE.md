@@ -196,18 +196,30 @@ Communication Agent never tells the client something is approved before
 it actually is, and never names a department as active unless it
 genuinely is.
 
-## Hard Constraint (specific to SEMRS's build and testing)
-Every tool, library, or service used in this project must be something
-SEMRS can build and test without entering any payment or billing
-credentials. This rule is about how SEMRS is testing this particular
-system, not a general claim that these tools are free for everyone. If
-unsure whether a tool would require SEMRS to add payment details, ask
-before using it. No agent ever handles a real password, API secret, or
-payment detail directly. In practice this system needs very little of
-that risk in the first place: since every channel agent produces a
-draft only and never connects to a live platform account, SEMRS does
-not need to hold or manage credentials for any client's Facebook,
-Instagram, WhatsApp, email-sending tool, or CMS at all.
+## Hard Constraint — Free Tools Only by Default
+Every tool, plugin, skill, or API used in this project — for SEMRS's
+own build/testing AND for actual client work — must be free by
+default: no paid plugin, tool, skill, or commercial API/data service
+(e.g. Ahrefs, SimilarWeb, Supermetrics, or similar) is used unless a
+specific client explicitly requests it and pays for it themselves
+directly. SEMRS still never holds or moves that payment — same pattern
+as the Paid Media Model, above: the client funds it, SEMRS never
+touches the money. Absent that explicit, client-funded exception, SEMRS
+pays no external tool or platform for any engagement. This does NOT
+ban free official platform APIs (Meta Graph API, WordPress REST API,
+YouTube Data API, and the like, already used under the SEMRS as Virtual
+Assistant path, above) — platforms don't charge for API access itself;
+the ban is specifically on paid/commercial tools and data services, not
+on using a platform's own free API to publish on a client's behalf. If
+unsure whether a tool would require SEMRS (or an unpaying client) to
+add payment details, ask before using it. No agent ever handles a real
+password, API secret, or payment detail directly. In practice this
+system needs very little of that risk in the first place: since every
+channel agent produces a draft only by default and never connects to a
+live platform account unless a client has opted into the Virtual
+Assistant path, SEMRS does not need to hold or manage credentials for
+any client's Facebook, Instagram, WhatsApp, email-sending tool, or CMS
+at all.
 
 ## Security & Misuse Guardrails
 - **Order intake only from the defined channel.** This system only acts
@@ -592,10 +604,11 @@ Every part of this track — research, SEO & GEO, strategy, content,
 visuals, and publishing, across every one of semrs.com's own platforms
 and social accounts — uses only free tools, plugins, and skills. SEMRS
 pays no external platform for its own marketing, full stop; this is
-stricter than the project-wide Hard Constraint, above, which is scoped
-to SEMRS's build/testing phase for client work — here it's a
-permanent operating rule for self-marketing specifically, not a
-temporary one. All visual/creative assets still follow the same
+stricter than the Hard Constraint's client-work rule, above, which
+allows one narrow exception — a client explicitly requesting and
+paying for a specific paid tool themselves. Self-marketing has no such
+exception: there is no client to fund one, so it stays free with zero
+carve-outs. All visual/creative assets still follow the same
 properly-licensed-sources rule required everywhere in this system (see
 Security & Misuse Guardrails, "Visual & Video Content Agent — licensed
 sources only") — royalty-free or Creative Commons only, never a paid
