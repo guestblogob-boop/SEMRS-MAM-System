@@ -82,6 +82,14 @@ Select one:
 - [ ] Email — client's address:
 - [ ] WhatsApp — client's number:
 
+## SEMRS Commission Rate
+Ads-scoped orders only (leave blank if SEM/Ads Management wasn't
+selected above). SEMRS's standard rate is 15% of monthly ad spend, with
+a $150/month minimum fee (see CLAUDE.md, Paid Media Model). Record the
+actual agreed rate for this client here — defaults to the standard
+rate unless the CEO has negotiated something different:
+
+
 ## Content Ownership/Confidentiality Notes
 Any exceptions to SEMRS's standard policy (see CLAUDE.md, Operational
 Policies — "Content ownership & confidentiality"). Leave blank if none.

@@ -78,6 +78,19 @@ performance report, and collected by SEMRS through a separate invoice
 — never silently deducted from what the client believes is 100% going
 to ad spend, and never something an agent moves or collects itself.
 
+**Default commission rate (starting default, confirm or change per
+client).** Absent a different rate explicitly agreed with a specific
+client, SEMRS's standard commission is **15% of monthly ad spend, with
+a $150/month minimum fee** — the minimum exists because a pure
+percentage doesn't cover real management time on a very small budget
+(e.g. 15% of a $300/month test budget is $45, not enough to justify
+the setup/monitoring work). The Ads Agent records the actual agreed
+rate for a given client on that client's brief (see
+prompts/client-brief.md, "SEMRS Commission Rate") — defaulting to this
+standard rate unless the CEO has negotiated something different for
+that client. Same "confirm or change" treatment as the Data Retention
+default (see Operational Policies, below).
+
 Because a live ad campaign can't meaningfully be "drafted" the way
 organic content can — either it's running and spending real money, or
 it isn't — the Ads Agent may only launch or modify a campaign after
