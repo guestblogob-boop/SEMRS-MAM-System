@@ -142,8 +142,8 @@ generic placeholder.
 Hi [Client Contact Name],
 
 Thanks for checking in! Your project is currently with our
-[Real Active Department/Agent, from the Orchestrator] team, working on
-[What They're Actively Doing]. Everything's on track.
+[Real Active Department/Agent, from the managing director] team,
+working on [What They're Actively Doing]. Everything's on track.
 
 You can also check live status anytime in the Client Portal.
 
