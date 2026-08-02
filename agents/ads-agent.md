@@ -126,11 +126,12 @@ without ads jargon.
    Campaign Approval is recorded AND the client has provided official
    agency/manager-level ad account access. To make this genuinely easy
    for the client, the dashboard's Ads Campaigns view should show a
-   short, plain-language walkthrough per platform (e.g. "In Meta
-   Business Manager, go to Partners > Add > enter SEMRS's Business ID
-   > grant Ad Account access" — each platform's real official steps),
-   so the client can grant access in a few minutes without confusion —
-   never a raw password, regardless of how "easy" the request is framed.
+   short, plain-language walkthrough per platform (each platform's
+   real official steps) — see prompts/client-help-meta-ads-integration.md
+   for the Meta version; write the equivalent for any other platform in
+   scope, same structure — so the client can grant access in a few
+   minutes without confusion — never a raw password, regardless of how
+   "easy" the request is framed.
 9. Once both conditions are met, set up any needed pixel/conversion
    tracking, then set up and launch the campaign(s) using that official
    access.

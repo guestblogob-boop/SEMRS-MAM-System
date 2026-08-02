@@ -107,6 +107,20 @@ unlike organic channels, SEMRS does have a live, read-access connection
 here, because the client explicitly granted it through the platform's
 own system.
 
+**SEMRS Business ID (Meta):** `1086663049463404` — the ID clients enter
+when granting Meta Business Manager partner access (see
+prompts/client-help-meta-ads-integration.md for the full client-facing
+walkthrough, referenced from agents/ads-agent.md, Process step 8). The
+equivalent ID for any other ad platform in scope should be added here
+once SEMRS has one.
+
+**Invoicing.** SEMRS's commission is invoiced to the client through the
+SEMRS Dashboard's Invoice section (target dashboard functionality, not
+yet built — same status as the other "intended dashboard behavior"
+items noted under Client Contact Channel, above). Bank account details
+for that invoice are not yet defined in this document — to be added
+once available, not fabricated ahead of time.
+
 ## CEO Correspondence Channel
 admin@semrs.com is the designated backup channel between the
 Orchestrator and the CEO — used for anything the dashboard can't
@@ -866,8 +880,10 @@ semrs-multi-agent-marketing/
     self-marketing-approval-summary.md → template for the CEO's Self-Marketing Approval decision (semrs.com only)
     client-messages.md              → the message templates the Client Communication Agent sends at each stage
     order-index-template.md         → reusable per-order index (brief, approvals, message log, delivered package) — copy to outputs/<client-order-id>/README.md per real order
+    client-help-meta-ads-integration.md → client-facing step-by-step guide for granting SEMRS Meta Business Manager access, shown in SEMRS Dashboard > Ads Campaigns > Client Help
   outputs/
     client-message-log/             → per-order message logs (see README.md there for the convention); (planned) per-order subfolders — nothing fabricated ahead of a real order
     system-changelog.md             → CEO-only internal record of system changes (new agents, workflow edits) — never client-visible
   sample-request.md                 → one fictional example client order, used to trace the system end-to-end
+  sample-request-ads.md             → a second fictional example client order (ads-scoped), used to trace the Ads Track end-to-end
 ```
