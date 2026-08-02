@@ -839,11 +839,11 @@ semrs-multi-agent-marketing/
     order-approval-summary.md       → template the Orchestrator fills in for the CEO's order-approval decision
     final-approval-summary.md       → template the Orchestrator fills in for the CEO's final delivery decision
     budget-approval-summary.md      → template for the CEO's Budget & Campaign Approval decision (ads-scoped orders only)
+    self-marketing-approval-summary.md → template for the CEO's Self-Marketing Approval decision (semrs.com only)
     client-messages.md              → the message templates the Client Communication Agent sends at each stage
-  outputs/                          (planned)
-    client-message-log/             → a record of every message actually sent to the client, per order
+    order-index-template.md         → reusable per-order index (brief, approvals, message log, delivered package) — copy to outputs/<client-order-id>/README.md per real order
+  outputs/
+    client-message-log/             → per-order message logs (see README.md there for the convention); (planned) per-order subfolders — nothing fabricated ahead of a real order
     system-changelog.md             → CEO-only internal record of system changes (new agents, workflow edits) — never client-visible
-  docs/                             (planned)
-    org-chart.md                    → the formal organizational chart (Mermaid diagram) — CEO-only reference
-  sample-request.md                 (planned) → one example client order to test the system with
+  sample-request.md                 → one fictional example client order, used to trace the system end-to-end
 ```
