@@ -104,6 +104,49 @@ identity still ties back to the dashboard mechanism in Security &
 Misuse Guardrails, "Approvals only count via the defined approval
 channel."
 
+## Client Contact Channel
+The Client Portal/dashboard is the preferred two-way channel between
+SEMRS and the client — it's built to facilitate both sides without
+either needing a separate app. Where a client instead chooses Email or
+WhatsApp as their contact channel (recorded on the client brief, see
+prompts/client-brief.md, "Client Contact Channel"), SEMRS reaches them
+from one default identity, branded as "SEMRS" — the client sees the
+SEMRS business name only, never a bare email address or phone number:
+- Email: guestblogob@gmail.com — client-facing only. This is a
+  separate, dedicated address from admin@semrs.com (the CEO
+  Correspondence Channel, above), which stays internal-only
+  (Orchestrator↔CEO traffic). Keeping them separate means a client
+  reply can never land in the same inbox as an internal approval
+  exchange.
+- WhatsApp: 0333-8237156 — sent under the display name "SEMRS." Note
+  the honest limit here: WhatsApp shows the sending number in the
+  client's chat unless SEMRS registers a Meta-verified WhatsApp
+  Business Account, and even then the verified name typically appears
+  alongside the number, not instead of it, on most clients — this
+  cannot be fully guaranteed the way an email display name can.
+Regardless of which channel a message physically goes out on, the
+system's own record — outputs/client-message-log/ — is the
+authoritative log of what was sent and when, not the email inbox or
+WhatsApp app's own history. Every email/WhatsApp guardrail elsewhere in
+this file (CAN-SPAM compliance, documented WhatsApp opt-in, the 24-hour
+free-form window) still applies in full regardless of which identity
+sends the message.
+
+**Intended dashboard behavior.** Once a client meeting/order intake is
+recorded, the client's chosen contact channel (from the client brief)
+populates the dashboard automatically — no separate manual re-entry.
+From that point on, the dashboard's view of an order should surface
+the client brief AND that order's live conversation side by side
+(whichever underlying channel — email, WhatsApp, or the Client Portal
+itself — the client is actually using), so neither the CEO/SEMRS staff
+nor the client need to separately open Gmail or WhatsApp to follow an
+order. This is the target behavior, not something already built: the
+actual email/WhatsApp auto-fetch integration into the dashboard is a
+setup task outside this document (same status as the verified-intake
+mechanism under Operational Policies — "Order-intake verification").
+Until that integration exists, a human at SEMRS relays messages
+between the raw channel and outputs/client-message-log/ manually.
+
 ## Channels Supported
 Website/Blog, Facebook, Instagram, Twitter/X, TikTok, Reddit, Pinterest,
 LinkedIn, YouTube, WhatsApp, Email. A given client brief specifies which

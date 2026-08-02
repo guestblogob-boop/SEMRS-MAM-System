@@ -32,3 +32,11 @@ past entry, only add new ones. Each entry should record, at minimum:
 - **Channel** the message was sent on
 - **Message sent** — the actual text, using the matching template from
   prompts/client-messages.md
+
+## This is the authoritative record
+Whether a message physically went out over email, WhatsApp, or the
+Client Portal/dashboard, this log — not the email inbox or the WhatsApp
+app's own chat history — is treated as the real record (see CLAUDE.md,
+Client Contact Channel). Each order's subfolder should be linked from
+that order's index at outputs/<client-order-id>/README.md (see
+prompts/order-index-template.md).
