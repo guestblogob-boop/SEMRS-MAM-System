@@ -8,10 +8,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 This project builds SEMRS's own AI marketing production system — the
 single system SEMRS uses to deliver SEO, SEM (paid ads), GEO/AEM
 (AI-answer-engine visibility), link building, guest posting, content
-writing, copywriting, and authority-building work (research, SEO,
+writing, copywriting, authority-building work (research, SEO,
 strategy, content, visuals, website, social, WhatsApp, email, ads,
-reporting) on behalf of its clients' businesses, while keeping the
-client clearly informed at every stage.
+reporting), and AI agent services on behalf of its clients' businesses,
+while keeping the client clearly informed at every stage. "AI agent
+services" is recognized as an orderable service category (see
+prompts/client-brief.md) but does not yet have a dedicated specialist
+agent defined in Agent Roles, below — until one is added, an order
+selecting it should be scoped by the Orchestrator against the closest
+matching existing agents, or flagged to the CEO before Order Approval
+if it doesn't fit.
 
 ## Scope Constraint
 This system does marketing work for SEMRS's clients, commissioned as
