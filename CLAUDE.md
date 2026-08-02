@@ -664,7 +664,12 @@ stricter than the Hard Constraint's client-work rule, above, which
 allows one narrow exception — a client explicitly requesting and
 paying for a specific paid tool themselves. Self-marketing has no such
 exception: there is no client to fund one, so it stays free with zero
-carve-outs. All visual/creative assets still follow the same
+carve-outs. No commission applies here either — the commission concept
+(Paid Media Model, above) only exists for clients who order ads
+management; self-marketing has no client and runs no ads, so there is
+nothing to calculate a percentage of and nothing to record — not a
+waived or $0 commission, just not applicable. All visual/creative
+assets still follow the same
 properly-licensed-sources rule required everywhere in this system (see
 Security & Misuse Guardrails, "Visual & Video Content Agent — licensed
 sources only") — royalty-free or Creative Commons only, never a paid
@@ -675,6 +680,12 @@ option for that specific platform before using it — never assuming a
 mechanism from one platform carries over to another. Direct publishing
 to semrs.com's own accounts remains coordinated by the Orchestrator (see
 step F, below) once CEO Self-Marketing Approval is granted.
+
+**Platforms actually linked from semrs.com:** YouTube, Facebook,
+TikTok, X, Reddit, Pinterest, Instagram, LinkedIn. This is the fixed
+answer to "every platform actually linked from semrs.com" wherever
+that phrase appears below — update this line if SEMRS's own linked
+accounts ever change, rather than leaving future readers to guess.
 
 A. Every week, the SEMRS Communicator builds a Monday–Sunday plan for
    semrs.com: content topics, link-building/guest-posting targets, any
