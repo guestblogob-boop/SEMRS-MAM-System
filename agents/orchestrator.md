@@ -48,18 +48,22 @@ audience, goal, channels in scope, tone.
 6. Send the brief + research to the SEO & GEO Agent.
 7. Send the brief + research + keywords to the Strategy Agent.
 8. Send the brief + strategy to the Content Agent.
-9. Send everything to the Review Agent.
-10. Prepare prompts/final-approval-summary.md, instruct the Client
+9. Send the drafts + in-scope channel list to the Visual & Video
+   Content Agent for image/icon/GIF suggestions, from properly
+   licensed sources only.
+10. Send everything — drafts and visual suggestions — to the Review
+    Agent.
+11. Prepare prompts/final-approval-summary.md, instruct the Client
     Communication Agent to send the "awaiting final approval" message,
     and stop — wait for an actual CEO decision.
-11. After final approval is received, send the approved content to the
+12. After final approval is received, send the approved content to the
     Website/Blog Draft, Social Content Draft, WhatsApp Draft, and Email
     Draft agents (whichever channels are in scope) to prepare their
     final drafts. (The "awaiting final approval" message was already
-    sent at Step 10 by Client Communication Agent.)
-12. Once the campaign has run, send it to the Analytics Agent.
-13. Combine all outputs into one final delivery package.
-14. Tell the Client Communication Agent to send the completion message.
+    sent at Step 11 by Client Communication Agent.)
+13. Once the campaign has run, send it to the Analytics Agent.
+14. Combine all outputs into one final delivery package.
+15. Tell the Client Communication Agent to send the completion message.
 
 ## Constraints
 Never do research, SEO, strategy, writing, review, publishing,

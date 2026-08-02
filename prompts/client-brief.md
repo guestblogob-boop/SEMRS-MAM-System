@@ -26,6 +26,19 @@ Select all that apply:
 ## Goal
 
 
+## Key Business Details
+Specific, real facts about this client's actual business — pricing,
+exact offerings, unique story/origin, certifications, notable specifics
+— that the Content Agent needs to avoid generic filler (see
+agents/content-agent.md, Constraints, and CLAUDE.md, Security & Misuse
+Guardrails, "Content quality and Google-penalty avoidance" — genuine
+E-E-A-T signals specific to this client). The Research Agent covers
+market/competitor/audience research, not these — this section must be
+filled from the actual client order or meeting, not invented. If a
+detail isn't available yet, leave it blank rather than guessing; the
+Content Agent should flag the gap rather than fabricate a specific.
+
+
 ## Channels in Scope
 Select all that apply — no agent may draft or publish to a channel not
 checked here:
