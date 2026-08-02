@@ -736,6 +736,38 @@ Each agent must end its output with a clear "Handoff to [next agent]:"
 line summarizing what the next agent needs to know.
 
 ## Folder Structure
-See agents/ for job descriptions, prompts/ for shared inputs and
-message templates, and outputs/ for finished, approved campaigns,
-reports, and the client message log.
+Items marked (planned) below don't exist in the repository yet.
+
+```
+semrs-multi-agent-marketing/
+  CLAUDE.md                        → master rules for the whole project
+  README.md                        → what this project is, for any human opening it
+  agents/
+    orchestrator.md                 → the director's job description
+    client-communication-agent.md   → the account manager's job description
+    research-agent.md               → market & audience research job description
+    seo-agent.md                     → SEO & GEO (AI-visibility) job description
+    strategy-agent.md                → campaign planning job description
+    content-agent.md                 → copywriting job description (all channels)
+    visual-agent.md                  → visual content (images/icons/GIFs) job description
+    review-agent.md                  → SEMRS internal quality control job description
+    website-agent.md                 → website/blog draft-preparation job description
+    social-agent.md                  → social content draft-preparation job description (FB/IG/X/TikTok/Reddit/Pinterest/LinkedIn/YouTube)
+    whatsapp-agent.md                → WhatsApp draft-preparation job description
+    email-agent.md                    → email draft-preparation job description
+    analytics-agent.md                → reporting job description
+    ads-agent.md                      → paid media (ads) job description — only for ads-scoped orders
+    semrs-communicator-agent.md       → SEMRS's own self-marketing job description (semrs.com, never client work)
+  prompts/
+    client-brief.md                 → the shared input all agents read from
+    order-approval-summary.md       → template the Orchestrator fills in for the CEO's order-approval decision
+    final-approval-summary.md       → template the Orchestrator fills in for the CEO's final delivery decision
+    budget-approval-summary.md      → template for the CEO's Budget & Campaign Approval decision (ads-scoped orders only)
+    client-messages.md              → the message templates the Client Communication Agent sends at each stage
+  outputs/                          (planned)
+    client-message-log/             → a record of every message actually sent to the client, per order
+    system-changelog.md             → CEO-only internal record of system changes (new agents, workflow edits) — never client-visible
+  docs/                             (planned)
+    org-chart.md                    → the formal organizational chart (Mermaid diagram) — CEO-only reference
+  sample-request.md                 (planned) → one example client order to test the system with
+```
