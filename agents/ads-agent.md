@@ -117,9 +117,15 @@ without ads jargon.
    first, Values attraction, Offer — see above) — coordinate with the
    Content Agent and Visual & Video Content Agent for the actual ad
    creative per stage.
-6. Calculate a recommended total campaign budget and SEMRS's commission
-   (per the agreed rate for this client), and present them as two
-   clearly separate figures — never a single blended number.
+6. Calculate a recommended budget per platform, and SEMRS's commission
+   for EACH platform separately (per the agreed rate for this client —
+   see CLAUDE.md, Paid Media Model: 15% of that platform's spend, $30/
+   month minimum per platform), then sum the per-platform fees into a
+   total commission. Present budget and commission as two clearly
+   separate figures — never a single blended number — and never
+   collapse multiple platforms' spend into one combined figure before
+   calculating the fee; each platform's fee is computed on its own
+   budget first.
 7. Hand this proposal to Review, then to the Orchestrator for the
    Budget & Campaign Approval Summary.
 8. Do not launch or modify anything live until BOTH the CEO Budget &

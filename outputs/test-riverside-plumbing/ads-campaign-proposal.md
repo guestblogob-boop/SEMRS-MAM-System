@@ -54,18 +54,24 @@ search) and scheduled work (lower-urgency, comparison-shopping search).
   not a full parallel content pipeline.)
 
 ## Step 6 — Budget and commission
-**Proposed total campaign budget:** $300/month, illustrative only — a
-real run would base this on live local CPC data for plumbing keywords,
+**Proposed Google Ads budget:** $300/month, illustrative only — a real
+run would base this on live local CPC data for plumbing keywords,
 which this dry run doesn't have access to. Used here only to test that
 the commission math actually works, not as a genuine recommendation.
+Only one platform (Google Ads) is in scope for this order, so there's
+no separate-platforms summation to demonstrate here — see
+outputs/test-semrs-selfmarketing/ or a future multi-platform fixture
+for that case.
 
-**SEMRS's commission:** ✅ Now calculable — see client-brief.md,
-"SEMRS Commission Rate" (added to close the gap this fixture first
-found): standard rate is 15% of ad spend, $150/month minimum. 15% of
-$300 = $45, which is below the $150 minimum, so **the minimum applies:
-$150/month**. This is a real, useful outcome of the fix — it correctly
-demonstrates the minimum-fee floor doing its job on a genuinely small
-test budget, exactly the scenario the floor exists for.
+**SEMRS's commission (per-platform model — see CLAUDE.md, Paid Media
+Model, updated after this fixture was first built):** standard rate is
+15% of that platform's ad spend, $30/month minimum **per platform**.
+15% of $300 = $45, which is above the $30-per-platform floor, so **the
+straight percentage applies: $45/month** — the floor only matters
+below $200/month per platform (15% of $200 = $30). This is a different
+number than this fixture originally showed ($150/month, under the old
+total-spend/$150-floor model) — updated here to keep this file
+consistent with the now-authoritative per-platform model.
 
 ## Step 7 — Handoff
 Hand this proposal to Review, then to the Orchestrator for the

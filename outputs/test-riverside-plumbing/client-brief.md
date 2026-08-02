@@ -60,10 +60,13 @@ CLAUDE.md, Paid Media Model.
 - [ ] WhatsApp
 
 ## SEMRS Commission Rate
-Standard rate — 15% of monthly ad spend, $150/month minimum. No
-different rate was negotiated for this client. (This field didn't
-exist when this fixture was first built — added retroactively to
-confirm the fix closes the gap found below.)
+Standard rate — 15% of ad spend per platform, calculated separately
+per platform, $30/month minimum per platform. No different rate was
+negotiated for this client. (This field didn't exist when this
+fixture was first built — added retroactively to confirm the fix
+closes the gap found below; updated a second time when the commission
+model itself changed from total-spend/$150-floor to per-platform/$30-
+floor.)
 
 ## Content Ownership/Confidentiality Notes
 None.

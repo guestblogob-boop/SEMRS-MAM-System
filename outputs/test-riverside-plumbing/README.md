@@ -32,10 +32,18 @@ fixture focuses specifically on the ads-only mechanics.
 Found and fixed one real gap: SEMRS's commission rate was never
 captured anywhere in the system, even though ads-agent.md requires it
 and CLAUDE.md's Paid Media Model requires it shown as a line item on
-every budget proposal. Fixed with a default rate (15% of ad spend,
-$150/month minimum) in CLAUDE.md's Paid Media Model, plus a per-client
-"SEMRS Commission Rate" field in prompts/client-brief.md. Confirmed
-fixed in this fixture — see ads-campaign-proposal.md and
-budget-approval-summary.md, both updated to show the resolved
-$150/month commission (the minimum-fee floor correctly applying on a
-small illustrative $300/month test budget).
+every budget proposal. Fixed with a default rate in CLAUDE.md's Paid
+Media Model, plus a per-client "SEMRS Commission Rate" field in
+prompts/client-brief.md.
+
+**Since updated a second time:** the commission model itself changed
+from a single 15%-of-total-spend rate with one $150/month account-wide
+floor, to 15% calculated PER PLATFORM SEPARATELY with a $30/month
+floor per platform (per SEMRS_PRICING_PER_PLATFORM_15PCT.md, the
+now-authoritative pricing brief). Riverside only runs one platform
+(Google Ads), so the per-platform model produces $45/month here (15%
+of $300, above the $30 floor — the floor doesn't bind at this budget
+size) rather than this fixture's original $150/month figure. Both
+ads-campaign-proposal.md and budget-approval-summary.md are updated to
+match. See the separate SEMRS-Dashboard repo for where this same
+per-platform math is implemented as real product pricing.

@@ -18,15 +18,24 @@ Geo-targeted to the Riverside metro service area. Two ad groups:
 emergency-intent and scheduled-work-intent keywords. See
 ads-campaign-proposal.md, Step 5, for full detail.
 
-## Proposed Total Campaign Budget
+## Proposed Budget & Commission Per Platform
 $300/month, illustrative only (see ads-campaign-proposal.md, Step 6).
+Only one platform in scope for this order.
 
-## SEMRS Commission
-$150/month (the $150/month minimum applies — 15% of $300 is $45, below
-the minimum). Shown as a clear, separate line item from the $300/month
-ad spend above, per CLAUDE.md's Paid Media Model. Standard rate; no
-different rate was negotiated for this client (see client-brief.md,
-"SEMRS Commission Rate").
+| Platform | Proposed Budget | SEMRS Commission |
+|---|---|---|
+| Google Ads | $300/mo | $45/mo |
+
+**Total budget (all platforms):** $300/month.
+
+**Total SEMRS commission:** $45/month (15% of $300 — above the
+$30/month-per-platform minimum, so the straight percentage applies,
+not the floor). Shown as a clear, separate line item from the
+$300/month ad spend above, per CLAUDE.md's Paid Media Model
+(per-platform model). Standard rate; no different rate was negotiated
+for this client (see client-brief.md, "SEMRS Commission Rate").
+Corrected from this fixture's original $150/month figure, which used
+the now-superseded total-spend/$150-floor model.
 
 ## Ad Account Access Status
 Not yet granted — client understands official Google Ads Manager

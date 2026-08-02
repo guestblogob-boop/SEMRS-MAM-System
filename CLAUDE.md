@@ -79,17 +79,27 @@ performance report, and collected by SEMRS through a separate invoice
 to ad spend, and never something an agent moves or collects itself.
 
 **Default commission rate (starting default, confirm or change per
-client).** Absent a different rate explicitly agreed with a specific
-client, SEMRS's standard commission is **15% of monthly ad spend, with
-a $150/month minimum fee** — the minimum exists because a pure
-percentage doesn't cover real management time on a very small budget
-(e.g. 15% of a $300/month test budget is $45, not enough to justify
-the setup/monitoring work). The Ads Agent records the actual agreed
-rate for a given client on that client's brief (see
-prompts/client-brief.md, "SEMRS Commission Rate") — defaulting to this
-standard rate unless the CEO has negotiated something different for
-that client. Same "confirm or change" treatment as the Data Retention
-default (see Operational Policies, below).
+client) — calculated PER PLATFORM, SEPARATELY.** Absent a different
+rate explicitly agreed with a specific client, SEMRS's standard
+commission is **15% of monthly ad spend on each platform, calculated
+separately per platform, with a $30/month minimum fee per platform**
+— never one blended rate applied to a client's combined spend across
+platforms. If a client runs ads on only one platform, they pay one
+15% fee on that platform's spend. If they run ads on multiple
+platforms (e.g. Google AND Facebook), each platform's fee is
+calculated on its own budget and then summed — e.g. Google $1,000 ×
+15% = $150, plus Facebook $1,000 × 15% = $150, total fee = $300; this
+is different from (and always ≥) treating the $2,000 combined spend
+as one $150-minimum account. The $30/month-per-platform minimum
+exists because a pure percentage doesn't cover real management time
+on a very small per-platform budget (e.g. 15% of a $150/month
+per-platform test budget is $22.50, not enough to justify the
+setup/monitoring work on that one platform). The Ads Agent records
+the actual agreed rate for a given client on that client's brief (see
+prompts/client-brief.md, "SEMRS Commission Rate") — defaulting to
+this standard rate unless the CEO has negotiated something different
+for that client. Same "confirm or change" treatment as the Data
+Retention default (see Operational Policies, below).
 
 Because a live ad campaign can't meaningfully be "drafted" the way
 organic content can — either it's running and spending real money, or

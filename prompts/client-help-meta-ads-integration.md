@@ -79,11 +79,13 @@ this client's Budget & Campaign Approval, not a default or minimum.
    account — Meta bills **your** card, never SEMRS.
 2. SEMRS runs campaigns inside your Ad Account using our agency access
    — we never move the money ourselves.
-3. You pay SEMRS only our management fee (15% of ad spend, $150/month
-   minimum — see CLAUDE.md, Paid Media Model, for how this is
-   calculated for your specific budget). We send an invoice via the
-   SEMRS Dashboard's Invoice section — never deducted from your ad
-   spend.
+3. You pay SEMRS only our management fee (15% of your Meta ad spend,
+   $30/month minimum — see CLAUDE.md, Paid Media Model, for how this
+   is calculated for your specific budget). If you also run ads on
+   another platform through SEMRS, that platform's fee is calculated
+   the same way, separately, and added — never one blended rate on
+   your combined spend. We send an invoice via the SEMRS Dashboard's
+   Invoice section — never deducted from your ad spend.
 4. Meta charges your card in smaller daily increments until your
    agreed monthly budget is reached.
 
