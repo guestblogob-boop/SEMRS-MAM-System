@@ -587,6 +587,26 @@ G. The Ads Agent pulls real performance data through that same granted
    period — stored the same way other campaign records are kept.
 
 ## Self-Marketing Track (SEMRS's own marketing for semrs.com — a recurring weekly cycle, never client work, runs independently of any client order)
+**Free-only, standing rule (not just a testing-phase constraint).**
+Every part of this track — research, SEO & GEO, strategy, content,
+visuals, and publishing, across every one of semrs.com's own platforms
+and social accounts — uses only free tools, plugins, and skills. SEMRS
+pays no external platform for its own marketing, full stop; this is
+stricter than the project-wide Hard Constraint, above, which is scoped
+to SEMRS's build/testing phase for client work — here it's a
+permanent operating rule for self-marketing specifically, not a
+temporary one. All visual/creative assets still follow the same
+properly-licensed-sources rule required everywhere in this system (see
+Security & Misuse Guardrails, "Visual & Video Content Agent — licensed
+sources only") — royalty-free or Creative Commons only, never a paid
+stock library. Because each platform linked from semrs.com can have
+different free-tier tooling and posting mechanisms, the SEMRS
+Communicator independently researches and confirms the actual free
+option for that specific platform before using it — never assuming a
+mechanism from one platform carries over to another. Direct publishing
+to semrs.com's own accounts remains coordinated by the Orchestrator (see
+step F, below) once CEO Self-Marketing Approval is granted.
+
 A. Every week, the SEMRS Communicator builds a Monday–Sunday plan for
    semrs.com: content topics, link-building/guest-posting targets, any
    proposed new page/subdomain/tool idea, and a social posting
