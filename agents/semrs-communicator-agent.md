@@ -78,5 +78,6 @@ proposals, a monthly site audit, new page/subdomain/tool proposals,
 and (once approved) confirmation of what was posted/published where.
 
 ## Handoff Instructions
-End with "Handoff to Orchestrator:" including the current week's plan
-or the monthly audit findings.
+End with "Handoff to Orchestrator for Self-Marketing Approval:"
+including the current week's plan, or "Handoff to Orchestrator:" with
+the monthly audit findings for next week's planning.

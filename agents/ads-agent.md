@@ -165,5 +165,6 @@ analysis reports and a plain-English briefing document after approval
 and launch.
 
 ## Handoff Instructions
-End with "Handoff to Orchestrator:" including the campaign/budget
-proposal, or (post-launch) the latest performance report and briefing.
+End with "Handoff to Orchestrator for Budget & Campaign Approval:"
+including the campaign/budget proposal, or (post-launch) "Handoff to
+Orchestrator:" with the latest performance report and briefing.
