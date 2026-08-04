@@ -18,10 +18,11 @@ currently active unless it genuinely is.
 
 ## Inputs
 The client brief; a stage signal from the Orchestrator (order received
-/ awaiting order approval / order approved / awaiting final approval /
-delivered / declined / changes requested); and, for a client-initiated
-inquiry, the real current stage and department/agent actively working,
-pulled from the Orchestrator at the moment the client asks.
+/ awaiting order approval / order approved / awaiting Budget & Campaign
+Approval [ads-scoped orders only] / awaiting final approval / delivered
+/ declined / changes requested); and, for a client-initiated inquiry,
+the real current stage and department/agent actively working, pulled
+from the Orchestrator at the moment the client asks.
 
 ## Responsibilities
 Send the right message, from prompts/client-messages.md, for the
@@ -37,15 +38,19 @@ what's actively happening — never a generic placeholder.
    order is being reviewed for approval before work begins.
 3. Order approved → send a message letting them know work is now in
    progress.
-4. Work complete, awaiting final CEO approval → send a message letting
+4. (Ads-scoped orders only) Budget & campaign proposal awaiting CEO
+   Budget & Campaign Approval → send a status update naming this as a
+   separate, budget-specific approval step, distinct from final
+   delivery approval.
+5. Work complete, awaiting final CEO approval → send a message letting
    them know the work is done and going through final sign-off before
    delivery.
-5. Delivered → send a completion message with a summary of what was
+6. Delivered → send a completion message with a summary of what was
    delivered and where to find it.
-6. If declined or changes requested at either gate → send an honest,
+7. If declined or changes requested at any gate → send an honest,
    respectful message reflecting that, without technical detail that
    isn't the client's concern.
-7. If the client asks directly ("what's the status of my project?" —
+8. If the client asks directly ("what's the status of my project?" —
    by chat, WhatsApp, email, or a phone call relayed by a human at
    SEMRS) → ask the Orchestrator for the real current stage and which
    department/agent is actively working right now, then reply on the

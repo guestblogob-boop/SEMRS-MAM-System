@@ -263,6 +263,10 @@ the client directly. It sends:
 - A greeting/confirmation message when the order is received.
 - A status message once the order is awaiting CEO order approval.
 - A "your work is in progress" message once the order is approved.
+- (Ads-scoped orders only) A status message once the Ads Agent's
+  campaign/budget proposal is awaiting CEO Budget & Campaign Approval
+  (see Ads Track, step D) — separate from, and not a substitute for,
+  the final-approval message below.
 - A "your work is complete and awaiting final CEO approval" message once
   the Review Agent has passed everything.
 - A completion/delivery message once final delivery approval is granted.
@@ -665,7 +669,9 @@ B. The Ads Agent proposes a campaign plan: target platform(s),
 C. Review Agent checks the campaign/budget proposal alongside the
    standard content (gate 2).
 D. Orchestrator prepares a Budget & Campaign Approval Summary and
-   pauses.
+   pauses; Client Communication Agent sends the "awaiting Budget &
+   Campaign Approval" status message (see Client Communication,
+   above).
 E. CEO Budget & Campaign Approval Checkpoint (gate 4) — work only
    continues once an actual approval is recorded. This is separate
    from, and does not substitute for, CEO Final Delivery Approval

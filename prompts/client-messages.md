@@ -64,6 +64,26 @@ You can also check live status anytime in the Client Portal.
 Warmly,
 The SEMRS Team
 
+## 3a. Awaiting CEO Budget & Campaign Approval (ads-scoped orders only)
+
+Subject: An update on your ad campaign budget
+
+Hi [Client Contact Name],
+
+Quick update: our team has put together a campaign and budget plan for
+your ads, and it's now going through internal approval before we move
+forward. This is a separate check specifically for budget and campaign
+decisions, on top of the usual review your other content goes through.
+
+We'll follow up as soon as it's approved, with the full plan for you to
+review — including our management fee shown as a clear, separate line
+item from your ad spend.
+
+You can also check live status anytime in the Client Portal.
+
+Warmly,
+The SEMRS Team
+
 ## 4. Work Complete / Awaiting Final CEO Approval
 
 Subject: Your campaign is complete and in final review
