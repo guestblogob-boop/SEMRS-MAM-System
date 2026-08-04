@@ -5,3 +5,9 @@
 node_modules/
 npm-debug.log*
 package-lock.json
+
+# Local Claude Code dev-preview config (e.g. launch.json pointing at
+# SEMRS-Dashboard for `npm run dev` previews from this session) — a
+# local tooling convenience, not spec content, so it stays out of this
+# markdown-only repo's history.
+.claude/
