@@ -32,10 +32,19 @@ so these remain simulated regardless.
 - **Channel:** not specified in brief (simulated)
 - **Message sent:** Template 4, filled as-is.
 
-## Entry 4 — NOT YET SENT
-- **Stage:** Delivered — not sent yet. Package compiled in
-  outputs/test-brightleaf-dental-clinic/README.md covers only
-  Website/Blog, Facebook, Instagram, and LinkedIn; WhatsApp and Email
-  are held back pending real client input (opt-in, postal address).
-  Template 5 will be filled once/if a completion message is actually
-  triggered.
+## Entry 4
+- **Timestamp:** 2026-08-03 (simulated)
+- **Stage:** Delivered
+- **Channel:** not specified in brief (simulated)
+- **Message sent:** Template 5, filled — "Your campaign is ready!
+  Hi BrightLeaf team, Your campaign is complete and ready for you.
+  Here's a quick summary of what's included: your Website/Blog post,
+  and Facebook, Instagram, and LinkedIn content — all built around
+  growing your organic traffic, local rankings, and appointment
+  bookings, reviewed internally at 7.5/10. Your WhatsApp and Email
+  pieces are ready in draft but need two quick things from you first —
+  confirmed opt-in for WhatsApp messaging, and your business's mailing
+  address for Email — we'll finalize those the moment we have them.
+  You can find everything here: outputs/campaign-1.md (no real
+  Google Doc/Client Portal link exists in this dry run). Thank you for
+  choosing SEMRS! Warmly, The SEMRS Team"

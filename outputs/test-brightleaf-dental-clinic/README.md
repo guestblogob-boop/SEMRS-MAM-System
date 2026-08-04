@@ -45,11 +45,14 @@ never publishes on the client's behalf under Draft-Only Handoff, so
 performance data can only come from the client after they publish).
 
 ## Status
-Dry run complete through Workflow Order step 14 (package compiled) for
-4 of 6 channels. Step 15 (completion message) not yet sent — holding
-until WhatsApp/Email's gaps are resolved or a deliberate decision is
-made to deliver the 4 ready channels now and follow up separately for
-the other two. No real Google Docs were created for any draft (flagged
-throughout, not fabricated links). No ads track (SEM/Ads Management
-wasn't ordered) and no self-marketing track (this is client work, not
-SEMRS's own marketing) — neither applies to this order.
+Dry run complete through Workflow Order step 19 (completion message
+sent). Final compiled package: ../campaign-1.md. Delivered 4 of 6
+channels (Website/Blog, Facebook, Instagram, LinkedIn); WhatsApp and
+Email remain held back pending real client input (opt-in confirmation;
+mailing address) — the completion message told the client this
+honestly rather than overstating status. Analytics not run — no
+client-shared performance data exists yet. No real Google Docs were
+created for any draft (flagged throughout, not fabricated links). No
+ads track (SEM/Ads Management wasn't ordered) and no self-marketing
+track (this is client work, not SEMRS's own marketing) — neither
+applies to this order.
