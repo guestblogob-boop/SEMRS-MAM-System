@@ -900,6 +900,8 @@ semrs-multi-agent-marketing/
   outputs/
     client-message-log/             → per-order message logs (see README.md there for the convention); (planned) per-order subfolders — nothing fabricated ahead of a real order
     system-changelog.md             → CEO-only internal record of system changes (new agents, workflow edits) — never client-visible
+  docs/
+    org-chart.md                    → the formal 15-agent, 6-department organizational chart (Mermaid diagram) — CEO-only reference, shown in SEMRS Dashboard's Admin/System Settings view; never client-visible
   sample-request.md                 → one fictional example client order, used to trace the system end-to-end
   sample-request-ads.md             → a second fictional example client order (ads-scoped), used to trace the Ads Track end-to-end
 ```
