@@ -48,3 +48,30 @@ so these remain simulated regardless.
   You can find everything here: outputs/campaign-1.md (no real
   Google Doc/Client Portal link exists in this dry run). Thank you for
   choosing SEMRS! Warmly, The SEMRS Team"
+
+## Entry 5
+- **Timestamp:** 2026-08-03 (simulated)
+- **Stage:** Update/correction in progress (adapted from the
+  "Additional: Changes Requested at Final Delivery" template)
+- **Channel:** not specified in brief (simulated)
+- **Message sent:** "A quick update on your campaign — Hi BrightLeaf
+  team, thanks for confirming your city! We're updating your Instagram
+  post's tags to reflect it and sending that one piece back through
+  our internal review before it's finalized. Everything else you
+  already have stays as-is. We'll follow up shortly once it's ready.
+  Warmly, The SEMRS Team" — note: this correction is still PENDING a
+  fresh CEO Final Delivery Approval (see
+  final-approval-summary-correction-1.md); nothing has actually
+  changed in the delivered package yet, and this message doesn't claim
+  otherwise.
+
+## Entry 6
+- **Timestamp:** 2026-08-03 (simulated)
+- **Stage:** Correction complete
+- **Channel:** not specified in brief (simulated)
+- **Message sent:** "Your Instagram update is live in the package — Hi
+  BrightLeaf team, quick follow-up: the Instagram post now reflects
+  Darban in its tags, reviewed and finalized. Everything else is
+  unchanged. Thanks again for confirming that detail! Warmly, The
+  SEMRS Team" — Correction 1 approved 2026-08-03, see
+  final-approval-summary-correction-1.md.

@@ -201,3 +201,40 @@ office photos would outperform these stock placeholders once available.
 (2 applied, 3 still open); items 1 and 6 flagged as pre-delivery
 follow-ups; items 4–5 flagged as compliance gates that stay open until
 their respective conditions are met.
+
+---
+
+## Correction 1 — Content Agent re-run (Instagram hashtags)
+
+**Trigger:** the client has now confirmed their city is Darban (as
+given — noting in case this was meant to be a different spelling, but
+not silently "correcting" client-supplied data). This resolves the one
+piece of missing information the Review Agent's Instagram hashtag note
+was blocked on. Per the instruction that prompted this correction,
+scope is intentionally limited to the Content Agent step only — the
+SEO & GEO Agent's keyword table above still has unresolved "[city]"
+placeholders (e.g. "[city] dental clinic," "dentist reviews [city]")
+that could now also be filled in, but that's a separate agent's output
+and out of scope for this specific re-run.
+
+**Content Agent — revised Instagram hashtags (PENDING — not yet
+approved, not yet applied to social-drafts.md):**
+Old: #BrightLeafDentalClinic #GentleDentalCare #DentalHealth
+#NewPatientWelcome #LocalDentist #DentalAnxietyAwareness
+New: #BrightLeafDentalClinic #GentleDentalCare #DarbanDentist
+#NewPatientWelcome #DarbanDentalClinic #DentalAnxietyAwareness
+(caption text and CTA unchanged — only the two most generic tags were
+swapped for location-specific ones, per the Review Agent's actual
+note: "swap in at least one location-specific tag.")
+
+**Review Agent re-review:**
+**Score for this revision: pass** — resolves the flagged gap cleanly,
+no new issues introduced, on-tone, correctly scoped (didn't touch
+anything else). Overall campaign score remains 7.5/10 until the other
+still-open items (client business specifics beyond city, stock photo
+placeholders, WhatsApp opt-in, Email postal address) are separately
+resolved — this correction only closes the hashtag item.
+
+**Handoff to Orchestrator for a fresh Final Delivery Approval:** see
+final-approval-summary-correction-1.md — **Approved, 2026-08-03.**
+Applied to social-drafts.md.

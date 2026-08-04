@@ -20,10 +20,12 @@ Alt text: "Warm, inviting dental clinic reception area."
 **Caption:** New here? Here's the honest version of what your first
 visit looks like — a friendly intake chat, a gentle exam, and a plan
 you actually understand before you leave. No rushing, no jargon. 🦷✨
-**Hashtags:** #BrightLeafDentalClinic #GentleDentalCare #DentalHealth
-#NewPatientWelcome #LocalDentist #DentalAnxietyAwareness (Review Agent
-flagged these as generic — swap in a location-specific tag once
-BrightLeaf's city is known.)
+**Hashtags:** #BrightLeafDentalClinic #GentleDentalCare #DarbanDentist
+#NewPatientWelcome #DarbanDentalClinic #DentalAnxietyAwareness
+(Correction 1, approved 2026-08-03 — swapped #DentalHealth and
+#LocalDentist for location-specific tags now that the client's city,
+Darban, is confirmed. See pipeline-output.md, "Correction 1," and
+final-approval-summary-correction-1.md.)
 **Image:** calm treatment-room photo (Pexels/Pixabay). Alt text: "Calm,
 modern dental treatment room with natural light."
 **Suggested posting time:** Thursday, 12:00 PM.

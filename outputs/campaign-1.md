@@ -86,12 +86,19 @@ ready-to-use status, per final-approval-summary.md's own recommendation.
 
 ## Review Score
 **7.5/10** (QA/Review Agent). Improvement notes: LinkedIn's overclaim
-rewritten; Instagram hashtags still generic, need a location-specific
-tag once BrightLeaf's city is known; no real client-specific business
-details were available in the test brief (flagged, not fabricated);
-visuals passed the licensing check (Unsplash/Pexels/Pixabay, alt text
-present) but use stock placeholders — real BrightLeaf photos
-recommended. Full notes: pipeline-output.md, section 6.
+rewritten; no real client-specific business details were available in
+the test brief beyond the city (flagged, not fabricated); visuals
+passed the licensing check (Unsplash/Pexels/Pixabay, alt text present)
+but use stock placeholders — real BrightLeaf photos recommended. Full
+notes: pipeline-output.md, section 6.
+
+## Correction Log
+- **Correction 1 (2026-08-03, approved):** client confirmed their city
+  (Darban). Content Agent revised the Instagram post's hashtags to two
+  location-specific tags; Review Agent re-reviewed (pass); fresh Final
+  Delivery Approval recorded separately. See pipeline-output.md,
+  "Correction 1," and final-approval-summary-correction-1.md. No other
+  channel affected.
 
 ## Client Message Log
 Full log: outputs/client-message-log/test-brightleaf-dental-clinic/message-log.md

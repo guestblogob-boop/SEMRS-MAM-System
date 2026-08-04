@@ -45,8 +45,16 @@ never publishes on the client's behalf under Draft-Only Handoff, so
 performance data can only come from the client after they publish).
 
 ## Status
-Dry run complete through Workflow Order step 19 (completion message
-sent). Final compiled package: ../campaign-1.md. Delivered 4 of 6
+**Correction 1 complete and approved** (2026-08-03): Instagram hashtags
+updated to reflect the client's confirmed city (Darban). Content Agent
+revised → Review Agent passed it → fresh Final Delivery Approval
+recorded (final-approval-summary-correction-1.md) → applied to
+social-drafts.md and logged in campaign-1.md's new Correction Log →
+client told via the message log (Entries 5–6). Logged as a correction
+to the existing delivery, not a new campaign, per CLAUDE.md's
+Post-publish correction policy. All other channels/content unchanged.
+Prior to this correction, the run was complete through Workflow Order
+step 19 (completion message sent). Final compiled package: ../campaign-1.md. Delivered 4 of 6
 channels (Website/Blog, Facebook, Instagram, LinkedIn); WhatsApp and
 Email remain held back pending real client input (opt-in confirmation;
 mailing address) — the completion message told the client this
