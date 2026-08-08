@@ -10,6 +10,34 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-08
+- Added the "SEMRS Dashboard" standing decision-identity label
+  (CLAUDE.md, Operational Policies) — confirmed by the CEO after being
+  asked whether it fits the append-only audit-trail requirement, and
+  renamed from an initial placeholder ("SEMRS-DB") to match the actual
+  real WordPress user account semrs.com's Application Password
+  credential authenticates as, so the label names a genuine account
+  rather than an arbitrary tag. All dashboard "Decided by"/"Entered
+  by"/"Attempted by" fields (Order, Final Delivery, Budget & Campaign,
+  and Self-Marketing Approval; Channel Draft entry; Publish actions)
+  now default to "SEMRS Dashboard" for both client work and
+  self-marketing work, since the real accountability boundary is
+  control of the authenticated dashboard session itself, not the
+  free-text name. A real human still has to click the decision/action
+  button — nothing here simulates or auto-grants a CEO gate.
+- Established the standing content-production template applied to
+  semrs.com's own blog posts going forward: title as H1, an SEO title
+  sized to Rank Math's ~50-60 character guidance with the focus
+  keyword up front, a header image after the intro, a second image
+  after the first H2, a third image at the ~500-600 word mark (mixing
+  licensed stock sourcing with free-tier AI generation per
+  agents/visual-agent.md), and both internal links (to real existing
+  semrs.com pages) and external links (to the real sources any cited
+  data comes from) with descriptive anchor text. Applied for the first
+  time to the two self-marketing posts "Euro Market SEO: Why One
+  Campaign for 20 Countries Fails" and "Guest Posting Service: What to
+  Look For (2026 Guide)."
+
 ## 2026-08-07
 - Made the front-office division of labor explicit and permanent in
   CLAUDE.md's Agent Roles: the Client Communication Agent works

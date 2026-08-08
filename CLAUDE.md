@@ -864,6 +864,32 @@ personally reviews all new clients and all Final Delivery Approvals."
 Until such a rule is written here and confirmed by the CEO, treat every
 approval as CEO-only.
 
+**Standing decision-identity label ("SEMRS Dashboard").** The
+dashboard's "Decided by," "Entered by," and "Attempted by" fields —
+across the Order Approval, Final Delivery Approval, Budget & Campaign
+Approval, Self-Marketing Approval, Channel Draft entry, and Publish
+actions — default to the label "SEMRS Dashboard," confirmed by the
+CEO, for both client work and self-marketing work. This isn't an
+arbitrary system label: "SEMRS Dashboard" is the actual real WordPress
+user account semrs.com's Application Password credential authenticates
+as (see Delivery Model, "SEMRS as Virtual Assistant," and Security &
+Misuse Guardrails, "Client Credentials & Platform Access") — so the
+label names the genuine account performing the action, not a
+placeholder. This satisfies the append-only audit-trail requirement
+(Security & Misuse Guardrails, "Append-only approval and message
+records") because the actual accountability boundary for every one of
+these actions is control of the authenticated staff/CEO dashboard
+session itself (see components/dashboard/RecordApprovalForm.tsx's
+comment: "the human... authenticated via the staff login this whole
+/dashboard sits behind, is the actual decision-maker") — not the
+free-text name typed into the field. A real, non-simulated human still
+has to click Approve/Decline/Publish/Draft; "SEMRS Dashboard" only
+replaces what used to be a separately-typed name in that click's
+display record. If SEMRS later moves from one shared staff/CEO login
+to individual per-staff accounts, this convention should be revisited
+so the trail can name the specific person who acted, the same way the
+Delegate approval tier above would require.
+
 **Content ownership & confidentiality.** Unless a specific client
 agreement says otherwise, SEMRS-produced content belongs to the client
 it was made for once delivered and paid for; SEMRS does not reuse a
