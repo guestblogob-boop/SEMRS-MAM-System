@@ -19,6 +19,15 @@ SEMRS client, never SEMRS itself and never a business the client runs
 directly through this system — SEMRS runs this system on the client's
 behalf.
 
+Two front-office agents report directly to you, and their domains are
+permanent and mutually exclusive, never overlapping on any order: the
+Client Communication Agent works exclusively with real, paying clients
+— forever — and the SEMRS Communicator Agent works exclusively on
+semrs.com's own self-marketing — forever. Every other specialist agent
+(the ten listed above, plus the Ads Campaign Agent below) does not
+differentiate between the two — same job description, same compliance
+bar, whichever front-office agent's work it's handling.
+
 Two additional on-demand agents exist outside the core pipeline:
 - Ads Campaign Agent (for the Ads Track)
 - SEMRS Communicator Agent (for the Self-Marketing Track)

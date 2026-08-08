@@ -202,9 +202,11 @@ capability, not something to build from scratch.
   document, spreadsheet, or slide deck.
 - **Visual & Video Content Agent** — in addition to images/video/icons/
   GIFs/animation notes (see Security & Misuse Guardrails, the Visual &
-  Video Content Agent licensed-sources rule): diagrams, charts,
-  infographics, cartoon/illustration-style graphics, and 2D/3D object
-  graphics — always from the same licensed sources already required.
+  Video Content Agent licensed-sources-and-generation rule): diagrams,
+  charts, infographics, cartoon/illustration-style graphics, and 2D/3D
+  object graphics — either from the same licensed sources already
+  required, or generated with a free-tier AI tool using SEMRS's own
+  prompt-engineering toolkit (agents/visual-agent.md).
 - **Website/Blog Draft Agent** — beyond blog posts: WordPress-ready
   page drafts for Home, Landing Pages, Services pages, and Pricing
   tables, formatted for WordPress's block editor conventions.
@@ -349,21 +351,37 @@ at all.
 - **No personal data collection.** Never collect or store personal data
   about identifiable individuals. Only public, aggregate
   market/audience signals are allowed as research input.
-- **Visual & Video Content Agent — licensed sources only.** The Visual
-  & Video Content Agent only suggests images, video clips, icons, GIFs,
-  and animation/effect notes from properly licensed sources
-  (royalty-free or Creative Commons stock image/video sites, licensed
-  icon sets, GIPHY's embeddable GIFs, or a properly licensed AI
-  image/video generation tool). Never suggest scraping an image or
-  video from a random website or a search result. Never suggest
-  copyrighted characters, branded IP, celebrity or other real
-  identifiable people's photos/footage, or a screenshot/clip of
-  someone else's copyrighted content — flag such a request instead of
-  fulfilling it, even if the client asks for it. Animation/effect
-  suggestions stay at the creative-brief level (described transitions,
-  motion notes) — this system doesn't do full video editing/rendering.
-  Always include alt text with every suggested image and a brief
-  description with every suggested video/GIF/animation.
+- **Visual & Video Content Agent — licensed sources, and free-tier AI
+  generation, only.** The Visual & Video Content Agent sources images,
+  video clips, icons, GIFs, and animation/effect notes only from
+  properly licensed sources (royalty-free or Creative Commons stock
+  image/video sites, licensed icon sets, GIPHY's embeddable GIFs), OR
+  generates them directly with a free-tier AI image/video/diagram
+  generation tool (e.g. the free tier of ChatGPT, Claude, Gemini, Grok,
+  or an equivalent) — never a paid tier or paid generation credits by
+  default, same as every other tool in this system (see Hard
+  Constraint, above; a client may fund a paid tier themselves under
+  that same narrow exception). When generating, the agent builds its
+  own prompt using SEMRS's internal prompt-engineering toolkit (see
+  agents/visual-agent.md, "Prompt-Engineering Toolkit") to get a
+  sharper, more on-brief result — this toolkit shapes the *prompt*, it
+  is not a bypass of any guardrail below. Never suggest OR generate
+  scraping an image or video from a random website or search result.
+  Never suggest or generate copyrighted characters, branded IP,
+  celebrity or other real identifiable people's photos/footage/likeness,
+  or a screenshot/clip of someone else's copyrighted content — flag
+  such a request instead of fulfilling it, even if the client asks for
+  it, and this applies with equal force to AI-generated output, which
+  can inadvertently produce a recognizable likeness or a
+  trained-on-copyrighted-style result if prompted carelessly. Any data
+  visualization (chart, graph, trend line, table) must plot only real,
+  provided data — never a fabricated number, matching this project's
+  standing rule against invented statistics everywhere else. Animation/
+  effect suggestions stay at the creative-brief level (described
+  transitions, motion notes) — this system doesn't do full video
+  editing/rendering. Always include alt text with every image and a
+  brief description with every video/GIF/animation, sourced or
+  generated alike.
 - **Ad account access via official agency mechanisms only.** Ad account
   access is only ever granted through a platform's own official
   agency/manager/partner access mechanism (Google Ads Manager Account,
@@ -439,6 +457,26 @@ at all.
   between clients.
 
 ## Agent Roles
+Two front-office agents report directly to the Orchestrator, and their
+domains are permanent and mutually exclusive — neither ever crosses
+into the other's work, on any order, ever. The Client Communication
+Agent works exclusively with SEMRS's paying clients — every client,
+every order, forever — and never touches semrs.com's own marketing or
+speaks on SEMRS's own behalf. The SEMRS Communicator Agent works
+exclusively on semrs.com's own self-marketing (the whole SEMRS
+business, including its own linked social platforms) — forever — and
+never takes on client work or communicates with a client directly.
+Every other agent below (Research, SEO & GEO, Strategy, Content, Visual
+& Video Content, Review, the four Draft agents, Analytics, and the two
+on-demand agents) does not differentiate between the two: the exact
+same job description and the exact same quality/compliance bar apply
+identically whether the work arrived through a real client order (via
+the Client Communication Agent) or through the Self-Marketing Track's
+weekly cycle (via the SEMRS Communicator Agent, "with SEMRS as the
+client" — see Self-Marketing Track, below). Every order — client or
+self-marketing — still moves through the same fixed chain of work (see
+Workflow Order, below) end to end; nothing skips a step or a CEO
+approval gate because of which one it is.
 - Orchestrator: coordinates all agents, prepares each CEO approval
   package that applies to the engagement (order, final delivery, and,
   where relevant, budget/self-marketing), ensures the SEO and Content agents operate within the
@@ -463,11 +501,17 @@ at all.
 - Content Agent: writes channel-matched content for every channel in
   scope: blog post, per-platform social content, WhatsApp message,
   email — also operating under the Orchestrator's compliance oversight.
-- Visual & Video Content Agent: suggests images, icons, and short animations/
-  GIFs to accompany the approved text for each channel — always from
-  sources SEMRS has the rights to use (see Security & Misuse
-  Guardrails, "Visual & Video Content Agent — licensed sources only").
-  Never writes or changes any text content.
+- Visual & Video Content Agent: sources AND generates images, icons,
+  GIFs, short animations, and data visualizations (charts, graphs,
+  trend lines, tables) to accompany the approved text for each channel
+  — either from properly licensed free/CC stock sources, or generated
+  directly with a free-tier AI image/video model, using SEMRS's own
+  prompt-engineering toolkit to construct the generation prompt (see
+  agents/visual-agent.md, "Prompt-Engineering Toolkit"). Same licensing
+  and no-real-people/no-copyrighted-IP standard applies to generated
+  output as to sourced media (see Security & Misuse Guardrails, "Visual
+  & Video Content Agent — licensed sources only"). Never writes or
+  changes any text content.
 - Review Agent: SEMRS's internal quality gate — scores and improves all
   channel content AND checks every suggested visual before anything
   goes to the CEO for final delivery approval.
