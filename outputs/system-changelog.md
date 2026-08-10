@@ -10,6 +10,32 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-09
+- Added Google Business Profile to Channels Supported (now twelve
+  channels, not eleven). Found, not invented: SEMRS-Dashboard's pricing
+  catalog already sells it ("gmb," part of the Bundle Builder's organic
+  channel tiers) with no workflow-channel equivalent — a real mismatch
+  between what's sold and what the agent pipeline can be scoped to,
+  closed rather than left silently inconsistent.
+- SEMRS-Dashboard: built real live-publish integrations for Instagram
+  (Graph API container-then-publish flow, same Meta Business Manager
+  access mechanism as Facebook) and LinkedIn (UGC Posts API, LinkedIn
+  Developer Portal OAuth token). Both join Website/Blog and Facebook as
+  channels with genuine, working publish actions — Twitter/X, TikTok,
+  Reddit, Pinterest, YouTube, and Google Business Profile still have
+  real walkthroughs and credential schemas but no live-publish code
+  yet, on purpose.
+- SEMRS-Dashboard: the Client Portal now has a real "Connect Your
+  Accounts" section for Virtual-Assistant clients, showing each
+  in-scope channel's real access walkthrough directly to the client
+  (not just buried in the internal staff dashboard) and letting the
+  client paste their own access credential into an encrypted form
+  themselves — never emailed/WhatsApped as plaintext for staff to
+  paste in. Found the same gap already existed for the Ads Client Help
+  guide (prompts/client-help-meta-ads-integration.md) — written to be
+  shown to the client but never actually wired into the app; not fixed
+  in this pass, flagged for later.
+
 ## 2026-08-08
 - Added the "SEMRS Dashboard" standing decision-identity label
   (CLAUDE.md, Operational Policies) — confirmed by the CEO after being

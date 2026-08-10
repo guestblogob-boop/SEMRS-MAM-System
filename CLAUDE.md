@@ -186,9 +186,13 @@ between the raw channel and outputs/client-message-log/ manually.
 
 ## Channels Supported
 Website/Blog, Facebook, Instagram, Twitter/X, TikTok, Reddit, Pinterest,
-LinkedIn, YouTube, WhatsApp, Email. A given client brief specifies which
-of these are actually in scope for that engagement — never assume all
-eleven apply.
+LinkedIn, YouTube, Google Business Profile, WhatsApp, Email. A given
+client brief specifies which of these are actually in scope for that
+engagement — never assume all twelve apply. Google Business Profile
+was added after the pricing catalog was found to already sell it
+(SEMRS-Dashboard's Bundle Builder) with no workflow-channel equivalent
+— a real gap, not a hypothetical one, closed rather than left
+silently mismatched.
 
 ## Deliverable Formats
 Beyond channel-native posts, this system can produce a wider range of
