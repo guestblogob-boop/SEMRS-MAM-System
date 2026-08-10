@@ -7,10 +7,10 @@ Never shown to a client, and never included in anything compiled for a
 client — this file exists purely for SEMRS's own internal structure.
 
 This is a different grouping than CLAUDE.md's existing "Departmental
-Chart" (Organizational Chart section) — that one groups by 9 informal
-work areas for quick reference; this is the formal 15-agent,
-6-department structure: the CEO at the top, the Orchestrator and
-Client Communication Agent as the front office beneath the CEO, six
+Chart" (Organizational Chart section) — that one groups by 10 informal
+work areas for quick reference; this is the formal 17-agent,
+7-department structure: the CEO at the top, the Orchestrator and
+Client Communication Agent as the front office beneath the CEO, seven
 departments beneath the Orchestrator (each showing which agents sit in
 it), and the Analytics Agent reporting directly to the Orchestrator
 rather than sitting inside any one department.
@@ -57,6 +57,12 @@ flowchart TD
         ADS["Ads Campaign Agent<br/>(ads-scoped orders only)"]
     end
 
+    subgraph LG["Lead Generation and Sales"]
+        direction TB
+        LC["Lead Capture Agent<br/>(Lead Generation orders only)"]
+        QS["Qualification + AI Sales Agent<br/>(AI-led WhatsApp opt-in only)"]
+    end
+
     subgraph SM["Self-Marketing"]
         SC["SEMRS Communicator Agent<br/>(semrs.com only, own approval track)"]
     end
@@ -68,6 +74,7 @@ flowchart TD
     ORCH --> QC
     ORCH --> DIST
     ORCH --> PM
+    ORCH --> LG
     ORCH --> SM
     ORCH --> AN
 ```
@@ -75,17 +82,27 @@ flowchart TD
 ## Notes
 - **Front office (reports to CEO directly):** Orchestrator, Client
   Communication Agent.
-- **Six departments (report to Orchestrator):** Research and Strategy
+- **Seven departments (report to Orchestrator):** Research and Strategy
   (Research, SEO & GEO, Strategy); Creative (Content, Visual & Video
   Content); Quality and Compliance (Review); Distribution (Website/Blog
   Draft, Social Content Draft, WhatsApp Draft, Email Draft); Paid Media
-  (Ads Campaign — ads-scoped orders only); Self-Marketing (SEMRS
+  (Ads Campaign — ads-scoped orders only); Lead Generation and Sales
+  (Lead Capture Agent, Qualification + AI Sales Agent — Lead Generation
+  orders only, with the AI Sales Agent further gated on a client's
+  separate AI-led-WhatsApp-sales opt-in); Self-Marketing (SEMRS
   Communicator — semrs.com only, its own CEO approval track, never
   client work).
 - **Analytics Agent** reports directly to the Orchestrator rather than
   sitting in any one department, since it reports across every channel
   a campaign actually used, not one department's output specifically.
-- All 15 agents are accounted for exactly once. Ads Campaign and SEMRS
-  Communicator remain conditional/on-demand agents (CLAUDE.md,
-  Context) — shown here for organizational completeness, not implying
-  they're active on every order.
+- **Lead Capture Agent** runs for any Lead Generation order once
+  content/ads are live; the **Qualification + AI Sales Agent** only
+  runs on top of that for a client who has separately opted in to
+  AI-led WhatsApp sales conversations (see CLAUDE.md, Lead Generation
+  Track, and prompts/client-brief.md, "Lead Generation Details") — a
+  Lead Generation order with that opt-in left unchecked still gets
+  Lead Capture Agent coverage, just no AI-led outreach.
+- All 17 agents are accounted for exactly once. Ads Campaign, the Lead
+  Generation pair, and SEMRS Communicator remain conditional/on-demand
+  agents (CLAUDE.md, Context) — shown here for organizational
+  completeness, not implying they're active on every order.

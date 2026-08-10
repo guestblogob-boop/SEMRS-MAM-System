@@ -690,6 +690,12 @@ flowchart TD
 
     ORCH --> AN["Analytics Agent"]
 
+    subgraph LEADGEN["Lead Generation Track (Lead Generation orders only)"]
+        direction LR
+        LC["Lead Capture Agent"] --> QS["Qualification + AI Sales Agent<br/>(AI-led WhatsApp opt-in only)"]
+    end
+    ORCH --> LEADGEN
+
     subgraph COND["Conditional / Separate-Track Agents"]
         direction LR
         ADS["Ads Campaign Agent<br/>(ads-scoped orders only)"]
@@ -740,6 +746,11 @@ flowchart LR
     end
     subgraph PM["Paid Media (ads-scoped orders only)"]
         ADS2["Ads Campaign Agent"]
+    end
+    subgraph LG["Lead Generation (Lead Generation orders only)"]
+        direction TB
+        LC2["Lead Capture Agent"]
+        QS2["Qualification + AI Sales Agent"]
     end
     subgraph SM["Self-Marketing (semrs.com only)"]
         SC2["SEMRS Communicator Agent"]

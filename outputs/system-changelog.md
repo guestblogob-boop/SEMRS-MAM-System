@@ -10,6 +10,33 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-10
+- Added Lead Generation as a full track: two new agents (Lead Capture
+  Agent, Qualification + AI Sales Agent — agents/lead-capture-agent.md,
+  agents/qualification-sales-agent.md), a new Lead Generation Track in
+  CLAUDE.md (ongoing/reactive once channels are live, not part of the
+  one-time drafting pipeline), Lead Gen Integration duties added to
+  Content, Ads Campaign, and Analytics agents, new Security & Misuse
+  Guardrails (lead PII as a narrow exception to "no personal data
+  collection," webhook signature verification, human-in-the-loop for
+  binding commitments, escalation audit trail), a client-funded
+  exception for real WhatsApp Business API costs (Hard Constraint),
+  and new client-brief fields (qualification criteria, brand voice for
+  AI sales, escalation rules, a separate AI-led-sales opt-in distinct
+  from the general Virtual Assistant path). Org chart count moves from
+  15 agents/6 departments to 17 agents/7 departments (docs/org-chart.md
+  and both CLAUDE.md Mermaid diagrams updated to match). No new CEO
+  approval gate introduced — Lead Generation is authorized by the
+  existing Order Approval Checkpoint plus the client's own explicit
+  opt-in fields, the same pattern already used for the Virtual
+  Assistant delivery path.
+- Not adopted from the source spec this was built from: a tiered SaaS
+  subscription/billing model (Starter/Growth/Pro/Agency, Stripe
+  self-serve) — this is a business-model decision distinct from the
+  technical addition above, and conflicts with this system's current
+  per-order Bundle Builder pricing; flagged to the CEO rather than
+  silently adopted.
+
 ## 2026-08-09
 - Added Google Business Profile to Channels Supported (now twelve
   channels, not eleven). Found, not invented: SEMRS-Dashboard's pricing
