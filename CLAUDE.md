@@ -10,7 +10,8 @@ single system SEMRS uses to deliver SEO, SEM (paid ads), GEO/AEM
 (AI-answer-engine visibility), link building, guest posting, content
 writing, copywriting, authority-building work (research, SEO,
 strategy, content, visuals, website, social, WhatsApp, email, ads,
-reporting), and AI agent services on behalf of its clients' businesses,
+reporting), lead generation, and AI agent services on behalf of its
+clients' businesses,
 while keeping the client clearly informed at every stage. "AI agent
 services" is recognized as an orderable service category (see
 prompts/client-brief.md) but does not yet have a dedicated specialist
@@ -311,6 +312,20 @@ Assistant path, SEMRS does not need to hold or manage credentials for
 any client's Facebook, Instagram, WhatsApp, email-sending tool, or CMS
 at all.
 
+**WhatsApp Business API costs (Lead Generation only).** Real,
+per-conversation WhatsApp Business API usage — needed for the
+Qualification + AI Sales Agent to message leads at any real volume —
+carries its own cost from Meta, separate from and in addition to any
+Claude API usage. This is not a "free tool" in the sense the rest of
+this Hard Constraint requires, so it follows the exact same
+already-established exception as any other paid tool: only used for a
+client who has explicitly opted in to Lead Generation with an AI-led
+sales agent (see prompts/client-brief.md, "Lead Generation Details")
+and who understands and funds that real cost themselves, the same
+pattern as the Paid Media Model's ad spend, above — SEMRS never holds
+or moves that payment either. Absent that explicit, client-funded
+opt-in, no WhatsApp Business API usage happens for that client.
+
 ## Security & Misuse Guardrails
 - **Order intake only from the defined channel.** This system only acts
   on orders received through the defined SEMRS intake channel. No agent
@@ -459,6 +474,43 @@ at all.
   once, keep each one's brief, drafts, approvals, and message log fully
   separated (e.g. one subfolder per client order) so nothing crosses
   between clients.
+- **Lead data is the one deliberate exception to "no personal data
+  collection," and only within narrow limits.** The "No personal data
+  collection" rule above governs RESEARCH input (market/audience
+  signals must stay public and aggregate). A lead's name, phone number,
+  or email, submitted voluntarily through a real, in-scope capture
+  point (a form, a click-to-chat button, a platform lead form), is
+  different — collecting it is the entire point of the Lead Generation
+  service. Even so: collect only what the client's actual capture
+  form/CTA asked for, never more; encrypt lead and conversation data at
+  rest; scope access strictly by client (one client's dashboard user
+  must never see another client's leads); and never repurpose a lead's
+  data for anything beyond qualifying and engaging that lead for the
+  client who captured it — never resold, never reused across clients,
+  never used to enrich SEMRS's own marketing.
+- **Lead-capture webhook security.** Every inbound lead-capture
+  endpoint (a platform's lead-ads webhook, a website form submission, a
+  WhatsApp inbound message) must validate the sender's signature before
+  trusting the payload, so a spoofed request can't inject a fake lead
+  or a fake message into a real conversation. Rate-limit every
+  public-facing capture endpoint to prevent flooding the leads record
+  with junk. The Lead Capture Agent rejects and flags a malformed or
+  unverifiable submission rather than silently recording it (see
+  agents/lead-capture-agent.md).
+- **Human-in-the-loop safety net for AI-led sales conversations.** The
+  Qualification + AI Sales Agent is never the only step before a
+  binding commitment. It may score a lead and book a meeting, but
+  pricing, contracts, or any other commitment a human should actually
+  confirm always escalates to a human rep instead — the same principle
+  as every CEO approval gate elsewhere in this file: nothing consequential
+  is simulated, assumed, or auto-granted by an agent (see
+  agents/qualification-sales-agent.md, Responsibilities and
+  Constraints).
+- **Escalation audit trail.** Every AI→human handoff on a lead
+  conversation is logged with its reason, following the same
+  append-only rule as approval records and the client message log
+  (see "Append-only approval and message records," above) — so a
+  mishandled conversation is always traceable, never silently dropped.
 
 ## Agent Roles
 Two front-office agents report directly to the Orchestrator, and their
@@ -471,8 +523,9 @@ exclusively on semrs.com's own self-marketing (the whole SEMRS
 business, including its own linked social platforms) — forever — and
 never takes on client work or communicates with a client directly.
 Every other agent below (Research, SEO & GEO, Strategy, Content, Visual
-& Video Content, Review, the four Draft agents, Analytics, and the two
-on-demand agents) does not differentiate between the two: the exact
+& Video Content, Review, the four Draft agents, Analytics, and the
+on-demand agents — Ads Campaign, and the Lead Capture / Qualification +
+AI Sales pair) does not differentiate between the two: the exact
 same job description and the exact same quality/compliance bar apply
 identically whether the work arrived through a real client order (via
 the Client Communication Agent) or through the Self-Marketing Track's
@@ -546,6 +599,19 @@ approval gate because of which one it is.
   campaign and compiles ongoing analysis reports. Never handles the
   client's payment method; SEMRS's fee is always a separate, visible
   line item, never a silent deduction.
+- Lead Capture Agent (only for orders that include Lead Generation):
+  captures leads produced by the client's live content and ads into
+  one attributed record, tagged by the exact piece/campaign that
+  produced it. Never talks to a lead, never qualifies one — its job
+  ends the moment a lead is correctly recorded (see
+  agents/lead-capture-agent.md).
+- Qualification + AI Sales Agent (only for orders that include Lead
+  Generation, AND only for a client who has separately opted in to
+  AI-led WhatsApp sales conversations — see prompts/client-brief.md,
+  "Lead Generation Details"): diagnoses each captured lead's need,
+  scores it, and either books a meeting or escalates to a human rep
+  with a short summary. Never finalizes pricing, a contract, or any
+  other binding commitment itself (see agents/qualification-sales-agent.md).
 - SEMRS Communicator Agent (SEMRS's own marketing, never client work):
   plans and proposes semrs.com's weekly content calendar, link
   building/guest posting, monthly site audits, new pages/subdomains,
@@ -732,6 +798,55 @@ G. The Ads Agent pulls real performance data through that same granted
    spend, performance, and SEMRS's commission calculation for the
    period — stored the same way other campaign records are kept.
 
+## Lead Generation Track (only for orders that include Lead Generation — runs continuously once the client's channels/campaigns are actually live, alongside the standard sequence above)
+Unlike the Core Content Pipeline (a one-time, per-order drafting
+sequence) and the Ads Track (one campaign launch/approval cycle), this
+track is ongoing and reactive: it starts once content/ads are live and
+keeps running for as long as leads keep arriving. It does not
+introduce a new CEO approval gate — enabling Lead Generation for a
+client is authorized by the same CEO Order Approval Checkpoint (gate
+1) that authorizes everything else on that order, combined with the
+client's own explicit opt-in fields on the brief (see
+prompts/client-brief.md, "Lead Generation Details").
+A. Before any lead-capture CTA (a form, a WhatsApp click-to-chat link,
+   a platform-native ad lead form) goes live, the Lead Capture Agent
+   confirms the Content Agent's or Ads Campaign Agent's tracking tag is
+   in place (see each agent's "Lead Gen Integration" duties) — a CTA
+   never publishes without one.
+B. Once a channel/campaign is live (i.e. after CEO Final Delivery
+   Approval for organic content, or after CEO Budget & Campaign
+   Approval + launch for ads — this track never starts earlier than
+   those existing gates allow), the Lead Capture Agent ingests incoming
+   leads from every in-scope source, tagging each with its real source
+   and originating content/campaign.
+C. If, and only if, this client has separately opted in to AI-led
+   WhatsApp sales conversations (see prompts/client-brief.md — this is
+   a stricter, separate opt-in from the general Virtual Assistant
+   delivery path), the Qualification + AI Sales Agent engages each new
+   lead: diagnosing need, scoring hot/warm/cold against this client's
+   own qualification criteria, and either booking a meeting or
+   escalating to a human rep with a short summary.
+D. If a client has NOT opted in to AI-led sales conversations, captured
+   leads still get recorded and attributed (step B) — they are simply
+   handed to the client's own team to qualify and engage, the same way
+   organic draft content is handed to the client to publish under the
+   default Draft-Only path.
+E. Every WhatsApp message the Qualification + AI Sales Agent sends
+   still follows the full Email/WhatsApp compliance requirements
+   (Security & Misuse Guardrails, below) — a documented, per-lead
+   opt-in, the 24-hour free-form window or a pre-approved template, and
+   immediate honoring of any opt-out. This applies with no exception
+   for AI-led messages.
+F. The AI agent never finalizes pricing, a contract, or any other
+   binding commitment — `book_meeting` and `escalate_to_human` exist
+   specifically so a human confirms anything binding (see Security &
+   Misuse Guardrails, "Human-in-the-loop safety net for AI-led sales
+   conversations").
+G. The Analytics Agent's full-funnel reporting (see its "Lead Gen
+   Integration" duty) draws on this track's records the same way it
+   draws on client-shared data for organic channels and the Ads
+   Agent's pulled data for paid channels.
+
 ## Self-Marketing Track (SEMRS's own marketing for semrs.com — a recurring weekly cycle, never client work, runs independently of any client order)
 **Free-only, standing rule (not just a testing-phase constraint).**
 Every part of this track — research, SEO & GEO, strategy, content,
@@ -905,7 +1020,11 @@ silently.
 message log for as long as the engagement is active, plus a default of
 12 months after final delivery, then archive or delete on request —
 treat this 12-month figure as a starting default for SEMRS to confirm or
-change, not a fixed legal requirement.
+change, not a fixed legal requirement. The same default applies to lead
+records and lead conversation history where Lead Generation is in
+scope, including leads that never convert — a lead that goes cold is
+not exempt from this policy just because it never became a client
+outcome.
 
 **Post-publish correction.** If a mistake is discovered after something
 has already gone live (wrong content, a platform glitch, anything that
@@ -961,6 +1080,8 @@ semrs-multi-agent-marketing/
     email-agent.md                    → email draft-preparation job description
     analytics-agent.md                → reporting job description
     ads-agent.md                      → paid media (ads) job description — only for ads-scoped orders
+    lead-capture-agent.md             → lead intake/attribution job description — only for Lead Generation orders
+    qualification-sales-agent.md      → AI qualification & sales conversation job description — only for Lead Generation orders with AI-led WhatsApp sales opted in
     semrs-communicator-agent.md       → SEMRS's own self-marketing job description (semrs.com, never client work)
   prompts/
     client-brief.md                 → the shared input all agents read from
@@ -975,7 +1096,7 @@ semrs-multi-agent-marketing/
     client-message-log/             → per-order message logs (see README.md there for the convention); (planned) per-order subfolders — nothing fabricated ahead of a real order
     system-changelog.md             → CEO-only internal record of system changes (new agents, workflow edits) — never client-visible
   docs/
-    org-chart.md                    → the formal 15-agent, 6-department organizational chart (Mermaid diagram) — CEO-only reference, shown in SEMRS Dashboard's Admin/System Settings view; never client-visible
+    org-chart.md                    → the formal 17-agent, 7-department organizational chart (Mermaid diagram) — CEO-only reference, shown in SEMRS Dashboard's Admin/System Settings view; never client-visible
   sample-request.md                 → one fictional example client order, used to trace the system end-to-end
   sample-request-ads.md             → a second fictional example client order (ads-scoped), used to trace the Ads Track end-to-end
 ```

@@ -18,6 +18,7 @@ Select all that apply:
 - [ ] Content Writing
 - [ ] Copywriting
 - [ ] Authority Building
+- [ ] Lead Generation
 - [ ] AI Agent Services
 
 ## Target Audience
@@ -95,4 +96,47 @@ the standard rate unless the CEO has negotiated something different:
 ## Content Ownership/Confidentiality Notes
 Any exceptions to SEMRS's standard policy (see CLAUDE.md, Operational
 Policies — "Content ownership & confidentiality"). Leave blank if none.
+
+
+## Lead Generation Details
+Only fill in if Lead Generation was selected above (see CLAUDE.md,
+Lead Generation Track, and agents/lead-capture-agent.md /
+agents/qualification-sales-agent.md). Leave entirely blank otherwise.
+
+**Lead capture channels in scope** — which in-scope channels above
+will actually carry lead-capture CTAs (website form, WhatsApp
+click-to-chat, platform-native ad lead forms):
+
+
+**Qualification Criteria** — the real questions/signals that make a
+lead hot, warm, or cold for this specific client's business. Must come
+from the actual client meeting, not invented:
+
+
+**Brand Voice/Tone for AI Sales Conversations** — how this client
+wants an AI-led WhatsApp conversation to sound. May match the general
+Tone field above, or be more specific to sales conversations:
+
+
+**Escalation Rules** — when a lead should be handed to a human rep
+instead of continuing with the AI agent, and who that human rep is:
+
+
+**AI-Led WhatsApp Sales Agent — Enabled?**
+Select one. This is a separate, stricter opt-in than the general
+"SEMRS as Virtual Assistant" delivery path above — selecting Virtual
+Assistant does NOT by itself authorize an AI agent to hold live sales
+conversations with this client's leads (see
+agents/qualification-sales-agent.md, Constraints):
+- [ ] Yes — client has been briefed on what this means and explicitly
+      requested it
+- [ ] No — leads are captured and recorded, but qualification/outreach
+      is handled by the client's own team
+
+Note: even when enabled here, the Qualification + AI Sales Agent still
+requires a separate, documented WhatsApp opt-in from each individual
+lead before messaging them (see CLAUDE.md, Security & Misuse
+Guardrails, "Email/WhatsApp compliance requirements") — this checkbox
+authorizes SEMRS to run the agent for this client; it does not
+substitute for a lead's own consent.
 

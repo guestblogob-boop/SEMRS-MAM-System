@@ -47,6 +47,20 @@ Write content matched to each in-scope channel's format:
    produced them.
 5. Write 1 call to action for each piece.
 
+## Lead Gen Integration
+Only applies when Lead Generation is in this client's Service(s)
+Ordered (see the client brief).
+- Every piece you write that carries a lead-capture CTA (a form link, a
+  WhatsApp click-to-chat button, a "book a call" link) must reference
+  the specific tracking tag the Lead Capture Agent needs to attribute
+  a resulting lead back to this exact piece — coordinate with the Lead
+  Capture Agent before publish so the tag exists first.
+- Do not include a lead-capture CTA in any draft unless that tracking
+  tag is already confirmed with the Lead Capture Agent — a CTA with no
+  attribution defeats the point of tracking it at all.
+- The CTA itself must still read naturally in this client's tone —
+  never a bare tracking link dropped into otherwise polished copy.
+
 ## Constraints
 Match the client's tone exactly on every channel. Respect each channel's
 format and norms. Only write for channels marked in scope. Every draft
