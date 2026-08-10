@@ -142,12 +142,29 @@ unlike organic channels, SEMRS does have a live, read-access connection
 here, because the client explicitly granted it through the platform's
 own system.
 
-**SEMRS Business ID (Meta):** `1086663049463404` — the ID clients enter
-when granting Meta Business Manager partner access (see
-prompts/client-help-meta-ads-integration.md for the full client-facing
-walkthrough, referenced from agents/ads-agent.md, Process step 8). The
-equivalent ID for any other ad platform in scope should be added here
-once SEMRS has one.
+**Two ways to establish access — Client Grants, or SMMA Requests
+(both official, no raw password either way).** Removed 2026-08-11: this
+document no longer hardcodes and publishes SEMRS's own Business/Manager
+ID inline (the previous "SEMRS Business ID (Meta): 1086663049463404"
+line) — a static published ID can go stale, and every platform's own
+official partner-request mechanism makes it unnecessary to expose it at
+all for one of the two paths. Instead:
+- **Client Grants Access** (client-initiated) — the client adds SEMRS
+  as a partner on their own account. The client asks SEMRS staff
+  directly (dashboard or account manager) for SEMRS's current ID for
+  that specific platform at the time they need it, rather than reading
+  a number baked into a document.
+- **SMMA Requests Access** (agency-initiated) — SEMRS staff instead
+  sends a formal partner request FROM SEMRS's own account TO the
+  client's, using the client's account identifier (their Page/Business/
+  Handle ID) — the client only has to approve an incoming notification,
+  never look anything up. This is the newer, usually-easier path for
+  less technical clients.
+Both paths are documented per platform in
+prompts/client-help-meta-ads-integration.md (Meta) and, in
+SEMRS-Dashboard, lib/adPlatformHelp.ts (ads platforms) and
+lib/directPublishHelp.ts (organic/social channels) — see
+agents/ads-agent.md, Process step 8.
 
 **Invoicing.** SEMRS's commission is invoiced to the client through the
 SEMRS Dashboard's Invoice section (target dashboard functionality, not

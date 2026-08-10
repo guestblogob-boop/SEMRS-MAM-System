@@ -33,8 +33,11 @@ this client's Budget & Campaign Approval, not a default or minimum.
 1. Left menu: click Partners
 2. Click Add → "Give a partner access to your assets"
 3. It will ask for Partner Business ID
-4. Enter SEMRS Business ID: `1086663049463404`
+4. Ask your SEMRS account manager for our current Business ID and enter it here
 5. Click Next
+
+**Prefer not to look anything up?** Skip to Part C below — SEMRS can send
+you the request instead, and you just approve it.
 
 **Step 3 — Select what to share**
 - Ad Accounts: select your Ad Account → give access: Manage Campaigns,
@@ -74,6 +77,24 @@ this client's Budget & Campaign Approval, not a default or minimum.
 
 **Step 4 — Now give SEMRS access.** Follow Part A, Steps 1–5, above.
 
+## Part C: Ask SEMRS to Request Access Instead (no ID to look up)
+
+Prefer not to hunt down a Business ID yourself? SEMRS can send you the
+request instead — you just approve it.
+
+1. Tell your SEMRS account manager your Business name or Facebook Page
+   name/ID (found on your Page's About section, or in Business
+   Settings).
+2. SEMRS staff opens our own Meta Business Settings → Partners → "Ask a
+   partner to assign assets," and sends the request to your Business/
+   Page using what you gave us.
+3. You'll see the incoming request in your own Business Settings →
+   Requests — approve it there, choosing exactly which assets (Ad
+   Account, Page, Instagram, Pixel) to share.
+4. Done — same result as Part A, just no ID for you to type in.
+5. Remove SEMRS's access anytime: Business Settings → Partners →
+   Remove — same as Part A.
+
 ## After You Grant Access — What Happens Next?
 1. You keep control of your budget. The money stays in **your** Meta
    account — Meta bills **your** card, never SEMRS.
@@ -102,6 +123,8 @@ Click "Need Help? Chat with SEMRS Team" in the dashboard for a live
 2-minute screen share. (Video walkthrough: to be recorded and linked
 here.)
 
-## SEMRS Business ID
-`1086663049463404` — the same ID for every client's Part A, Step 2
-above.
+## SEMRS's Business ID
+Not published in this document (removed 2026-08-11 — a static ID here
+can go stale). Ask your SEMRS account manager for our current Business
+ID when you reach Part A, Step 2 — or skip that lookup entirely and use
+Part C instead, where SEMRS sends the request to you.
