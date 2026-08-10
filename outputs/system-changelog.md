@@ -10,6 +10,28 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-10 (repositioning)
+- Repositioned the system as an AI Social Media Marketing Agency
+  (AISMMA), per explicit instruction: SEMRS sells SMMA services, not a
+  full-service SEO/link-building shop. Removed "Link Building," "Guest
+  Posting," "Authority Building," and "AI Agent Services" from the
+  client-orderable Service(s) Ordered checklist (prompts/client-brief.md)
+  and from CLAUDE.md's Project Purpose. Added "Social Media Management"
+  and "Analytics & Reporting" as explicit orderable categories — these
+  were already real agent work (Content/Social Draft agents; Analytics
+  Agent) but not previously named as their own catalog line items. Kept
+  SEO, GEO/AEM, Content Writing, Copywriting, Lead Generation, and the
+  Website/Blog channel — all confirmed still in scope. The "No
+  manipulative SEO/link-building tactics" guardrail stays, reframed as
+  applying to SEMRS's own self-marketing use of guest posting/link
+  building (semrs.com's own growth, Self-Marketing Track — untouched by
+  this change) rather than to a client-facing service.
+- SEMRS-Dashboard: removed guest-post-tier and link-building pricing
+  from the actual live quotation catalog (`data/pricingCatalog.ts`,
+  `lib/pricingCalculator.ts`, both Bundle Builder/public pricing UI
+  components) to match — the real "FINAL pricing" document's guest post
+  and link building line items are no longer sold.
+
 ## 2026-08-10
 - Added Lead Generation as a full track: two new agents (Lead Capture
   Agent, Qualification + AI Sales Agent — agents/lead-capture-agent.md,

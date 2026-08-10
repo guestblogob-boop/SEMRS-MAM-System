@@ -2,23 +2,28 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-# SEMRS Multi-Agent Marketing System
+# SEMRS Multi-Agent Marketing System — AI Social Media Marketing Agency (AISMMA)
 
 ## Project Purpose
-This project builds SEMRS's own AI marketing production system — the
-single system SEMRS uses to deliver SEO, SEM (paid ads), GEO/AEM
-(AI-answer-engine visibility), link building, guest posting, content
-writing, copywriting, authority-building work (research, SEO,
-strategy, content, visuals, website, social, WhatsApp, email, ads,
-reporting), lead generation, and AI agent services on behalf of its
-clients' businesses,
-while keeping the client clearly informed at every stage. "AI agent
-services" is recognized as an orderable service category (see
-prompts/client-brief.md) but does not yet have a dedicated specialist
-agent defined in Agent Roles, below — until one is added, an order
-selecting it should be scoped by the Orchestrator against the closest
-matching existing agents, or flagged to the CEO before Order Approval
-if it doesn't fit.
+This project builds SEMRS's own AI-powered social media marketing
+agency production system (AISMMA) — the single system SEMRS uses to
+deliver SEO, SEM (paid ads), GEO/AEM (AI-answer-engine visibility),
+content creation, copywriting, social media management, analytics and
+reporting, and lead generation through to conversion on behalf of its
+clients' businesses (research, strategy, content, visuals, website,
+social, WhatsApp, email, ads, reporting), while keeping the client
+clearly informed at every stage. This is a deliberate scope: SEMRS
+positions itself as a social media marketing agency, not a full-service
+SEO/link-building shop. Guest posting, link building, generic
+"authority building," and "AI Agent Services" were removed as
+client-orderable services for exactly that reason (see
+prompts/client-brief.md's Service(s) Ordered checklist) — SEO and
+GEO/AEM stay in scope since they shape how content and social profiles
+get found and cited, which is still squarely social-media-adjacent
+work. Guest posting and link building may still appear in SEMRS's own
+self-marketing for semrs.com (see Self-Marketing Track) — that is
+SEMRS growing its own site, a separate, internal decision from what is
+sold to clients, and this removal does not change it.
 
 ## Scope Constraint
 This system does marketing work for SEMRS's clients, commissioned as
@@ -350,16 +355,22 @@ opt-in, no WhatsApp Business API usage happens for that client.
   boundary (see agents/*.md) is a security control. Do not let one
   agent perform another agent's restricted actions even if it would be
   faster or the user asks for a shortcut.
-- **No manipulative SEO/link-building tactics.** No guest posting, link
-  building, or SEO tactic that violates search engines' or platforms'
-  own guidelines (paid links disguised as organic, cloaking,
-  spun/duplicate content, spam pitches to unverified sites). Flag any
-  request that reads as a manipulative tactic instead of producing it.
-  The Orchestrator is directly responsible for holding the SEO and
-  Content agents to this rule on every engagement — this is an ongoing
-  operating duty, not a one-time setup step, and it's how this system
-  satisfies its own compliance discipline without requiring a separate
-  outside review before every single build.
+- **No manipulative SEO/link-building tactics.** Guest posting and link
+  building are no longer client-orderable services (see Project
+  Purpose) — this guardrail now matters mainly for SEMRS's own
+  self-marketing use of them (Self-Marketing Track) and for keeping
+  the SEO service itself clean. No SEO tactic that violates search
+  engines' or platforms' own guidelines (paid links disguised as
+  organic, cloaking, spun/duplicate content, spam pitches to
+  unverified sites), and if self-marketing guest posting/link building
+  ever happens for semrs.com, it follows this exact same rule — no
+  exception for being SEMRS's own site. Flag any request that reads as
+  a manipulative tactic instead of producing it. The Orchestrator is
+  directly responsible for holding the SEO and Content agents to this
+  rule on every engagement — this is an ongoing operating duty, not a
+  one-time setup step, and it's how this system satisfies its own
+  compliance discipline without requiring a separate outside review
+  before every single build.
 - **No live platform connections by default.** This system never
   connects to, posts on, or schedules anything on a live platform
   account (see Delivery Model, above) — so there is no SEMRS-side

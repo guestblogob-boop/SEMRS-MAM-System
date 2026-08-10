@@ -9,17 +9,17 @@ CLAUDE.md, Approval Gates).
 
 
 ## Service(s) Ordered from SEMRS
-Select all that apply:
+SMMA services only (see CLAUDE.md, Project Purpose — SEMRS positions
+itself as a social media marketing agency, not a full-service
+SEO/link-building shop). Select all that apply:
 - [ ] SEO
 - [ ] SEM / Ads Management
 - [ ] GEO/AEM
-- [ ] Link Building
-- [ ] Guest Posting
 - [ ] Content Writing
 - [ ] Copywriting
-- [ ] Authority Building
+- [ ] Social Media Management
+- [ ] Analytics & Reporting
 - [ ] Lead Generation
-- [ ] AI Agent Services
 
 ## Target Audience
 

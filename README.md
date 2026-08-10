@@ -1,6 +1,6 @@
 # SEMRS MAM System
 
-SEMRS's own multi-agent marketing system, used internally to do marketing work on behalf of SEMRS's clients across website, social, WhatsApp, and email channels.
+SEMRS's own multi-agent marketing system — an AI Social Media Marketing Agency (AISMMA) — used internally to do marketing work on behalf of SEMRS's clients across website, social, WhatsApp, and email channels. Services are scoped to SMMA work (SEO, ads, GEO/AEM, content creation, copywriting, social media management, analytics & reporting, lead generation through to conversion) — guest posting, link building, generic "authority building," and "AI Agent Services" are not sold as client services (see CLAUDE.md, Project Purpose).
 
 Clients place orders — they don't operate the system themselves. No work starts until the CEO approves the order, and nothing ships until the CEO gives final delivery approval. The client is kept informed at every stage in between.
 
