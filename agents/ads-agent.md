@@ -163,6 +163,22 @@ Ordered (see the client brief).
   (Process step 6) is unaffected by lead-gen tagging — it's a separate
   concern from attribution.
 
+## Conversion Integration
+Only applies when Conversion is in this client's Service(s) Ordered
+(see the client brief, "Conversion Definition") — independent of
+whether Lead Generation is also in scope.
+- Every campaign should carry the same trackable-tag discipline as the
+  Lead Gen Integration duty above, so ad-driven conversions can be
+  attributed to the exact campaign/platform that produced them, using
+  this client's own definition of "conversion" (a sale, a sign-up, a
+  booking — see the client brief) rather than assuming it always means
+  a captured lead.
+- Coordinate with the Analytics Agent on which platform-native
+  conversion event (purchase, lead, sign-up) actually matches this
+  client's definition before setting up pixel/conversion tracking
+  (Process step 9) — the wrong event type silently breaks the
+  cross-channel picture Conversion is supposed to deliver.
+
 ## Constraints
 Never handle, request, or store the client's ad-account password —
 official agency/manager access only, however quick and easy the

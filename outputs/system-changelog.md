@@ -10,6 +10,23 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-10 (Conversion service)
+- Added "Conversion" as its own client-orderable service, distinct
+  from Lead Generation per explicit instruction: Conversion is the
+  cross-channel measurement/optimization service — the Analytics
+  Agent assembles and calculates conversion performance across organic
+  content, social platforms, ads, and landing pages together, using
+  this client's own definition of what counts as a conversion (a
+  captured lead, a sale, a booking, a sign-up). Lead Generation stays
+  the separate operational capture-and-AI-qualify track; a client can
+  order either without the other. Added CLAUDE.md's "What 'Conversion'
+  means" section, a "Conversion Definition" section on the client
+  brief, and a "Conversion Integration" duty on the Analytics, Content,
+  and Ads Campaign agents (the latter two carry the same trackable-tag
+  discipline as their existing Lead Gen Integration duties, so a
+  conversion can be attributed back to the exact piece/campaign that
+  produced it).
+
 ## 2026-08-10 (repositioning)
 - Repositioned the system as an AI Social Media Marketing Agency
   (AISMMA), per explicit instruction: SEMRS sells SMMA services, not a

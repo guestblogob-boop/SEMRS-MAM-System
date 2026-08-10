@@ -20,6 +20,7 @@ SEO/link-building shop). Select all that apply:
 - [ ] Social Media Management
 - [ ] Analytics & Reporting
 - [ ] Lead Generation
+- [ ] Conversion
 
 ## Target Audience
 
@@ -96,6 +97,25 @@ the standard rate unless the CEO has negotiated something different:
 ## Content Ownership/Confidentiality Notes
 Any exceptions to SEMRS's standard policy (see CLAUDE.md, Operational
 Policies — "Content ownership & confidentiality"). Leave blank if none.
+
+
+## Conversion Definition
+Only fill in if Conversion was selected above (see CLAUDE.md, "What
+'Conversion' means," and agents/analytics-agent.md's Conversion
+Integration duty). Independent of whether Lead Generation is also
+selected — Conversion is the cross-channel measurement/optimization
+service; Lead Generation is the operational capture-and-AI-qualify
+track. A client can order one without the other.
+
+**What counts as a conversion for this client** — a captured lead, a
+sale, a booking, a sign-up, a download, whatever this client's actual
+goal defines it as. Must come from the actual client meeting, not
+assumed:
+
+
+**Landing pages in scope for conversion tracking** — which specific
+page(s) conversion is being measured against (see Website/Blog Draft
+Agent, Deliverable Formats, for landing page drafting):
 
 
 ## Lead Generation Details

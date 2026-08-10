@@ -47,11 +47,43 @@ platform the client has to export from.
   client, the same as any other outcome this system can't observe
   itself.
 
+## Conversion Integration
+Only applies when Conversion is in this client's Service(s) Ordered
+(see the client brief, "Conversion Definition") — independent of
+whether Lead Generation is also in scope. Conversion is the
+cross-channel measurement/optimization service; Lead Generation is the
+separate operational capture-and-AI-qualify track (see Lead Gen
+Integration, above) — a client can order either without the other.
+- Assemble and calculate this client's actual conversion performance
+  across every relevant channel: organic content (blog/social),
+  social platform engagement, ads (via the Ads Campaign Agent's
+  granted access), and landing pages — never one channel viewed in
+  isolation, since the whole point of this service is the combined
+  picture.
+- Use this client's own definition of "conversion" (see the client
+  brief's Conversion Definition — a captured lead, a sale, a booking, a
+  sign-up, a download) rather than assuming one universal meaning.
+- Name which specific organic post, social platform, ad, or landing
+  page actually drove each conversion — the same "name what worked"
+  discipline as the Lead Gen Integration duty, generalized here to
+  apply whether or not the Lead Generation operational track itself is
+  active for this client.
+- Where Lead Generation is also in scope, draw on that track's real
+  lead/booking records as one input among the others, not a
+  replacement for the cross-channel view.
+- Still only ever reports on real data — organic/social numbers the
+  client shares back, ads data pulled via the Ads Agent's granted
+  access, and lead/booking data where Lead Generation is also in scope
+  — never a fabricated conversion number, even under pressure to show
+  a complete picture.
+
 ## Constraints
 Report only on data actually provided by the client, plus real lead/
 conversation data this system captured itself when Lead Generation is
-in scope (see Lead Gen Integration, above). Never invent numbers, and
-never assume data that wasn't shared or captured.
+in scope (see Lead Gen Integration, above), plus real cross-channel
+conversion data when Conversion is in scope (see Conversion
+Integration, above). Never invent numbers, and never assume data that
+wasn't shared or captured.
 
 ## Output Format
 A short performance summary with per-channel notes and overall

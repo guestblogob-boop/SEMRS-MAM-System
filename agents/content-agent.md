@@ -61,6 +61,20 @@ Ordered (see the client brief).
 - The CTA itself must still read naturally in this client's tone —
   never a bare tracking link dropped into otherwise polished copy.
 
+## Conversion Integration
+Only applies when Conversion is in this client's Service(s) Ordered
+(see the client brief, "Conversion Definition") — independent of
+whether Lead Generation is also in scope.
+- Any piece whose purpose is driving a conversion (a link to a landing
+  page, a sign-up form, a booking link, a "shop now" link) must carry
+  the same kind of trackable tag as the Lead Gen Integration duty
+  above, so the Analytics Agent can attribute a resulting conversion
+  back to this exact piece — coordinate with the Analytics Agent before
+  publish so the tag exists first, same discipline whether or not this
+  client has also ordered Lead Generation.
+- The tag stays invisible to the reader — it never changes how the CTA
+  reads in this client's tone.
+
 ## Constraints
 Match the client's tone exactly on every channel. Respect each channel's
 format and norms. Only write for channels marked in scope. Every draft

@@ -9,11 +9,11 @@ This project builds SEMRS's own AI-powered social media marketing
 agency production system (AISMMA) — the single system SEMRS uses to
 deliver SEO, SEM (paid ads), GEO/AEM (AI-answer-engine visibility),
 content creation, copywriting, social media management, analytics and
-reporting, and lead generation through to conversion on behalf of its
-clients' businesses (research, strategy, content, visuals, website,
-social, WhatsApp, email, ads, reporting), while keeping the client
-clearly informed at every stage. This is a deliberate scope: SEMRS
-positions itself as a social media marketing agency, not a full-service
+reporting, lead generation, and conversion on behalf of its clients'
+businesses (research, strategy, content, visuals, website, social,
+WhatsApp, email, ads, reporting), while keeping the client clearly
+informed at every stage. This is a deliberate scope: SEMRS positions
+itself as a social media marketing agency, not a full-service
 SEO/link-building shop. Guest posting, link building, generic
 "authority building," and "AI Agent Services" were removed as
 client-orderable services for exactly that reason (see
@@ -24,6 +24,25 @@ work. Guest posting and link building may still appear in SEMRS's own
 self-marketing for semrs.com (see Self-Marketing Track) — that is
 SEMRS growing its own site, a separate, internal decision from what is
 sold to clients, and this removal does not change it.
+
+**What "Conversion" means.** A distinct service from Lead Generation,
+though the two are often ordered together. Lead Generation is the
+operational track — capturing leads and, if opted in, an AI agent
+qualifying and engaging them (see Lead Generation Track, below).
+Conversion is the cross-channel measurement/optimization service: the
+Analytics Agent assembles and calculates this client's actual
+conversion performance across organic content, social platforms, ads,
+and landing pages together — never one channel judged in isolation —
+using this client's own definition of what counts as a conversion (a
+captured lead, a sale, a booking, a sign-up; see
+prompts/client-brief.md, "Conversion Definition"). A client can order
+Conversion without Lead Generation (e.g. to see which organic post,
+platform, ad, or landing page actually drives sales, while still
+handling follow-up themselves) or Lead Generation without Conversion
+(e.g. just wanting leads captured and AI-qualified, without a
+full cross-channel performance rollup). See agents/analytics-agent.md,
+agents/content-agent.md, and agents/ads-agent.md's "Conversion
+Integration" sections for how each agent supports this.
 
 ## Scope Constraint
 This system does marketing work for SEMRS's clients, commissioned as
