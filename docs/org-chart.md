@@ -9,8 +9,10 @@ client — this file exists purely for SEMRS's own internal structure.
 This is a different grouping than CLAUDE.md's existing "Departmental
 Chart" (Organizational Chart section) — that one groups by 10 informal
 work areas for quick reference; this is the formal 17-agent,
-7-department structure: the CEO at the top, the Orchestrator and
-Client Communication Agent as the front office beneath the CEO, seven
+7-department structure: the CEO (human authority) at the top, the
+AISMMA Orchestrator (Managing Director — SEMRS's primary AI
+controller) and Client Communication Agent as the front office beneath
+the CEO, seven
 departments beneath the Orchestrator (each showing which agents sit in
 it), and the Analytics Agent reporting directly to the Orchestrator
 rather than sitting inside any one department.
@@ -21,7 +23,7 @@ flowchart TD
 
     subgraph FRONT["Front Office"]
         direction LR
-        ORCH["Orchestrator<br/>Marketing Director"]
+        ORCH["AISMMA Orchestrator<br/>Managing Director"]
         CC["Client Communication Agent<br/>Account Manager"]
     end
 

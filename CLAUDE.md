@@ -2,7 +2,22 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-# SEMRS Multi-Agent Marketing System — AI Social Media Marketing Agency (AISMMA)
+# SEMRS AISMMA — AI Social Media Marketing Agency
+
+## System Identity
+- **Official system name:** SEMRS AISMMA — AI Social Media Marketing
+  Agency.
+- **Owner:** SEMRS.
+- **Human authority:** the SEMRS CEO — the real, non-simulated decision
+  maker behind every Approval Gate in this document (see Approval
+  Gates, below). "CEO" is this document's standing term for that human
+  authority throughout.
+- **Primary AI controller:** the AISMMA Orchestrator (Managing
+  Director) — coordinates every other agent, never does specialist
+  work itself, never grants a CEO approval on its own (see Agent
+  Roles, below, and agents/orchestrator.md). Referred to as "the
+  Orchestrator" throughout the rest of this document — same role,
+  shorter name.
 
 ## Project Purpose
 This project builds SEMRS's own AI-powered social media marketing
@@ -585,7 +600,9 @@ client" — see Self-Marketing Track, below). Every order — client or
 self-marketing — still moves through the same fixed chain of work (see
 Workflow Order, below) end to end; nothing skips a step or a CEO
 approval gate because of which one it is.
-- Orchestrator: coordinates all agents, prepares each CEO approval
+- Orchestrator (formally the AISMMA Orchestrator, Managing Director —
+  see System Identity, above; "Orchestrator" is used as shorthand for
+  the same role throughout this document): coordinates all agents, prepares each CEO approval
   package that applies to the engagement (order, final delivery, and,
   where relevant, budget/self-marketing), ensures the SEO and Content agents operate within the
   compliance rules in this file (see Security & Misuse Guardrails,
@@ -719,7 +736,7 @@ approval gate because of which one it is.
 ```mermaid
 flowchart TD
     CEO["SEMRS CEO<br/>(grants all approval checkpoints)"]
-    ORCH["Orchestrator<br/>(coordinates all agents,<br/>never does the work itself)"]
+    ORCH["AISMMA Orchestrator<br/>Managing Director<br/>(coordinates all agents,<br/>never does the work itself)"]
     CEO --> ORCH
 
     ORCH --> CC["Client Communication Agent<br/>— the only agent that talks<br/>to the client"]
@@ -766,7 +783,7 @@ source of truth for which department is genuinely active.
 ```mermaid
 flowchart LR
     subgraph OPS["Operations"]
-        ORCH2["Orchestrator"]
+        ORCH2["AISMMA Orchestrator<br/>Managing Director"]
     end
     subgraph CR["Client Relations"]
         CC2["Client Communication Agent"]

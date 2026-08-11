@@ -10,6 +10,28 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-11 (Official system identity)
+- Formalized the system's official identity, per explicit instruction:
+  name "SEMRS AISMMA — AI Social Media Marketing Agency," owner SEMRS,
+  human authority the SEMRS CEO, primary AI controller the AISMMA
+  Orchestrator (Managing Director). Added a new "System Identity"
+  section to CLAUDE.md stating this explicitly. Renamed the
+  Orchestrator's formal title from "Marketing Director" to "Managing
+  Director" and its display name to "AISMMA Orchestrator"
+  (agents/orchestrator.md's title, both CLAUDE.md Mermaid diagrams,
+  docs/org-chart.md's Mermaid diagram and Notes, README.md). "The
+  Orchestrator" remains the shorthand used throughout the rest of both
+  documents' prose — not a full find-replace, since the role is
+  unchanged, only its formal name/title.
+- Not implemented from the accompanying example flowchart: a "Teams"
+  restructuring (Research/Strategy/Audit Teams → Specialist Teams:
+  Content/Social/SEO/YouTube/Web-Ecom). This doesn't map onto the real,
+  built agent roster — no Audit agent exists, YouTube is a channel
+  under the Social Content Draft Agent rather than a standalone team,
+  and "Web/Ecom" would be new scope beyond the SMMA-only positioning
+  just reconfirmed. Flagged to the CEO as a real decision rather than
+  silently reshaping the agent roster to fit an illustrative diagram.
+
 ## 2026-08-11 (Reddit removed)
 - Removed Reddit as a supported channel entirely, per explicit
   instruction — no longer in CLAUDE.md's Channels Supported, the
