@@ -10,6 +10,22 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-11 (Product listing copy)
+- Added product listing copy (title/description/tags for a product an
+  e-commerce client already sells) as a Content Agent deliverable, per
+  explicit instruction — most relevant when paired with SEM/Ads
+  Management, since paid ad traffic needs a real product page to land
+  on. Deliberately narrow: copy only. Explicitly declined and
+  permanently excluded in the same pass, per the CEO's own fallback
+  rule ("if not related to our system, go for option 1" — no
+  restructuring): platform listing/publishing integration (Shopify/Etsy
+  API work) and product research/sourcing/"winning product" strategy
+  advisory (deciding what a client should sell) — both a different
+  business line (e-commerce operations/consulting) from marketing a
+  client's existing offer, and both would have required a new Web
+  Development department that was considered and declined this same
+  session.
+
 ## 2026-08-11 (Official system identity)
 - Formalized the system's official identity, per explicit instruction:
   name "SEMRS AISMMA — AI Social Media Marketing Agency," owner SEMRS,

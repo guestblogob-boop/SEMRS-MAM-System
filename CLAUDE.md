@@ -263,7 +263,12 @@ capability, not something to build from scratch.
   press releases, speeches/lectures/scripts for this client's own
   speakers (an executive, founder, or presenter speaking on the
   client's behalf — never academic work a student would submit as
-  their own; see agents/content-agent.md, Constraints), and structured
+  their own; see agents/content-agent.md, Constraints), product
+  listing copy for an e-commerce client (title/description/tags for a
+  product they already sell — most relevant paired with SEM/Ads
+  Management, since ad traffic needs a real product page to land on;
+  copy only, never platform listing/publishing or product-sourcing
+  strategy — see agents/content-agent.md, Constraints), and structured
   content ready to drop into a document, spreadsheet, or slide deck.
 - **Visual & Video Content Agent** — in addition to images/video/icons/
   GIFs/animation notes (see Security & Misuse Guardrails, the Visual &

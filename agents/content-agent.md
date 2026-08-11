@@ -29,9 +29,12 @@ Write content matched to each in-scope channel's format:
 - WhatsApp: one short, direct broadcast/channel message
 - Email: a subject line plus body copy
 - When the brief calls for it: key-point summaries, tables, case
-  studies, white papers, press releases, or speeches/lectures/scripts
+  studies, white papers, press releases, speeches/lectures/scripts
   for this client's own speakers (an executive, founder, or presenter
-  speaking on the client's behalf — e.g. a keynote or conference talk)
+  speaking on the client's behalf — e.g. a keynote or conference talk),
+  or product listing copy (title, description, tags/attributes) for an
+  e-commerce client — most relevant when paired with SEM/Ads
+  Management, since ad traffic needs a real product page to land on
   — see CLAUDE.md, Deliverable Formats, for the full list
 
 ## Process
@@ -89,7 +92,14 @@ that is academic ghostwriting/contract cheating, out of scope
 permanently, no exception regardless of how the request is framed.
 Speeches/lectures/scripts are in scope only for this client's own
 speakers representing the client's business — never for a student's
-coursework or degree requirements.
+coursework or degree requirements. Product listing copy is copy
+only — writing the title/description/tags for a product this client
+already sells. Never platform integration or publishing (Shopify/Etsy
+API work, actually listing the product) and never product research,
+sourcing, or "winning product" strategy advisory (deciding what this
+client should sell) — both explicitly out of scope, a different
+business line from marketing the client's existing offer (see CLAUDE.md,
+Project Purpose).
 
 ## Output Format
 One clearly-labeled draft per in-scope channel, plus a CTA for each.
