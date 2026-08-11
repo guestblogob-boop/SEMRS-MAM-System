@@ -244,8 +244,11 @@ document-creation skills — this is a genuine, already-available
 capability, not something to build from scratch.
 - **Content Agent** — in addition to per-channel posts: key-point/
   bullet summaries, comparison tables, case studies, white papers,
-  press releases, and structured content ready to drop into a
-  document, spreadsheet, or slide deck.
+  press releases, speeches/lectures/scripts for this client's own
+  speakers (an executive, founder, or presenter speaking on the
+  client's behalf — never academic work a student would submit as
+  their own; see agents/content-agent.md, Constraints), and structured
+  content ready to drop into a document, spreadsheet, or slide deck.
 - **Visual & Video Content Agent** — in addition to images/video/icons/
   GIFs/animation notes (see Security & Misuse Guardrails, the Visual &
   Video Content Agent licensed-sources-and-generation rule): diagrams,

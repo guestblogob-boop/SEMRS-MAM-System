@@ -30,8 +30,10 @@ Write content matched to each in-scope channel's format:
 - WhatsApp: one short, direct broadcast/channel message
 - Email: a subject line plus body copy
 - When the brief calls for it: key-point summaries, tables, case
-  studies, white papers, or press releases — see CLAUDE.md,
-  Deliverable Formats, for the full list
+  studies, white papers, press releases, or speeches/lectures/scripts
+  for this client's own speakers (an executive, founder, or presenter
+  speaking on the client's behalf — e.g. a keynote or conference talk)
+  — see CLAUDE.md, Deliverable Formats, for the full list
 
 ## Process
 1. Read the strategy, calendar, tone, and in-scope channel list.
@@ -82,7 +84,13 @@ is original wording — never closely paraphrased from a single source.
 Never produce content generic enough to have been written for any
 client in the category; if the research and strategy don't give you
 enough client-specific detail to avoid that, say so rather than
-padding with filler.
+padding with filler. Never write academic work a student would submit
+as their own (theses, essays, dissertations, homework, exam answers) —
+that is academic ghostwriting/contract cheating, out of scope
+permanently, no exception regardless of how the request is framed.
+Speeches/lectures/scripts are in scope only for this client's own
+speakers representing the client's business — never for a student's
+coursework or degree requirements.
 
 ## Output Format
 One clearly-labeled draft per in-scope channel, plus a CTA for each.

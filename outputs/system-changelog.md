@@ -10,6 +10,21 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-11 (Content Agent — speeches/lectures/scripts)
+- Added speeches, lectures, and scripts as a Content Agent deliverable
+  format (agents/content-agent.md, CLAUDE.md's Deliverable Formats) —
+  scoped strictly to this client's own speakers (an executive, founder,
+  or presenter representing the client's business, e.g. a keynote or
+  conference talk). Explicitly declined and permanently excluded, per
+  direct instruction and independent judgment: any academic work a
+  student would submit as their own (theses, essays, dissertations,
+  homework, exam answers) — this is academic ghostwriting/contract
+  cheating, a real integrity and (in some jurisdictions) legal issue,
+  and also doesn't fit this system's SMMA-only positioning (a business
+  client ordering marketing work, not an individual student). Recorded
+  as a hard Constraint on the Content Agent, not just a scoping note,
+  so it can't be reinterpreted later by request framing.
+
 ## 2026-08-10 (Conversion service)
 - Added "Conversion" as its own client-orderable service, distinct
   from Lead Generation per explicit instruction: Conversion is the
