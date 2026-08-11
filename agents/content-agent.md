@@ -23,7 +23,6 @@ Write content matched to each in-scope channel's format:
 - Instagram: a caption plus relevant hashtags
 - Twitter/X: a short post, or a thread for longer ideas
 - TikTok: a short video caption plus a brief on-screen hook idea
-- Reddit: a community-appropriate, non-salesy post
 - Pinterest: a pin title and description
 - LinkedIn: a more detailed, professional-toned post
 - YouTube: a video title, description, tags, and a short script outline

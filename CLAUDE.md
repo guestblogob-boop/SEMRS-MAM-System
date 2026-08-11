@@ -227,14 +227,15 @@ Until that integration exists, a human at SEMRS relays messages
 between the raw channel and outputs/client-message-log/ manually.
 
 ## Channels Supported
-Website/Blog, Facebook, Instagram, Twitter/X, TikTok, Reddit, Pinterest,
+Website/Blog, Facebook, Instagram, Twitter/X, TikTok, Pinterest,
 LinkedIn, YouTube, Google Business Profile, WhatsApp, Email. A given
 client brief specifies which of these are actually in scope for that
-engagement — never assume all twelve apply. Google Business Profile
+engagement — never assume all eleven apply. Google Business Profile
 was added after the pricing catalog was found to already sell it
 (SEMRS-Dashboard's Bundle Builder) with no workflow-channel equivalent
 — a real gap, not a hypothetical one, closed rather than left
-silently mismatched.
+silently mismatched. Reddit was removed 2026-08-11, per explicit
+instruction — no longer a supported channel anywhere in this system.
 
 ## Deliverable Formats
 Beyond channel-native posts, this system can produce a wider range of
@@ -627,7 +628,7 @@ approval gate because of which one it is.
   actual website.
 - Social Content Draft Agent: formats final-delivery-approved content
   into ready-to-use DRAFTS for Facebook, Instagram, Twitter/X, TikTok,
-  Reddit, Pinterest, LinkedIn, and YouTube — never connects to or posts
+  Pinterest, LinkedIn, and YouTube — never connects to or posts
   on any live social account.
 - WhatsApp Draft Agent: formats the final-delivery-approved WhatsApp
   message into a ready-to-use DRAFT only — never connects to or sends
@@ -936,10 +937,10 @@ to semrs.com's own accounts remains coordinated by the Orchestrator (see
 step F, below) once CEO Self-Marketing Approval is granted.
 
 **Platforms actually linked from semrs.com:** YouTube, Facebook,
-TikTok, X, Reddit, Pinterest, Instagram, LinkedIn. This is the fixed
-answer to "every platform actually linked from semrs.com" wherever
-that phrase appears below — update this line if SEMRS's own linked
-accounts ever change, rather than leaving future readers to guess.
+TikTok, X, Pinterest, Instagram, LinkedIn. This is the fixed answer to
+"every platform actually linked from semrs.com" wherever that phrase
+appears below — update this line if SEMRS's own linked accounts ever
+change, rather than leaving future readers to guess.
 
 A. Every week, the SEMRS Communicator builds a Monday–Sunday plan for
    semrs.com: content topics, link-building/guest-posting targets, any
@@ -1136,7 +1137,7 @@ semrs-multi-agent-marketing/
     visual-agent.md                  → visual content (images/icons/GIFs) job description
     review-agent.md                  → SEMRS internal quality control job description
     website-agent.md                 → website/blog draft-preparation job description
-    social-agent.md                  → social content draft-preparation job description (FB/IG/X/TikTok/Reddit/Pinterest/LinkedIn/YouTube)
+    social-agent.md                  → social content draft-preparation job description (FB/IG/X/TikTok/Pinterest/LinkedIn/YouTube)
     whatsapp-agent.md                → WhatsApp draft-preparation job description
     email-agent.md                    → email draft-preparation job description
     analytics-agent.md                → reporting job description

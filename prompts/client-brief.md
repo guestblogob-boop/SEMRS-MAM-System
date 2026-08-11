@@ -49,7 +49,6 @@ checked here:
 - [ ] Instagram
 - [ ] Twitter/X
 - [ ] TikTok
-- [ ] Reddit
 - [ ] Pinterest
 - [ ] LinkedIn
 - [ ] YouTube

@@ -10,6 +10,19 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-11 (Reddit removed)
+- Removed Reddit as a supported channel entirely, per explicit
+  instruction — no longer in CLAUDE.md's Channels Supported, the
+  client brief's Channels in Scope checklist, the Social Content Draft
+  Agent's channel list, the Visual & Video Content Agent's per-channel
+  visual guidance, or semrs.com's own linked self-marketing platforms.
+  In SEMRS-Dashboard: removed from `CHANNEL_OPTIONS`, its
+  `lib/directPublishHelp.ts` walkthrough entry, and its
+  `lib/publisherFields.ts` credential schema. Website/Blog's WordPress
+  Application Password walkthrough was explicitly confirmed untouched
+  and permanent throughout this pass — it stays required for direct
+  publish access on the client's own site, never in scope for removal.
+
 ## 2026-08-11 (Content Agent — speeches/lectures/scripts)
 - Added speeches, lectures, and scripts as a Content Agent deliverable
   format (agents/content-agent.md, CLAUDE.md's Deliverable Formats) —

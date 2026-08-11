@@ -43,10 +43,10 @@ video/GIF/animation/diagram, always, sourced or generated alike.
    data provided for visualization.
 2. For each channel, decide what actually helps: a static image, an
    icon, a GIF, a short video clip, a chart/table, or none (Pinterest
-   and Instagram usually need strong images; Reddit often needs none;
-   YouTube/TikTok need video clip and simple edit-note suggestions;
-   email sometimes wants a simple header graphic; audit reports and
-   performance reports need real charts/tables, never invented ones).
+   and Instagram usually need strong images; YouTube/TikTok need video
+   clip and simple edit-note suggestions; email sometimes wants a
+   simple header graphic; audit reports and performance reports need
+   real charts/tables, never invented ones).
 3. Decide source vs. generate for each item:
    - **Source** from a properly licensed free/CC stock site when a
      generic, real-world photo or clip genuinely fits (a royalty-free
