@@ -188,6 +188,65 @@ items noted under Client Contact Channel, above). Bank account details
 for that invoice are not yet defined in this document — to be added
 once available, not fabricated ahead of time.
 
+## Conversion & Lead Generation Pricing Model — Phase 2 Upsell for Existing Clients Only
+Conversion and Lead Generation are never a client's first purchase from
+SEMRS — they are offered only as a second-phase upsell to a client who
+already has an active organic and/or paid engagement (at least one of
+SEO, SEM/Ads Management, GEO/AEM, Content Writing, Copywriting, or
+Social Media Management already ordered and approved). This reflects
+how these services actually work: there's nothing to measure
+conversions on, or capture leads from, until content or ads are
+already live. Analytics & Reporting is included at no extra charge the
+moment a client adds Conversion or Lead Generation — it is the
+reporting layer over what the client is already running with SEMRS,
+not a separately metered service.
+
+When a client adds Conversion and/or Lead Generation, they choose ONE
+of two pricing paths — recorded per client on the client brief (see
+prompts/client-brief.md, "Conversion & Lead Generation Pricing"):
+
+**Path A — Monthly Bundle (flat recurring fee, annual discount
+available).**
+- Conversion tracking only (cross-channel measurement/optimization, no
+  lead capture): $79/month.
+- Lead Generation (capture + cross-source attribution; captured leads
+  handed to the client's own team to qualify) — includes Conversion
+  measurement and free Analytics & Reporting: $149/month.
+- Lead Generation + AI-Led WhatsApp Sales Agent (adds qualification,
+  scoring, and meeting-booking via the Qualification + AI Sales Agent)
+  — includes everything in the tier above: $249/month. Real Meta
+  WhatsApp Business API usage cost is separate and client-funded (see
+  Hard Constraint, "WhatsApp Business API costs"), same as ad spend
+  under the Paid Media Model, above — SEMRS never holds or moves that
+  payment either.
+- Paying annually (12 months upfront) gets a 15% discount off any tier
+  above — same discount shape as the organic bundle tiers, not a new
+  pricing mechanism.
+
+**Path B — Case-by-Case Percentage (performance/success fee, the way
+most lead-gen agencies actually price this).** SEMRS earns a
+commission calculated as a percentage of the revenue or deal value the
+client attributes to SEMRS-sourced leads — charged only once the
+client actually closes that sale, not on lead volume or activity. This
+is deliberately structured so SEMRS stays engaged with a lead all the
+way through the funnel, not just until it's captured — the fee doesn't
+land until the client's product actually sells. Default starting rate
+— confirm or change per client, same "confirm or change" pattern as
+the Ads commission default, above — is **10% of attributed closed
+revenue**. Since SEMRS has no live connection into a client's own
+sales/CRM system (unlike the Ads Agent's platform-granted access),
+this path only works for a client who can and will report closed deals
+back to SEMRS in a verifiable way — record how, specifically, in the
+client's Conversion Definition (see prompts/client-brief.md). Not
+offered to a client who can't or won't do this.
+
+Either path is compatible with either service — a client can pick Path
+A for a flat monthly Lead Generation fee, or Path B if they'd rather
+pay only once SEMRS actually helps them close a sale. SEMRS's fee
+under either path is always shown as a clear, separate line item, and
+SEMRS never holds or moves the client's own payment — same standing
+rule as the Paid Media Model, above.
+
 ## CEO Correspondence Channel
 admin@semrs.com is the designated backup channel between the
 Orchestrator and the CEO — used for anything the dashboard can't

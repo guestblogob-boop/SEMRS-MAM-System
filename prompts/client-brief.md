@@ -93,6 +93,29 @@ this client here, and which platform(s) are in scope — defaults to
 the standard rate unless the CEO has negotiated something different:
 
 
+## Conversion & Lead Generation Pricing
+Only fill in if Conversion and/or Lead Generation was selected above
+(see CLAUDE.md, "Conversion & Lead Generation Pricing Model — Phase 2
+Upsell for Existing Clients Only"). This is a second-phase upsell —
+confirm the client already has an active organic and/or paid
+engagement with SEMRS before offering it; never sell it as a first
+purchase.
+
+Select one:
+- [ ] Path A — Monthly Bundle. Tier selected: __________
+      Billing: [ ] Monthly  [ ] Annual (15% discount)
+- [ ] Path B — Case-by-Case Percentage. Agreed rate: _____%
+      (defaults to 10% of attributed closed revenue unless negotiated
+      — only offered if the client can and will report closed deals
+      back to SEMRS in a verifiable way; note how, below)
+
+Analytics & Reporting is included free with either path — never a
+separate line item.
+
+How closed deals will be verified/reported back to SEMRS (Path B
+only):
+
+
 ## Content Ownership/Confidentiality Notes
 Any exceptions to SEMRS's standard policy (see CLAUDE.md, Operational
 Policies — "Content ownership & confidentiality"). Leave blank if none.
