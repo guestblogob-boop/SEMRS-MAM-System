@@ -247,6 +247,25 @@ under either path is always shown as a clear, separate line item, and
 SEMRS never holds or moves the client's own payment — same standing
 rule as the Paid Media Model, above.
 
+**The AI-Led WhatsApp Sales Agent is what actually delivers "engaged
+around the clock," under either path — not a bypass of human
+approval.** The Qualification + AI Sales Agent (see Lead Generation
+Track) nurtures, scores, and engages a captured lead continuously,
+including outside business hours — that is the real, already-built
+capability behind any "closes deals while you sleep" framing used in
+sales/marketing copy for this pricing model. What it does NOT do,
+under either path, is finalize the sale itself: pricing, a contract, or
+any other binding commitment always escalates to a human rep (see
+Security & Misuse Guardrails, "Human-in-the-loop safety net for AI-led
+sales conversations"). Under Path A's top tier, this agent is what the
+client is paying the flat fee for. Under Path B, it's not optional or
+separately mentioned — the success-fee model only makes sense if leads
+are actually being worked continuously, so this agent is the standard
+delivery mechanism assumed whenever Path B is offered. Either way, the
+Analytics Agent's Conversion Integration duty is what makes a deal this
+agent closes actually visible — and, on Path B, is what identifies the
+event that triggers SEMRS's fee (see agents/analytics-agent.md).
+
 ## CEO Correspondence Channel
 admin@semrs.com is the designated backup channel between the
 Orchestrator and the CEO — used for anything the dashboard can't

@@ -71,6 +71,16 @@ Integration, above) — a client can order either without the other.
 - Where Lead Generation is also in scope, draw on that track's real
   lead/booking records as one input among the others, not a
   replacement for the cross-channel view.
+- A sale the Qualification + AI Sales Agent closes via WhatsApp —
+  including one nurtured and closed outside business hours, since that
+  agent runs continuously once a lead is captured — counts as a real
+  conversion source here, same as any other channel. Attribute it
+  specifically to the AI Sales Agent, not folded anonymously into
+  "WhatsApp" generally, so the client can see what the automation
+  itself produced. Where this client is on the Conversion & Lead
+  Generation Pricing Model's Path B (Case-by-Case Percentage — see
+  CLAUDE.md), this is the exact event that triggers SEMRS's fee, so
+  timeliness and accuracy here matter more than for Path A clients.
 - Still only ever reports on real data — organic/social numbers the
   client shares back, ads data pulled via the Ads Agent's granted
   access, and lead/booking data where Lead Generation is also in scope
