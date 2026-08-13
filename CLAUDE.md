@@ -188,83 +188,182 @@ items noted under Client Contact Channel, above). Bank account details
 for that invoice are not yet defined in this document — to be added
 once available, not fabricated ahead of time.
 
-## Conversion & Lead Generation Pricing Model — Phase 2 Upsell for Existing Clients Only
-Conversion and Lead Generation are never a client's first purchase from
-SEMRS — they are offered only as a second-phase upsell to a client who
-already has an active organic and/or paid engagement (at least one of
-SEO, SEM/Ads Management, GEO/AEM, Content Writing, Copywriting, or
-Social Media Management already ordered and approved). This reflects
-how these services actually work: there's nothing to measure
-conversions on, or capture leads from, until content or ads are
-already live. Analytics & Reporting is included at no extra charge the
-moment a client adds Conversion or Lead Generation — it is the
-reporting layer over what the client is already running with SEMRS,
-not a separately metered service.
+## Conversion & Lead Generation Pricing Model
+Conversion and Lead Generation are priced and onboarded one of two
+ways:
 
-When a client adds Conversion and/or Lead Generation, they choose ONE
-of two pricing paths — recorded per client on the client brief (see
-prompts/client-brief.md, "Conversion & Lead Generation Pricing"):
+- **Default — Phase 2 upsell.** A client who already has an active
+  organic and/or paid engagement with SEMRS (at least one of SEO,
+  SEM/Ads Management, GEO/AEM, Content Writing, Copywriting, or Social
+  Media Management already ordered and approved) adds Conversion
+  and/or Lead Generation on top of it. This is the common case, since
+  there's more to measure and more channels to capture leads from once
+  content or ads are already live.
+- **Standalone — a client's first and only purchase.** A client who
+  wants ONLY Conversion and/or Lead Generation — because they already
+  run their own website, ads, or social presence (self-managed or via
+  someone else) and just want SEMRS to add capture, AI-led
+  qualification, and cross-channel conversion measurement on top of
+  what they already have — is onboarded directly for that, with no
+  Phase 1 organic/paid engagement required or pitched. See "Onboarding
+  a Conversion & Lead Generation-Only Client," below, for how this
+  differs operationally from a normal order.
 
-**Path A — Monthly Bundle (flat recurring fee, annual discount
-available).**
-- Conversion tracking only (cross-channel measurement/optimization, no
-  lead capture): $79/month.
-- Lead Generation (capture + cross-source attribution; captured leads
-  handed to the client's own team to qualify) — includes Conversion
-  measurement and free Analytics & Reporting: $149/month.
-- Lead Generation + AI-Led WhatsApp Sales Agent (adds qualification,
-  scoring, and meeting-booking via the Qualification + AI Sales Agent)
-  — includes everything in the tier above: $249/month. Real Meta
-  WhatsApp Business API usage cost is separate and client-funded (see
-  Hard Constraint, "WhatsApp Business API costs"), same as ad spend
-  under the Paid Media Model, above — SEMRS never holds or moves that
-  payment either.
-- Paying annually (12 months upfront) gets a 15% discount off any tier
-  above — same discount shape as the organic bundle tiers, not a new
-  pricing mechanism.
+Analytics & Reporting is included at no extra charge with either
+onboarding path, but for two different reasons — worth keeping
+straight rather than treating as one blanket freebie:
+- **Phase 2 upsell client:** genuinely already paid for it. Basic
+  performance reporting on whatever channels the client ordered under
+  Phase 1 is a standing Analytics Agent duty on every order regardless
+  of Conversion/Lead Generation (see Workflow Order, step 18) — so
+  there's no new reporting cost to absorb when Conversion/Lead
+  Generation is added; the $249/month plan is priced for the
+  incremental capture/qualification/cross-channel-rollup work only.
+- **Standalone client:** there's no Phase 1 purchase to point to, so
+  here Analytics & Reporting is free simply because it's baked into the
+  $249/month plan itself, same as any other included feature — not
+  because of a Phase 1 relationship that doesn't exist for this client.
 
-**Path B — Case-by-Case Percentage (performance/success fee, the way
-most lead-gen agencies actually price this).** SEMRS earns a
-commission calculated as a percentage of the revenue or deal value the
-client attributes to SEMRS-sourced leads — charged only once the
-client actually closes that sale, not on lead volume or activity. This
-is deliberately structured so SEMRS stays engaged with a lead all the
-way through the funnel, not just until it's captured — the fee doesn't
-land until the client's product actually sells. Default starting rate
-— confirm or change per client, same "confirm or change" pattern as
-the Ads commission default, above — is **10% of attributed closed
-revenue**. Since SEMRS has no live connection into a client's own
-sales/CRM system (unlike the Ads Agent's platform-granted access),
-this path only works for a client who can and will report closed deals
-back to SEMRS in a verifiable way — record how, specifically, in the
-client's Conversion Definition (see prompts/client-brief.md). Not
-offered to a client who can't or won't do this.
+There is ONE pricing plan — recorded on the client brief (see
+prompts/client-brief.md, "Conversion & Lead Generation Pricing"). A
+percentage/success-fee alternative was considered and rejected the same
+day it was proposed: it would have depended on the client
+self-reporting closed deals with no way for SEMRS to verify them —
+real, unmanaged trust exposure on real money, since SEMRS has no live
+connection into a client's own sales/CRM system (unlike the Ads
+Agent's platform-granted access). One flat, verifiable plan avoids that
+risk entirely rather than trying to manage it.
 
-Either path is compatible with either service — a client can pick Path
-A for a flat monthly Lead Generation fee, or Path B if they'd rather
-pay only once SEMRS actually helps them close a sale. SEMRS's fee
-under either path is always shown as a clear, separate line item, and
-SEMRS never holds or moves the client's own payment — same standing
-rule as the Paid Media Model, above.
+**The Plan (annual option available).** A single flat monthly plan
+covering Conversion tracking, Lead Generation (capture + cross-source
+attribution), and the AI-Led WhatsApp Sales Agent (qualification,
+scoring, and meeting-booking) together — **$249/month**. The AI-Led
+WhatsApp Sales Agent isn't a separate add-on; it's the standard way
+this plan is delivered (see below). Real Meta WhatsApp Business API
+usage cost is separate and client-funded (see Hard Constraint,
+"WhatsApp Business API costs"), same as ad spend under the Paid Media
+Model, above — SEMRS never holds or moves that payment either. Paying
+annually is **10 months upfront for 12 months of service** ($2,490/
+year) — the same "pay 10, get 12" mechanic used everywhere else in this
+catalog (see `lib/pricingCalculator.ts`'s `billedTotal`), not a
+separately-invented discount rate. SEMRS's fee is always shown as a
+clear, separate line item, and SEMRS never holds or moves the client's
+own payment — same standing rule as the Paid Media Model, above.
 
-**The AI-Led WhatsApp Sales Agent is what actually delivers "engaged
-around the clock," under either path — not a bypass of human
-approval.** The Qualification + AI Sales Agent (see Lead Generation
-Track) nurtures, scores, and engages a captured lead continuously,
-including outside business hours — that is the real, already-built
-capability behind any "closes deals while you sleep" framing used in
-sales/marketing copy for this pricing model. What it does NOT do,
-under either path, is finalize the sale itself: pricing, a contract, or
-any other binding commitment always escalates to a human rep (see
-Security & Misuse Guardrails, "Human-in-the-loop safety net for AI-led
-sales conversations"). Under Path A's top tier, this agent is what the
-client is paying the flat fee for. Under Path B, it's not optional or
-separately mentioned — the success-fee model only makes sense if leads
-are actually being worked continuously, so this agent is the standard
-delivery mechanism assumed whenever Path B is offered. Either way, the
-Analytics Agent's Conversion Integration duty is what makes a deal this
-agent closes actually visible — and, on Path B, is what identifies the
-event that triggers SEMRS's fee (see agents/analytics-agent.md).
+**The AI-Led WhatsApp Sales Agent instantly notifies the client —
+never the lead — so the client can respond within minutes, not
+hours.** The Qualification + AI Sales Agent (see Lead Generation
+Track) never messages, calls, or otherwise contacts a lead directly —
+the client does all actual outreach and closing themselves, on their
+own WhatsApp Business number, using their own credentials (see
+agents/qualification-sales-agent.md — a hard architectural boundary,
+not a style choice). The client's own WhatsApp Business number must
+still carry Meta's official green-checkmark Business verification
+before onboarding proceeds — this is a hard precondition, not a
+nice-to-have: an unverified number faces Meta's tighter
+messaging-volume limits and a much higher spam-flag risk, which would
+directly undermine the client's own ability to reliably reach their
+leads at volume. If the client's number isn't yet verified, that's
+step one of onboarding, before anything else in Lead Generation goes
+live (see "Onboarding a Conversion & Lead Generation-Only Client,"
+below). **SEMRS never requests or holds access to the client's own
+WhatsApp Business Account** — there is nothing to grant, since this
+system never sends a single message through it; the "client adds SEMRS
+as an authorized partner" pattern used for ad accounts under the Paid
+Media Model does NOT apply here. Instead, the moment a lead is
+captured and scored, SEMRS's own system (its own WhatsApp Business
+number and/or email, entirely separate from the client's) sends the
+client an instant notification with the lead's contact details, score,
+and remark. That is the real, already-built capability behind any
+"closes deals while you sleep" framing used in sales/marketing copy for
+this pricing model: leads get captured, scored, and delivered around
+the clock, so the client can jump on a hot lead within minutes even
+overnight — not an AI holding a sales conversation with anyone. What
+this system does NOT do, ever, is contact the lead, negotiate, or
+finalize a sale — that responsibility sits entirely with the client
+(see Security & Misuse Guardrails, "No AI-led conversations with
+leads"). The Analytics Agent's Conversion Integration duty is what
+makes a deal the client ultimately closes visible in reporting (see
+agents/analytics-agent.md).
+
+### Client Portal Access — Read-Only, Phase-Segregated, Never Operated
+by the Client
+Same rule for both phases, and not a new exception to the Scope
+Constraint above — a restatement of it in this specific context, since
+Lead Generation's continuous, AI-driven nature could otherwise read as
+an invitation to hand the client more control than any other service
+gets:
+- **Read-only, always.** A client watches their own data — leads
+  coming in, AI Sales Agent activity, conversion numbers, Phase 1
+  analytics/reports — in their own Client Portal sign-in. They never
+  configure, pause, trigger, or otherwise operate any part of the
+  system themselves. Every action — content, qualification criteria,
+  escalation rules, campaign changes — is made by SEMRS's agents/staff,
+  never the client directly, identical to how Phase 1 already works.
+- **Phase-segregated.** A client onboarded standalone for Conversion
+  and/or Lead Generation only sees their own Phase II data in the
+  portal — there's no Phase 1 organic/paid deliverable to show them,
+  since they never ordered one. A client who has both phases sees
+  both: their existing Phase 1 reports/analysis (already-built Portal
+  behavior — Analytics Summaries, Ads Performance Reports, etc.,
+  unchanged) alongside their Phase II data. Neither phase's view leaks
+  into an order that doesn't include it.
+- **Not yet built.** The Client Portal today has no Lead/Conversion
+  data model at all — this session's Phase II work has been pricing
+  and business-rules only, not the underlying Lead Capture Agent/
+  Qualification + AI Sales Agent build. When that data model is built,
+  it follows the Portal's existing pattern (see `app/portal/page.tsx`
+  in SEMRS-Dashboard): scoped strictly to the signed-in client's own
+  `clientId`, rendered only when real data exists, no write/operate
+  affordance anywhere on the page — the same pattern Phase 1's
+  deliverables already use, not a new one invented for Phase II.
+
+### Onboarding a Conversion & Lead Generation-Only Client
+Follows the same fixed Approval Gates and the same client brief as any
+other order (see Workflow Order, above) — nothing about approvals or
+compliance is relaxed. What's different is scope: there's no organic
+content or ad campaign for SEMRS to create, so the Core Content
+Pipeline's content-production steps don't apply.
+0. **Gate before anything else starts:** confirm the client's WhatsApp
+   number is on a Meta-verified WhatsApp Business Account (see above).
+   If it isn't verified yet, that's the client's first task — point
+   them to Meta's own Business verification flow — before Order Intake
+   proceeds to step 1. Don't take a brief, don't start the approval
+   chain, on an unverified number.
+1. Client brief: only Conversion and/or Lead Generation checked under
+   Service(s) Ordered. Channels in Scope lists only the channel(s) that
+   already host — or will host — the lead-capture point (the client's
+   own website form, WhatsApp click-to-chat, or ad platform lead
+   form): SEMRS is placing a tracking tag and a capture/qualification
+   layer on the client's existing presence, not building new content
+   for it. Record the verified WhatsApp Business number and billing
+   cycle (see prompts/client-brief.md, "Conversion & Lead Generation
+   Pricing").
+2. CEO Order Approval Checkpoint (gate 1) — same as always.
+3. Research, SEO & GEO, Strategy, Content, and Visual & Video Content
+   are skipped — there's no organic content being produced. Go
+   straight to: the Lead Capture Agent confirming the tracking tag is
+   correctly placed on the client's existing asset(s), and setting up
+   the Qualification + AI Sales Agent's qualification criteria (what
+   makes a lead HOT/WARM/COLD for this client) and notification
+   preferences (WhatsApp and/or email, and the contact details to send
+   instant lead alerts to) with the client. No access grant is needed
+   from the client for this step — SEMRS never touches their WhatsApp
+   Business Account (see above).
+4. Review Agent still runs — reviewing the AI Sales Agent's
+   qualification/conversation setup for compliance (documented opt-in,
+   the 24-hour window/template rule, escalation rules) and the tracking
+   tag placement, in place of reviewing organic content.
+5. CEO Final Delivery Approval Checkpoint (gate 3) — approves the
+   capture/qualification setup going live.
+6. Ongoing: the Lead Generation Track runs continuously from there —
+   same as any client with Lead Generation in scope (see Lead
+   Generation Track, above).
+This same flow is also how Conversion/Lead Generation gets added to an
+existing client (the default Phase 2 path) — the only difference is
+that an existing client already has channels/content live, so step 1's
+"Channels in Scope" update is smaller and steps 2-5 move faster since
+most of the client relationship is already established.
 
 ## CEO Correspondence Channel
 admin@semrs.com is the designated backup channel between the
@@ -646,20 +745,25 @@ opt-in, no WhatsApp Business API usage happens for that client.
   with junk. The Lead Capture Agent rejects and flags a malformed or
   unverifiable submission rather than silently recording it (see
   agents/lead-capture-agent.md).
-- **Human-in-the-loop safety net for AI-led sales conversations.** The
-  Qualification + AI Sales Agent is never the only step before a
-  binding commitment. It may score a lead and book a meeting, but
-  pricing, contracts, or any other commitment a human should actually
-  confirm always escalates to a human rep instead — the same principle
-  as every CEO approval gate elsewhere in this file: nothing consequential
-  is simulated, assumed, or auto-granted by an agent (see
-  agents/qualification-sales-agent.md, Responsibilities and
-  Constraints).
-- **Escalation audit trail.** Every AI→human handoff on a lead
-  conversation is logged with its reason, following the same
-  append-only rule as approval records and the client message log
-  (see "Append-only approval and message records," above) — so a
-  mishandled conversation is always traceable, never silently dropped.
+- **No AI-led conversations with leads.** The Qualification + AI Sales
+  Agent scores a captured lead from the data already on record and
+  notifies the client — it never messages, calls, or otherwise
+  contacts the lead directly, with no exception (see
+  agents/qualification-sales-agent.md, Context and Constraints). The
+  client does all actual outreach and closing themselves, on their own
+  WhatsApp Business account. This is a hard architectural boundary, not
+  a style choice — it's what keeps this system out of the legal
+  questions that come with an AI holding sales conversations with
+  consumers (AI-disclosure requirements in several jurisdictions,
+  automated-decision rights under GDPR-style law, and the basic fact
+  that an AI system cannot itself be a party to a contract). Nothing in
+  this system simulates, assumes, or auto-completes a sale — the same
+  principle as every CEO approval gate elsewhere in this file.
+- **Notification delivery is logged, not the lead's data.** Every
+  instant lead notification sent to a client (WhatsApp and/or email)
+  is logged the same way as any other client message (see "Append-only
+  approval and message records," above) — so a client can never later
+  claim a hot lead was captured but never delivered to them.
 
 ## Agent Roles
 Two front-office agents report directly to the Orchestrator, and their
@@ -757,12 +861,13 @@ approval gate because of which one it is.
   ends the moment a lead is correctly recorded (see
   agents/lead-capture-agent.md).
 - Qualification + AI Sales Agent (only for orders that include Lead
-  Generation, AND only for a client who has separately opted in to
-  AI-led WhatsApp sales conversations — see prompts/client-brief.md,
-  "Lead Generation Details"): diagnoses each captured lead's need,
-  scores it, and either books a meeting or escalates to a human rep
-  with a short summary. Never finalizes pricing, a contract, or any
-  other binding commitment itself (see agents/qualification-sales-agent.md).
+  Generation): scores each captured lead HOT/WARM/COLD against this
+  client's own qualification criteria, using only the data already
+  captured, and instantly notifies the client (WhatsApp and/or email)
+  — never the lead. Never messages, calls, or otherwise contacts a
+  lead directly, under any circumstance; the client does all actual
+  outreach and closing themselves, on their own WhatsApp Business
+  account (see agents/qualification-sales-agent.md).
 - SEMRS Communicator Agent (SEMRS's own marketing, never client work):
   plans and proposes semrs.com's weekly content calendar, link
   building/guest posting, monthly site audits, new pages/subdomains,
@@ -843,7 +948,7 @@ flowchart TD
 
     subgraph LEADGEN["Lead Generation Track (Lead Generation orders only)"]
         direction LR
-        LC["Lead Capture Agent"] --> QS["Qualification + AI Sales Agent<br/>(AI-led WhatsApp opt-in only)"]
+        LC["Lead Capture Agent"] --> QS["Qualification + AI Sales Agent<br/>(scores + notifies client only —<br/>never contacts the lead)"]
     end
     ORCH --> LEADGEN
 
@@ -981,29 +1086,37 @@ B. Once a channel/campaign is live (i.e. after CEO Final Delivery
    those existing gates allow), the Lead Capture Agent ingests incoming
    leads from every in-scope source, tagging each with its real source
    and originating content/campaign.
-C. If, and only if, this client has separately opted in to AI-led
-   WhatsApp sales conversations (see prompts/client-brief.md — this is
-   a stricter, separate opt-in from the general Virtual Assistant
-   delivery path), the Qualification + AI Sales Agent engages each new
-   lead: diagnosing need, scoring hot/warm/cold against this client's
-   own qualification criteria, and either booking a meeting or
-   escalating to a human rep with a short summary.
-D. If a client has NOT opted in to AI-led sales conversations, captured
-   leads still get recorded and attributed (step B) — they are simply
-   handed to the client's own team to qualify and engage, the same way
-   organic draft content is handed to the client to publish under the
-   default Draft-Only path.
-E. Every WhatsApp message the Qualification + AI Sales Agent sends
-   still follows the full Email/WhatsApp compliance requirements
-   (Security & Misuse Guardrails, below) — a documented, per-lead
-   opt-in, the 24-hour free-form window or a pre-approved template, and
-   immediate honoring of any opt-out. This applies with no exception
-   for AI-led messages.
-F. The AI agent never finalizes pricing, a contract, or any other
-   binding commitment — `book_meeting` and `escalate_to_human` exist
-   specifically so a human confirms anything binding (see Security &
-   Misuse Guardrails, "Human-in-the-loop safety net for AI-led sales
-   conversations").
+C. The Qualification + AI Sales Agent scores every newly captured lead
+   HOT, WARM, or COLD against this client's own qualification criteria,
+   using only the data actually captured (form answers, source, prior
+   engagement) — never a live conversation with the lead itself (see
+   agents/qualification-sales-agent.md — this is a hard architectural
+   boundary, not a style choice). It writes a short remark explaining
+   the score, gets the scored lead into the Client Portal immediately,
+   and sends the client an instant notification (WhatsApp and/or
+   email, whichever the client selected) the moment scoring is done —
+   no batching, no delay.
+D. The client then does the actual outreach and closes the lead
+   themselves, on their own WhatsApp Business number and their own
+   credentials — this system never messages, calls, or otherwise
+   contacts the lead directly, with no exception. "Closes deals while
+   you sleep" describes the capture-score-notify pipeline running
+   continuously, 24/7, so the client can act on a hot lead within
+   minutes of it arriving even overnight — not an AI holding a sales
+   conversation with the lead. This is also what keeps this track out
+   of the compliance questions that come with an AI selling directly to
+   consumers (see Security & Misuse Guardrails).
+E. The instant notification to the client still follows the standard
+   Email/WhatsApp compliance requirements (Security & Misuse
+   Guardrails, below) — but since the recipient is the client, not the
+   lead, it carries none of the lead-consent complexity: the client has
+   an existing, explicitly paid-for service relationship expecting
+   these alerts.
+F. This system never finalizes pricing, a contract, or any other
+   binding commitment on a lead, and never will — that responsibility
+   sits entirely with the client, on their own account, since this
+   system never talks to the lead at all (see Security & Misuse
+   Guardrails, "No AI-led conversations with leads").
 G. The Analytics Agent's full-funnel reporting (see its "Lead Gen
    Integration" duty) draws on this track's records the same way it
    draws on client-shared data for organic channels and the Ads
@@ -1243,7 +1356,7 @@ semrs-multi-agent-marketing/
     analytics-agent.md                → reporting job description
     ads-agent.md                      → paid media (ads) job description — only for ads-scoped orders
     lead-capture-agent.md             → lead intake/attribution job description — only for Lead Generation orders
-    qualification-sales-agent.md      → AI qualification & sales conversation job description — only for Lead Generation orders with AI-led WhatsApp sales opted in
+    qualification-sales-agent.md      → lead scoring & instant client-notification job description — only for Lead Generation orders; never contacts the lead itself
     semrs-communicator-agent.md       → SEMRS's own self-marketing job description (semrs.com, never client work)
   prompts/
     client-brief.md                 → the shared input all agents read from

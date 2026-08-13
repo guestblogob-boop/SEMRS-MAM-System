@@ -95,25 +95,33 @@ the standard rate unless the CEO has negotiated something different:
 
 ## Conversion & Lead Generation Pricing
 Only fill in if Conversion and/or Lead Generation was selected above
-(see CLAUDE.md, "Conversion & Lead Generation Pricing Model — Phase 2
-Upsell for Existing Clients Only"). This is a second-phase upsell —
-confirm the client already has an active organic and/or paid
-engagement with SEMRS before offering it; never sell it as a first
-purchase.
+(see CLAUDE.md, "Conversion & Lead Generation Pricing Model"). Note
+which onboarding path this is:
+- [ ] Phase 2 upsell — client already has an active organic/paid
+      engagement with SEMRS
+- [ ] Standalone — Conversion &/or Lead Generation is this client's
+      only purchase (see CLAUDE.md, "Onboarding a Conversion & Lead
+      Generation-Only Client")
 
-Select one:
-- [ ] Path A — Monthly Bundle. Tier selected: __________
-      Billing: [ ] Monthly  [ ] Annual (15% discount)
-- [ ] Path B — Case-by-Case Percentage. Agreed rate: _____%
-      (defaults to 10% of attributed closed revenue unless negotiated
-      — only offered if the client can and will report closed deals
-      back to SEMRS in a verifiable way; note how, below)
+The Plan — $249/month: Conversion tracking, Lead Generation, and the
+AI-Led WhatsApp Sales Agent, all included. (A percentage/success-fee
+alternative was considered and rejected — it depended on the client
+self-reporting closed deals with no way for SEMRS to verify them; see
+CLAUDE.md.)
+Billing: [ ] Monthly  [ ] Annual ($2,490/year — pay 10 months, get 12)
 
-Analytics & Reporting is included free with either path — never a
-separate line item.
+Analytics & Reporting is included free — never a separate line item.
 
-How closed deals will be verified/reported back to SEMRS (Path B
-only):
+**WhatsApp Business number** — gate before onboarding proceeds: the
+client will use their own **Meta-verified** WhatsApp Business number to
+message and close leads themselves — never a SEMRS-owned one and never
+an unverified number (see CLAUDE.md, "Conversion & Lead Generation
+Pricing Model," for why verification is required, not optional). SEMRS
+does not need any access to this number — record it only so it can be
+confirmed verified:
+
+- [ ] Number confirmed Meta-verified (if not yet verified, that's the
+      client's first task — do not proceed until it is)
 
 
 ## Content Ownership/Confidentiality Notes
@@ -151,34 +159,26 @@ click-to-chat, platform-native ad lead forms):
 
 
 **Qualification Criteria** — the real questions/signals that make a
-lead hot, warm, or cold for this specific client's business. Must come
-from the actual client meeting, not invented:
+lead HOT, WARM, or COLD for this specific client's business, based on
+what the capture form/CTA actually collects (the Qualification + AI
+Sales Agent scores from this data only — it never holds a conversation
+with the lead to find out more; see agents/qualification-sales-agent.md).
+Must come from the actual client meeting, not invented:
 
 
-**Brand Voice/Tone for AI Sales Conversations** — how this client
-wants an AI-led WhatsApp conversation to sound. May match the general
-Tone field above, or be more specific to sales conversations:
+**Notification Preferences** — how the client wants to be instantly
+alerted the moment a new lead is captured and scored (see CLAUDE.md,
+Lead Generation Track, step C — this happens automatically, with no
+delay, for every Lead Generation client; there is no separate opt-in
+for it):
+- [ ] WhatsApp — client's number to send alerts to:
+- [ ] Email — client's address to send alerts to:
 
-
-**Escalation Rules** — when a lead should be handed to a human rep
-instead of continuing with the AI agent, and who that human rep is:
-
-
-**AI-Led WhatsApp Sales Agent — Enabled?**
-Select one. This is a separate, stricter opt-in than the general
-"SEMRS as Virtual Assistant" delivery path above — selecting Virtual
-Assistant does NOT by itself authorize an AI agent to hold live sales
-conversations with this client's leads (see
-agents/qualification-sales-agent.md, Constraints):
-- [ ] Yes — client has been briefed on what this means and explicitly
-      requested it
-- [ ] No — leads are captured and recorded, but qualification/outreach
-      is handled by the client's own team
-
-Note: even when enabled here, the Qualification + AI Sales Agent still
-requires a separate, documented WhatsApp opt-in from each individual
-lead before messaging them (see CLAUDE.md, Security & Misuse
-Guardrails, "Email/WhatsApp compliance requirements") — this checkbox
-authorizes SEMRS to run the agent for this client; it does not
-substitute for a lead's own consent.
+**Who follows up with the lead** — always the client's own team, on
+the client's own WhatsApp Business number (see "WhatsApp Business
+number," above). This system never messages, calls, or otherwise
+contacts a lead directly, with no exception (see
+agents/qualification-sales-agent.md, Constraints) — record here only if
+this client has a specific internal process (e.g. a named team member,
+a response-time target) worth noting for context:
 

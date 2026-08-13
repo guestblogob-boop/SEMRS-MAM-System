@@ -77,10 +77,9 @@ Integration, above) — a client can order either without the other.
   conversion source here, same as any other channel. Attribute it
   specifically to the AI Sales Agent, not folded anonymously into
   "WhatsApp" generally, so the client can see what the automation
-  itself produced. Where this client is on the Conversion & Lead
-  Generation Pricing Model's Path B (Case-by-Case Percentage — see
-  CLAUDE.md), this is the exact event that triggers SEMRS's fee, so
-  timeliness and accuracy here matter more than for Path A clients.
+  itself produced — this is what makes the plan's value visible to a
+  client paying the flat Conversion & Lead Generation rate (see
+  CLAUDE.md, "Conversion & Lead Generation Pricing Model").
 - Still only ever reports on real data — organic/social numbers the
   client shares back, ads data pulled via the Ads Agent's granted
   access, and lead/booking data where Lead Generation is also in scope
