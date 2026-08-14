@@ -62,7 +62,7 @@ flowchart TD
     subgraph LG["Lead Generation and Sales"]
         direction TB
         LC["Lead Capture Agent<br/>(Lead Generation orders only)"]
-        QS["Qualification + AI Sales Agent<br/>(AI-led WhatsApp opt-in only)"]
+        QS["Qualification + AI Sales Agent<br/>(scores + notifies client only —<br/>never contacts the lead)"]
     end
 
     subgraph SM["Self-Marketing"]
@@ -89,21 +89,21 @@ flowchart TD
   Content); Quality and Compliance (Review); Distribution (Website/Blog
   Draft, Social Content Draft, WhatsApp Draft, Email Draft); Paid Media
   (Ads Campaign — ads-scoped orders only); Lead Generation and Sales
-  (Lead Capture Agent, Qualification + AI Sales Agent — Lead Generation
-  orders only, with the AI Sales Agent further gated on a client's
-  separate AI-led-WhatsApp-sales opt-in); Self-Marketing (SEMRS
+  (Lead Capture Agent, Qualification + AI Sales Agent — both run for
+  any Lead Generation order; the AI Sales Agent scores and notifies the
+  client only, never contacts the lead itself); Self-Marketing (SEMRS
   Communicator — semrs.com only, its own CEO approval track, never
   client work).
 - **Analytics Agent** reports directly to the Orchestrator rather than
   sitting in any one department, since it reports across every channel
   a campaign actually used, not one department's output specifically.
-- **Lead Capture Agent** runs for any Lead Generation order once
-  content/ads are live; the **Qualification + AI Sales Agent** only
-  runs on top of that for a client who has separately opted in to
-  AI-led WhatsApp sales conversations (see CLAUDE.md, Lead Generation
-  Track, and prompts/client-brief.md, "Lead Generation Details") — a
-  Lead Generation order with that opt-in left unchecked still gets
-  Lead Capture Agent coverage, just no AI-led outreach.
+- **Lead Capture Agent** and the **Qualification + AI Sales Agent** both
+  run for any Lead Generation order once content/ads are live — there
+  is no separate opt-in gating the AI Sales Agent's scoring/notification
+  work (see CLAUDE.md, Lead Generation Track). It never messages, calls,
+  or otherwise contacts the lead directly, with no exception; the
+  client does all actual outreach and closing themselves, on their own
+  WhatsApp Business account.
 - All 17 agents are accounted for exactly once. Ads Campaign, the Lead
   Generation pair, and SEMRS Communicator remain conditional/on-demand
   agents (CLAUDE.md, Context) — shown here for organizational

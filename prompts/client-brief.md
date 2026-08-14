@@ -171,8 +171,18 @@ alerted the moment a new lead is captured and scored (see CLAUDE.md,
 Lead Generation Track, step C — this happens automatically, with no
 delay, for every Lead Generation client; there is no separate opt-in
 for it):
-- [ ] WhatsApp — client's number to send alerts to:
-- [ ] Email — client's address to send alerts to:
+- [x] Email — always on, free, default channel. Client's address to
+      send alerts and the CSV/Excel lead report to:
+- [ ] WhatsApp (optional add-on, not a replacement for email) — only
+      if the client specifically wants it and understands it may carry
+      a small real Meta conversation cost (see CLAUDE.md, Hard
+      Constraint, "WhatsApp Business API costs"). Client's number:
+
+**Lead Report Cadence** — how often the full CSV/Excel lead report
+(every captured lead's name, phone, WhatsApp, email, score, remark,
+source, and capture date) is emailed, on top of the instant per-lead
+alert above. Also available on demand from the Client Portal:
+- [ ] Daily  [ ] Weekly  [ ] Monthly
 
 **Who follows up with the lead** — always the client's own team, on
 the client's own WhatsApp Business number (see "WhatsApp Business

@@ -271,15 +271,32 @@ WhatsApp Business Account** — there is nothing to grant, since this
 system never sends a single message through it; the "client adds SEMRS
 as an authorized partner" pattern used for ad accounts under the Paid
 Media Model does NOT apply here. Instead, the moment a lead is
-captured and scored, SEMRS's own system (its own WhatsApp Business
-number and/or email, entirely separate from the client's) sends the
-client an instant notification with the lead's contact details, score,
-and remark. That is the real, already-built capability behind any
-"closes deals while you sleep" framing used in sales/marketing copy for
-this pricing model: leads get captured, scored, and delivered around
-the clock, so the client can jump on a hot lead within minutes even
-overnight — not an AI holding a sales conversation with anyone. What
-this system does NOT do, ever, is contact the lead, negotiate, or
+captured and scored, SEMRS's own system sends the client an instant
+notification with the lead's contact details, score, and remark.
+**Email is the default and required notification channel — free, via
+the same Gmail App Password mechanism already used elsewhere in this
+system (see lib/notifyEmail.ts), with no per-message cost and no Meta
+setup burden.** WhatsApp is an OPTIONAL additional channel a client may
+request on top of email, not a replacement for it — offered only when
+the client understands it may carry a small real Meta conversation cost
+(see Hard Constraint, "WhatsApp Business API costs") and explicitly
+wants it anyway; most clients need nothing beyond the free email
+channel. That is the real, already-built capability behind any "closes
+deals while you sleep" framing used in sales/marketing copy for this
+pricing model: leads get captured, scored, and delivered around the
+clock, so the client can jump on a hot lead within minutes even
+overnight — not an AI holding a sales conversation with anyone.
+
+**Beyond the instant single-lead alert, the client also gets a full
+lead report — CSV/Excel, built with Claude Code's own document-creation
+skills (same free capability already used for other file-format
+deliverables, see Deliverable Formats, above) — containing every
+captured lead's full information: name, phone number, WhatsApp number,
+email, HOT/WARM/COLD score, remark, source, and capture date.** Sent by
+email (free, same mechanism as the instant alert) on a regular
+cadence and available on demand from the Client Portal — this is the
+client's actual working list for outreach, not just a one-at-a-time
+feed. What this system does NOT do, ever, is contact the lead, negotiate, or
 finalize a sale — that responsibility sits entirely with the client
 (see Security & Misuse Guardrails, "No AI-led conversations with
 leads"). The Analytics Agent's Conversion Integration duty is what

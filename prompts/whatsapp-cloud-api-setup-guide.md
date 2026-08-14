@@ -24,6 +24,13 @@ A client never sees or performs any of this directly. Compare against
 for the difference in audience/tone this document deliberately does
 not follow.
 
+**Only build this when actually needed.** Per CLAUDE.md's "Conversion &
+Lead Generation Pricing Model," email is the default, free, required
+notification channel — this whole WhatsApp setup is an optional add-on
+built only once a specific client explicitly requests WhatsApp alerts
+on top of email and accepts the small real Meta cost that comes with
+it. Most clients never trigger this section at all.
+
 ## Prerequisites
 - A Facebook account.
 - A Meta Business Manager Account (business.facebook.com) — create one
@@ -68,7 +75,10 @@ You now have:
 3. Verify via SMS or voice call.
 4. Meta reviews the display name (can be rejected if it doesn't match
    your actual business name — avoid generic terms, emojis, or
-   promotional text in the display name).
+   promotional text in the display name). **Display name review is
+   separate from Business Verification below and can be rejected with
+   no detailed reason** — plan for a possible resubmission rather than
+   assuming approval.
 
 ## 4. Business Verification
 Business Settings → Business Info → Start Verification. Submit:
@@ -76,6 +86,16 @@ Business Settings → Business Info → Start Verification. Submit:
 - A business document (registration certificate, utility bill, bank
   statement)
 - Website with a matching domain
+
+**The single most common cause of rejection: the legal entity name
+must match EXACTLY** across the Meta account, the submitted document,
+and the business website — e.g. registering as "SEMRS" while the
+document says "SEMRS Ltd" (or whatever SEMRS's actual registered legal
+name is) will fail. Confirm the exact registered name before starting,
+don't assume the trading name is what's on file. Submission must come
+from an authorized representative (owner or director) — not just
+whoever has the Facebook login. Non-English documents need a certified
+translation, never a loose/informal one.
 
 **Not the same verification CLAUDE.md's pricing model gates onboarding
 on.** That gate is about the CLIENT's own WhatsApp Business number
@@ -126,8 +146,13 @@ go-live, not after.
    Marketing). Mislabeling categories is a common cause of rejection or
    unexpected billing.
 3. Write the template with `{{1}}`, `{{2}}` style variables for
-   dynamic content (name, lead source, etc.).
-4. Submit for review — usually resolves within minutes to a day.
+   dynamic content (name, lead source, etc.) — use real sample values
+   (an actual name, an actual lead source) when submitting, not
+   placeholder text like "Test" or "ASDF"; vague samples are a common
+   cause of a review getting stuck.
+4. Submit for review — Utility templates like a lead alert typically
+   resolve within minutes; new accounts or more complex templates can
+   take up to 24 hours.
 5. Repeat for every distinct message shape you need (lead alert,
    offer/discount link, appointment confirmation, etc.) — each wording
    variant needs its own approved template.
@@ -139,7 +164,11 @@ quality and volume of business-initiated conversations in a rolling
 - Tier 1: 250 unique customers/24hr
 - Tier 2: 1,000
 - Tier 3: 10,000
-- Tier 4: unlimited
+- Tier 4: 100,000
+
+Meta's own docs describe further scaling beyond Tier 4 case-by-case —
+irrelevant at SEMRS's actual volume (one alert per captured lead per
+client) either way.
 
 Business Verification is what unlocks moving beyond Tier 1. Tiers
 upgrade automatically as you maintain volume and a healthy quality
