@@ -11,7 +11,7 @@ Clients place orders — they don't operate the system themselves. No work start
 Extends the Content, Ads Campaign, and Analytics agents with automatic lead handling, for orders that select Lead Generation as a service:
 
 1. Leads are captured from ads, website forms, and organic channels into one attributed record per lead, tagged by the exact content piece or campaign that produced it (see [agents/lead-capture-agent.md](agents/lead-capture-agent.md)).
-2. If, and only if, the client has separately opted in to AI-led WhatsApp sales conversations, an AI agent qualifies each lead, diagnoses their need, and either books a meeting or escalates to a human rep — it never finalizes pricing, contracts, or any other binding commitment itself (see [agents/qualification-sales-agent.md](agents/qualification-sales-agent.md)).
-3. The Analytics Agent reports full-funnel performance — leads generated per content piece/ad, qualification rate, meetings booked, and (once the client reports it) close rate.
+2. An AI agent scores every captured lead HOT/WARM/COLD from the data already collected and instantly notifies the client — by email (free, default) and/or WhatsApp (optional add-on, real Meta cost) — never the lead. The client does all actual outreach and closing themselves, on their own WhatsApp Business number; this agent never messages, calls, or otherwise contacts a lead directly, with no exception (see [agents/qualification-sales-agent.md](agents/qualification-sales-agent.md)).
+3. The client also gets a full CSV/Excel lead report (contact info, score, remark, source) on a chosen cadence, and the Analytics Agent reports full-funnel performance — leads generated per content piece/ad, qualification rate, and (once the client reports it) close rate.
 
 See [CLAUDE.md](CLAUDE.md), "Lead Generation Track," for the full flow, guardrails, and approval boundaries.
