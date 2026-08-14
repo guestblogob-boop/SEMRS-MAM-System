@@ -335,6 +335,49 @@ gets:
   affordance anywhere on the page — the same pattern Phase 1's
   deliverables already use, not a new one invented for Phase II.
 
+### Client Support Module
+A public **`/support`** page — no login required, deliberately separate
+from the Client Portal (`/portal`) so it's useful to a prospect
+browsing semrs.com and an existing client alike. Real short and long
+videos, auto-embedded from a dedicated **"SEMRS Client Support"**
+playlist on SEMRS's own real YouTube channel,
+[youtube.com/@SEMRS-GBOB](https://www.youtube.com/@SEMRS-GBOB). Videos
+are never hosted inside this system itself — only the playlist is
+configured; the app fetches the current video list live from that one
+real playlist (YouTube's free, keyless RSS feed — no API key, no
+Google Cloud project) and embeds directly from the channel, per
+explicit instruction. Topics: account integration, a dashboard
+overview, SEMRS.com's services and pricing explained, how the system
+works end to end, and usage guidance for every module.
+
+**Why a dedicated playlist, not the whole channel:** SEMRS's channel
+also carries regular blog/social-tie-in content that has nothing to do
+with using this system. A playlist is the actual content filter — any
+video added to "SEMRS Client Support" appears on `/support`
+automatically; everything else on the channel is naturally excluded,
+with no fragile title-keyword guessing needed to tell them apart.
+
+**Creation and upload are currently a manual step, not an automated
+pipeline.** The Visual & Video Content Agent can produce the creative
+brief, script, and visual direction for a support video — same as any
+other creative-brief-level output it already handles — but this system
+still doesn't do full video editing/rendering (see Security & Misuse
+Guardrails, "Visual & Video Content Agent — licensed sources, and
+free-tier AI generation, only": "Animation/effect suggestions stay at
+the creative-brief level... this system doesn't do full video
+editing/rendering"). Nothing about that constraint changes here. A
+human produces the actual video from that brief and uploads it to the
+real SEMRS channel, into the "SEMRS Client Support" playlist,
+themselves — from there it appears on `/support` with no further
+staff action. If SEMRS later adopts a genuinely free avatar-video
+generation tool and a YouTube Data API upload integration, the upload
+step itself could become automated — that would be a real, separate
+scoping decision, not assumed here.
+
+System-wide, not per-client — every visitor sees the same support
+library, the same way pricing is one shared catalog rather than
+per-client data.
+
 ### Onboarding a Conversion & Lead Generation-Only Client
 Follows the same fixed Approval Gates and the same client brief as any
 other order (see Workflow Order, above) — nothing about approvals or
