@@ -10,6 +10,31 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-15 (System renamed to SEMRS OS; CEO correspondence address changed)
+- Permanently renamed the system's official identity from "SEMRS
+  AISMMA — AI Social Media Marketing Agency" to "SEMRS OS — AI Social
+  Media Marketing Agency," per explicit instruction. Every live
+  reference to "SEMRS AISMMA" / "AISMMA" was updated to "SEMRS OS":
+  CLAUDE.md (System Identity, Project Purpose's "(AISMMA)"
+  parenthetical, Agent Roles, both Mermaid diagrams), README.md,
+  agents/orchestrator.md (title and Role section), and docs/org-chart.md
+  (intro text and Mermaid diagram). The Orchestrator's display name is
+  now "SEMRS OS Orchestrator" (Managing Director); "the Orchestrator"
+  remains the shorthand used throughout both documents' prose,
+  unchanged — same non-full-find-replace approach used for the prior
+  2026-08-11 identity formalization entry below. Historical entries in
+  this changelog that describe the prior "SEMRS AISMMA"/"AISMMA" name
+  are left as-is, per this file's own append-only rule.
+- Permanently changed the CEO Correspondence Channel address from
+  admin@semrs.com to purfits@gmail.com, per explicit instruction.
+  Updated everywhere it appeared: CLAUDE.md (Delivery Model's Path 1
+  hand-off, CEO Correspondence Channel, Client Contact Channel's
+  distinction from the client-facing address, Output Format) and
+  prompts/client-brief.md (Client Contact Channel). This address stays
+  internal-only (Orchestrator↔CEO traffic), distinct from the
+  client-facing guestblogob@gmail.com address, unchanged by this
+  update.
+
 ## 2026-08-11 (Product listing copy)
 - Added product listing copy (title/description/tags for a product an
   e-commerce client already sells) as a Content Agent deliverable, per

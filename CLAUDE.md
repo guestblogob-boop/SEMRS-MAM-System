@@ -2,17 +2,17 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-# SEMRS AISMMA — AI Social Media Marketing Agency
+# SEMRS OS — AI Social Media Marketing Agency
 
 ## System Identity
-- **Official system name:** SEMRS AISMMA — AI Social Media Marketing
+- **Official system name:** SEMRS OS — AI Social Media Marketing
   Agency.
 - **Owner:** SEMRS.
 - **Human authority:** the SEMRS CEO — the real, non-simulated decision
   maker behind every Approval Gate in this document (see Approval
   Gates, below). "CEO" is this document's standing term for that human
   authority throughout.
-- **Primary AI controller:** the AISMMA Orchestrator (Managing
+- **Primary AI controller:** the SEMRS OS Orchestrator (Managing
   Director) — coordinates every other agent, never does specialist
   work itself, never grants a CEO approval on its own (see Agent
   Roles, below, and agents/orchestrator.md). Referred to as "the
@@ -21,7 +21,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Purpose
 This project builds SEMRS's own AI-powered social media marketing
-agency production system (AISMMA) — the single system SEMRS uses to
+agency production system (SEMRS OS) — the single system SEMRS uses to
 deliver SEO, SEM (paid ads), GEO/AEM (AI-answer-engine visibility),
 content creation, copywriting, social media management, analytics and
 reporting, lead generation, and conversion on behalf of its clients'
@@ -80,7 +80,7 @@ Every channel agent produces a finished, formatted DRAFT as a Google
 Doc or Google Sheet with a shareable link. Once CEO Final Delivery
 Approval is granted, the Orchestrator compiles all approved draft links
 (and, once available, the analytics summary) into one package and
-emails it to the CEO at admin@semrs.com, in addition to showing it on
+emails it to the CEO at purfits@gmail.com, in addition to showing it on
 the dashboard. The CEO manually forwards it to the client — by
 whichever channel the client prefers (email, WhatsApp, or the
 dashboard link). The client then publishes the content themselves,
@@ -426,7 +426,7 @@ that an existing client already has channels/content live, so step 1's
 most of the client relationship is already established.
 
 ## CEO Correspondence Channel
-admin@semrs.com is the designated backup channel between the
+purfits@gmail.com is the designated backup channel between the
 Orchestrator and the CEO — used for anything the dashboard can't
 conveniently carry (draft/Google-Doc links, final package summaries,
 direct-publish confirmations). It supplements the dashboard; it is
@@ -444,7 +444,7 @@ prompts/client-brief.md, "Client Contact Channel"), SEMRS reaches them
 from one default identity, branded as "SEMRS" — the client sees the
 SEMRS business name only, never a bare email address or phone number:
 - Email: guestblogob@gmail.com — client-facing only. This is a
-  separate, dedicated address from admin@semrs.com (the CEO
+  separate, dedicated address from purfits@gmail.com (the CEO
   Correspondence Channel, above), which stays internal-only
   (Orchestrator↔CEO traffic). Keeping them separate means a client
   reply can never land in the same inbox as an internal approval
@@ -847,7 +847,7 @@ client" — see Self-Marketing Track, below). Every order — client or
 self-marketing — still moves through the same fixed chain of work (see
 Workflow Order, below) end to end; nothing skips a step or a CEO
 approval gate because of which one it is.
-- Orchestrator (formally the AISMMA Orchestrator, Managing Director —
+- Orchestrator (formally the SEMRS OS Orchestrator, Managing Director —
   see System Identity, above; "Orchestrator" is used as shorthand for
   the same role throughout this document): coordinates all agents, prepares each CEO approval
   package that applies to the engagement (order, final delivery, and,
@@ -984,7 +984,7 @@ approval gate because of which one it is.
 ```mermaid
 flowchart TD
     CEO["SEMRS CEO<br/>(grants all approval checkpoints)"]
-    ORCH["AISMMA Orchestrator<br/>Managing Director<br/>(coordinates all agents,<br/>never does the work itself)"]
+    ORCH["SEMRS OS Orchestrator<br/>Managing Director<br/>(coordinates all agents,<br/>never does the work itself)"]
     CEO --> ORCH
 
     ORCH --> CC["Client Communication Agent<br/>— the only agent that talks<br/>to the client"]
@@ -1031,7 +1031,7 @@ source of truth for which department is genuinely active.
 ```mermaid
 flowchart LR
     subgraph OPS["Operations"]
-        ORCH2["AISMMA Orchestrator<br/>Managing Director"]
+        ORCH2["SEMRS OS Orchestrator<br/>Managing Director"]
     end
     subgraph CR["Client Relations"]
         CC2["Client Communication Agent"]
@@ -1279,7 +1279,7 @@ that applied to this engagement (order, final delivery, and where
 relevant budget/self-marketing),
 the full client message log, and (once available) the analytics
 summary per channel. This package is shown on the dashboard AND emailed
-to admin@semrs.com once it's ready.
+to purfits@gmail.com once it's ready.
 
 ## Quality Standards
 - Content must match the client's stated tone exactly.
