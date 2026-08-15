@@ -1,6 +1,6 @@
 # Client Help: How to Give SEMRS Access to Your Meta Ad Account (3 Minutes)
 
-This is what the client sees in SEMRS Dashboard → Ads Campaigns →
+This is what the client sees in SEMRS OS → Ads Campaigns →
 Client Help, once an ads-scoped order has passed CEO Budget & Campaign
 Approval (see agents/ads-agent.md, Process step 8, which this guide
 fulfills). The auto-verification step described below ("Access
@@ -51,8 +51,8 @@ you the request instead, and you just approve it.
 **Step 4 — Done in Meta.** You'll see SEMRS listed as a partner with
 "Pending" or "Active."
 
-**Step 5 — Come back to SEMRS Dashboard**
-1. Go to SEMRS Dashboard → My Campaigns → Ads Campaigns
+**Step 5 — Come back to SEMRS OS**
+1. Go to SEMRS OS → My Campaigns → Ads Campaigns
 2. Click "I Have Granted Access — Verify Now"
 3. The system checks within ~2 minutes and shows "Access Verified ✅"
 
@@ -105,7 +105,7 @@ request instead — you just approve it.
    is calculated for your specific budget). If you also run ads on
    another platform through SEMRS, that platform's fee is calculated
    the same way, separately, and added — never one blended rate on
-   your combined spend. We send an invoice via the SEMRS Dashboard's
+   your combined spend. We send an invoice via SEMRS OS's
    Invoice section — never deducted from your ad spend.
 4. Meta charges your card in smaller daily increments until your
    agreed monthly budget is reached.

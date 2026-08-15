@@ -182,7 +182,7 @@ lib/directPublishHelp.ts (organic/social channels) — see
 agents/ads-agent.md, Process step 8.
 
 **Invoicing.** SEMRS's commission is invoiced to the client through the
-SEMRS Dashboard's Invoice section (target dashboard functionality, not
+SEMRS OS's Invoice section (target dashboard functionality, not
 yet built — same status as the other "intended dashboard behavior"
 items noted under Client Contact Channel, above). Bank account details
 for that invoice are not yet defined in this document — to be added
@@ -1318,15 +1318,18 @@ personally reviews all new clients and all Final Delivery Approvals."
 Until such a rule is written here and confirmed by the CEO, treat every
 approval as CEO-only.
 
-**Standing decision-identity label ("SEMRS Dashboard").** The
+**Standing decision-identity label ("SEMRS OS").** The
 dashboard's "Decided by," "Entered by," and "Attempted by" fields —
 across the Order Approval, Final Delivery Approval, Budget & Campaign
 Approval, Self-Marketing Approval, Channel Draft entry, and Publish
-actions — default to the label "SEMRS Dashboard," confirmed by the
+actions — default to the label "SEMRS OS," confirmed by the
 CEO, for both client work and self-marketing work. This isn't an
-arbitrary system label: "SEMRS Dashboard" is the actual real WordPress
+arbitrary system label: "SEMRS OS" is the actual real WordPress
 user account semrs.com's Application Password credential authenticates
-as (see Delivery Model, "SEMRS as Virtual Assistant," and Security &
+as — renamed from "SEMRS Dashboard" on 2026-08-15, per explicit
+instruction, when the CEO renamed that real WordPress user account to
+match the system's own renamed identity (see System Identity, above)
+(see Delivery Model, "SEMRS as Virtual Assistant," and Security &
 Misuse Guardrails, "Client Credentials & Platform Access") — so the
 label names the genuine account performing the action, not a
 placeholder. This satisfies the append-only audit-trail requirement
@@ -1337,7 +1340,7 @@ session itself (see components/dashboard/RecordApprovalForm.tsx's
 comment: "the human... authenticated via the staff login this whole
 /dashboard sits behind, is the actual decision-maker") — not the
 free-text name typed into the field. A real, non-simulated human still
-has to click Approve/Decline/Publish/Draft; "SEMRS Dashboard" only
+has to click Approve/Decline/Publish/Draft; "SEMRS OS" only
 replaces what used to be a separately-typed name in that click's
 display record. If SEMRS later moves from one shared staff/CEO login
 to individual per-staff accounts, this convention should be revisited
@@ -1426,12 +1429,12 @@ semrs-multi-agent-marketing/
     self-marketing-approval-summary.md → template for the CEO's Self-Marketing Approval decision (semrs.com only)
     client-messages.md              → the message templates the Client Communication Agent sends at each stage
     order-index-template.md         → reusable per-order index (brief, approvals, message log, delivered package) — copy to outputs/<client-order-id>/README.md per real order
-    client-help-meta-ads-integration.md → client-facing step-by-step guide for granting SEMRS Meta Business Manager access, shown in SEMRS Dashboard > Ads Campaigns > Client Help
+    client-help-meta-ads-integration.md → client-facing step-by-step guide for granting SEMRS Meta Business Manager access, shown in SEMRS OS > Ads Campaigns > Client Help
   outputs/
     client-message-log/             → per-order message logs (see README.md there for the convention); (planned) per-order subfolders — nothing fabricated ahead of a real order
     system-changelog.md             → CEO-only internal record of system changes (new agents, workflow edits) — never client-visible
   docs/
-    org-chart.md                    → the formal 17-agent, 7-department organizational chart (Mermaid diagram) — CEO-only reference, shown in SEMRS Dashboard's Admin/System Settings view; never client-visible
+    org-chart.md                    → the formal 17-agent, 7-department organizational chart (Mermaid diagram) — CEO-only reference, shown in SEMRS OS's Admin/System Settings view; never client-visible
   sample-request.md                 → one fictional example client order, used to trace the system end-to-end
   sample-request-ads.md             → a second fictional example client order (ads-scoped), used to trace the Ads Track end-to-end
 ```

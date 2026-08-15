@@ -10,6 +10,23 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-15 (WordPress decision-identity label renamed to match)
+- The CEO renamed semrs.com's real WordPress user account (the one
+  whose Application Password authenticates every direct-publish and
+  staff-dashboard action) from "SEMRS Dashboard" to "SEMRS OS," per
+  explicit instruction, following the same-day system rename below.
+  Updated the 5 code locations that default the dashboard's "Decided
+  by"/"Entered by"/"Attempted by" fields to that real username
+  (`components/dashboard/RecordApprovalForm.tsx`,
+  `RecordBriefApprovalForm.tsx`, `RecordPaymentForm.tsx`,
+  `ChannelDrafts.tsx` ×2) to match, plus CLAUDE.md's "Standing
+  decision-identity label" section describing them. These were
+  deliberately left untouched during the same-day system rename below
+  until the real WordPress account was confirmed renamed too — renaming
+  the label without the real account would have misrepresented which
+  account actually authenticates, per this same section's own stated
+  reasoning.
+
 ## 2026-08-15 (System renamed to SEMRS OS; CEO correspondence address changed)
 - Permanently renamed the system's official identity from "SEMRS
   AISMMA — AI Social Media Marketing Agency" to "SEMRS OS — AI Social
