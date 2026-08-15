@@ -1,6 +1,6 @@
-# SEMRS AISMMA — AI Social Media Marketing Agency
+# SEMRS OS — AI Social Media Marketing Agency
 
-Official system name: **SEMRS AISMMA — AI Social Media Marketing Agency**. Owner: SEMRS. Human authority: the SEMRS CEO, the real decision maker behind every Approval Gate. Primary AI controller: the AISMMA Orchestrator (Managing Director) — coordinates every other agent, never does specialist work itself, never grants a CEO approval on its own (see CLAUDE.md, "System Identity" and agents/orchestrator.md).
+Official system name: **SEMRS OS — AI Social Media Marketing Agency**. Owner: SEMRS. Human authority: the SEMRS CEO, the real decision maker behind every Approval Gate. Primary AI controller: the SEMRS OS Orchestrator (Managing Director) — coordinates every other agent, never does specialist work itself, never grants a CEO approval on its own (see CLAUDE.md, "System Identity" and agents/orchestrator.md).
 
 SEMRS's own multi-agent marketing system, used internally to do marketing work on behalf of SEMRS's clients across website, social, WhatsApp, and email channels. Services are scoped to SMMA work (SEO, ads, GEO/AEM, content creation, copywriting, social media management, analytics & reporting, lead generation, and conversion) — guest posting, link building, generic "authority building," and "AI Agent Services" are not sold as client services (see CLAUDE.md, Project Purpose). Lead Generation (capture + AI qualification) and Conversion (cross-channel performance measurement across organic, social, ads, and landing pages) are separate, independently-orderable services — see CLAUDE.md, "What 'Conversion' means."
 

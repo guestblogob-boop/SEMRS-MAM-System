@@ -74,7 +74,7 @@ access per platform here once provided:
 How the client wants to receive status updates and the final package
 (see CLAUDE.md, Client Contact Channel). SEMRS reaches the client from
 its own dedicated client-facing identity (guestblogob@gmail.com /
-WhatsApp) — separate from admin@semrs.com, which stays internal-only —
+WhatsApp) — separate from purfits@gmail.com, which stays internal-only —
 branded as "SEMRS" so the client sees the business name only, never a
 bare address or phone number. The Client Portal/dashboard is the
 preferred two-way channel; email/WhatsApp are the fallback.
