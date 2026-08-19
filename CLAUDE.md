@@ -410,7 +410,10 @@ gets:
   Virtual Assistant client, the same direct-publish pattern as every
   paying VA client beneath it. This replaces the prior location of
   that link under Admin/System Settings — it belongs with the rest of
-  this pattern, not off on its own.
+  this pattern, not off on its own. Each subsection starts folded —
+  its name is styled as a clickable link-button that opens it, so
+  staff scanning the list see just client names at a glance rather
+  than every brief expanded at once.
 - **CEO/staff visibility into the Portal, without ever touching a
   client's login.** The CEO doesn't have (and shouldn't need) a client
   account to check whether a client's Portal experience is actually

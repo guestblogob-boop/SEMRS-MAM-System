@@ -10,6 +10,16 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-20 (VA Clients subsections folded by default, link-button toggle)
+- Per explicit instruction, every subsection in the VA Clients list
+  (SEMRS's own self-marketing, each real client, and any future one —
+  the grouping logic is fully dynamic) now starts folded, with its
+  name styled as a clickable link-button rather than plain bold text,
+  so the control clearly reads as something to click.
+- Verified live: all subsections render collapsed on page load; a real
+  click on a client's name correctly expands it to show that client's
+  brief(s).
+
 ## 2026-08-20 (VA Clients grouped by client; Self-Marketing moved into it)
 - Per explicit instruction, the "VA Clients" section on the main staff
   dashboard is now grouped into one foldable subsection per client,
