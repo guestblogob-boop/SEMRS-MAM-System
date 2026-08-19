@@ -10,6 +10,23 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-20 (Blog Post Type badge now shown to the self-service client too)
+- The Normal/SEO Blog Post distinction (see entry below) was only
+  visible to staff. Per explicit follow-up instruction, a self-service
+  (Draft-Only) client downloading their content from the real Client
+  Portal now sees the same "Normal Blog Post" / "SEO Blog Post" badge
+  next to each Website/Blog item in "Your Content" — so they can see
+  which of the two paid tiers (data/pricingCatalog.ts) they're
+  downloading, matching exactly what they ordered/paid for. No new
+  payment logic was added: the whole "Your Deliverables" section
+  already gates on the brief reaching "finalized" (payment
+  confirmed) — this only adds the visible label, since which tier a
+  given post is was decided at drafting/ordering time, not something
+  this change introduces a new purchase flow for.
+- Verified live: created a real "normal" Website/Blog draft, confirmed
+  the badge renders correctly on the real `/portal` page next to the
+  channel/title. Test draft deleted after.
+
 ## 2026-08-20 (Normal vs SEO Blog Post distinction, tied to real pricing)
 - Per explicit instruction, differentiated the Channel Draft form
   between the two real, differently-priced blog-content products
