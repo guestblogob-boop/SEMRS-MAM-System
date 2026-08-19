@@ -10,6 +10,31 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-20 (Real "Your Plan & Billing" section; walkthrough default fixed)
+- Per direct user testing/correction: the real Client Portal had no
+  billing information at all, and no dedicated section confirming a
+  Virtual Assistant client's plan/fee — two symptoms of the same real
+  gap. Fixed with a new **"Your Plan & Billing"** section (shown for
+  Virtual Assistant clients, ads-scoped clients with a recorded
+  commission rate, or any client with a recorded payment): delivery
+  path, the Virtual Assistant Service Fee, the Ads Commission Rate,
+  and — genuinely new — the real payment history
+  (`ClientBrief.payments`, staff-confirmed amount/method/reference/
+  date), which existed in the database since payments were first
+  recorded but was never queried or shown to the client anywhere.
+  Mirrored in the staff Preview Client Portal.
+- Also fixed, same investigation: `ConnectAccountsSection`'s walkthrough
+  defaulted closed, so a client filling in an unfamiliar field
+  ("Application Password"? "Page Access Token"?) saw a bare form with
+  no guidance until they discovered and clicked a small "Walkthrough"
+  toggle — inconsistent with the staff preview version, which
+  correctly defaulted open. Now defaults open on both.
+- Verified live with real test data (a real payment record, a real VA
+  fee, a real commission rate) logged in as the actual client account,
+  not just a code read — confirmed the section renders correctly and
+  the walkthrough shows immediately without an extra click. Test data
+  removed after.
+
 ## 2026-08-20 (Blog Post Type badge now shown to the self-service client too)
 - The Normal/SEO Blog Post distinction (see entry below) was only
   visible to staff. Per explicit follow-up instruction, a self-service

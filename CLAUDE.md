@@ -390,23 +390,29 @@ gets:
   working — a real, staff-only **"Preview Client Portal"** page
   (`/dashboard/briefs/[id]/portal-preview`, linked from that brief's
   main dashboard page) mirrors exactly what that client sees: the
-  status stepper, Connect Your Accounts / Connect Analytics / Ad
-  Account Access statuses, and delivered content — using the client's
-  own status labels and wording. Connect Your Accounts and Ad Account
-  Access each go further than a status badge: every channel/platform
-  expands (a plain read-only `<details>`, not a live component) to
-  show the exact walkthrough guidance that client sees —
-  `lib/directPublishHelp.ts` / `lib/adPlatformHelp.ts`, the same
-  source both this page and the real Portal read from — so staff can
-  verify the guidance itself is accurate and current, not just whether
-  a connection happened. Ad Account Access lists every ad platform
-  (`lib/adPlatformHelp.ts`'s full set), not only ones with an existing
-  record, matching what the client actually sees. This is deliberately NOT a minted
-  client session or any form of impersonation: every interactive form
-  the real Portal has (submitting access, submitting payment proof) is
-  rendered here as a plain, non-interactive status readout instead, so
-  staff browsing this page can never accidentally submit or change
-  anything as if they were the client. A CEO-only **"Client Portal"**
+  status stepper, Your Plan & Billing, Connect Your Accounts / Connect
+  Analytics / Ad Account Access statuses, and delivered content —
+  using the client's own status labels and wording. Connect Your
+  Accounts and Ad Account Access each go further than a status badge:
+  the exact same single-picker style described above (status badges +
+  one dropdown + real walkthrough, defaulting open) lets staff check
+  the exact guidance a given channel/platform shows, reading from the
+  same `lib/directPublishHelp.ts` / `lib/adPlatformHelp.ts` source both
+  this page and the real Portal use — so staff can verify the guidance
+  itself is accurate and current, not just whether a connection
+  happened. Ad Account Access reuses the real
+  `components/portal/AdAccessInfoSection.tsx` directly (it never had a
+  data-mutating form to begin with, so there's nothing to strip out).
+  Your Plan & Billing mirrors the real Portal's section exactly:
+  delivery path, the Virtual Assistant Service Fee or Ads Commission
+  Rate when set, and the real payment history
+  (`ClientBrief.payments`) — this and the Connect Your Accounts
+  credential-submission form (which stays deliberately absent, unlike
+  the walkthrough around it) are the two places this page differs from
+  the real Portal, both for the same reason: this page is deliberately
+  NOT a minted client session or any form of impersonation — the one
+  thing it never does is let staff submit or change data as if they
+  were the client. A CEO-only **"Client Portal"**
   panel in Admin/System Settings (`/dashboard/admin/client-portal`,
   linked alongside Self-Marketing Approval) is the front door to this
   across every client at once — every real Client Portal account and
