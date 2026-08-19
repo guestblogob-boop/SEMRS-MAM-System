@@ -76,36 +76,68 @@ it.
 
 **Path 1 — Draft-Only Handoff (default).** This system never connects
 to, posts on, or schedules anything on any live platform account.
-Every channel agent produces a finished, formatted DRAFT as a Google
-Doc or Google Sheet with a shareable link. Once CEO Final Delivery
-Approval is granted, the Orchestrator compiles all approved draft links
-(and, once available, the analytics summary) into one package and
-emails it to the CEO at purfits@gmail.com, in addition to showing it on
-the dashboard. The CEO manually forwards it to the client — by
-whichever channel the client prefers (email, WhatsApp, or the
-dashboard link). The client then publishes the content themselves,
-using their own accounts and resources.
+Every channel agent produces a finished, formatted DRAFT — genuinely
+real, not just a database row describing one. Once CEO Final Delivery
+Approval is granted, the Orchestrator compiles all approved draft
+links (and, once available, the analytics summary) into one package
+and emails it to the CEO at purfits@gmail.com, in addition to showing
+it on the dashboard. **The instant payment is confirmed for this
+client (brief status reaches "finalized"), the client gets direct,
+self-serve results: their own finished content, downloadable straight
+to their own device** from their Client Portal in whichever of five
+real formats they prefer — PDF, Word, Excel, Google Sheet, or Google
+Slides (see Output Format, below, for the full mechanism) — no waiting
+on a human to manually compile or forward anything. This IS the
+delivery mechanism for a Draft-Only client; the CEO-forwards-the-
+package flow above is the internal/backup path (email, WhatsApp, or a
+dashboard link) for anything that isn't a per-channel content piece
+(the research summary, keyword list, calendar, etc.). The client then
+publishes the content themselves, using their own accounts and
+resources.
 
-**Path 2 — SEMRS as Virtual Assistant (opt-in).** A client may instead
-authorize SEMRS to manage their channels directly and post on their
-behalf, following their agreed upload/posting plan, rather than
-publishing it themselves. This is off by default and only applies to a
-specific client who has explicitly opted in. To enable it, the client
-provides SEMRS, through the dashboard, with access to their own
-platform account(s) — a scoped API token or connected-app access they
-generate themselves, never a raw password or login credential (see
-Hard Constraint, above — no agent ever handles a real password
-directly, no exceptions — and Security & Misuse Guardrails, "Client
-Credentials & Platform Access," for the full handling rules). When it's
-on, the Website and Social Draft Agents may upload/publish directly to
-that client's platforms immediately after CEO Final Delivery Approval,
-instead of stopping at a draft — but every approval gate still applies
-exactly as before; opting in changes what happens after Final Delivery
-Approval, never before it. WhatsApp and Email drafts remain draft-only
-by default even for opted-in clients, since sending directly "as the
-client" through their personal accounts carries extra sensitivity —
-only enable this per client if they specifically request it and
-understand what they're authorizing.
+**Path 2 — SEMRS as Virtual Assistant (opt-in, and a separate,
+additional paid service).** A client may instead authorize SEMRS to
+manage their channels directly and post on their behalf — draft AND
+publish — on an ongoing, standing basis (billed monthly or yearly),
+rather than publishing it themselves order by order. This is off by
+default and only applies to a specific client who has explicitly
+opted in, for two things at once, both required before SEMRS starts
+managing anything on their behalf:
+- **Platform access.** The client provides/grants SEMRS, through the
+  dashboard, scoped access to their own platform account(s) — a scoped
+  API token or connected-app access they generate themselves, never a
+  raw password or login credential (see Hard Constraint, above — no
+  agent ever handles a real password directly, no exceptions — and
+  Security & Misuse Guardrails, "Client Credentials & Platform
+  Access," for the full handling rules).
+- **The Virtual Assistant Service Fee.** This is a separate, additional
+  recurring charge on top of whatever base engagement (SEO/Content/
+  Social/etc.) the client already ordered — it pays for SEMRS staff
+  actively managing and posting to the client's own live accounts on a
+  standing basis, not a one-time drafting cost, and is distinct from
+  the Paid Media Model's ad-spend commission below (that's for running
+  ad campaigns; this is for organic/social account management). No
+  standard default rate is established yet — the CEO sets and confirms
+  the actual agreed fee, billing cycle (monthly or, using the same
+  "pay 10 months, get 12" mechanic as Conversion & Lead Generation's
+  annual option — not a separately-invented discount — yearly), and
+  which channels it covers, recorded per client on the client brief
+  (see prompts/client-brief.md, "SEMRS Virtual Assistant Service Fee").
+  Same "no invented number, CEO confirms per client" treatment as the
+  Ads Commission Rate and Data Retention defaults (see Operational
+  Policies, below).
+
+Once both are in place, the Website and Social Draft Agents may
+upload/publish directly to that client's platforms immediately after
+CEO Final Delivery Approval, instead of stopping at a draft — but
+every approval gate still applies exactly as before; opting in changes
+what happens after Final Delivery Approval, never before it. WhatsApp
+and Email drafts remain draft-only by default even for opted-in
+clients, since sending directly "as the client" through their personal
+accounts carries extra sensitivity — only enable this per client if
+they specifically request it and understand what they're authorizing;
+these two channels' content still reaches the client via the same
+Download menu Path 1 clients use (see Output Format, below).
 
 ## Paid Media (Ads) Model — Client Funds Their Own Ad Accounts, SEMRS Fee Is Always a Separate, Transparent Line Item
 For clients who order ads management, SEMRS never holds, moves, or has
@@ -334,6 +366,54 @@ gets:
   `clientId`, rendered only when real data exists, no write/operate
   affordance anywhere on the page — the same pattern Phase 1's
   deliverables already use, not a new one invented for Phase II.
+- **One consistent "connect a social account" style everywhere.** Per
+  explicit instruction, every surface that shows a channel's
+  connect/grant-access walkthrough now uses the same single-picker
+  layout: a compact row of status badges (one per channel, at a
+  glance) plus one dropdown below it showing the selected channel's
+  full walkthrough (with the grant/request toggle) — the same style
+  `components/dashboard/DirectPublishAccessSection.tsx` (Self-
+  Marketing and every staff brief page) already used. The real Client
+  Portal's `ConnectAccountsSection` (with its real credential-
+  submission form), the staff-only Preview Client Portal's
+  `PreviewConnectAccountsPicker` (read-only, no form), and a new,
+  client-independent **Social Account Connection Guide** on the Admin
+  Client Portal panel (pure reference lookup — no status, no form,
+  just every channel's walkthrough in one place) all read the same
+  walkthrough content from one shared renderer
+  (`components/shared/DirectPublishWalkthroughContent.tsx`), so the
+  guidance text can never drift apart between surfaces even as it's
+  shown four different ways.
+- **CEO/staff visibility into the Portal, without ever touching a
+  client's login.** The CEO doesn't have (and shouldn't need) a client
+  account to check whether a client's Portal experience is actually
+  working — a real, staff-only **"Preview Client Portal"** page
+  (`/dashboard/briefs/[id]/portal-preview`, linked from that brief's
+  main dashboard page) mirrors exactly what that client sees: the
+  status stepper, Connect Your Accounts / Connect Analytics / Ad
+  Account Access statuses, and delivered content — using the client's
+  own status labels and wording. Connect Your Accounts and Ad Account
+  Access each go further than a status badge: every channel/platform
+  expands (a plain read-only `<details>`, not a live component) to
+  show the exact walkthrough guidance that client sees —
+  `lib/directPublishHelp.ts` / `lib/adPlatformHelp.ts`, the same
+  source both this page and the real Portal read from — so staff can
+  verify the guidance itself is accurate and current, not just whether
+  a connection happened. Ad Account Access lists every ad platform
+  (`lib/adPlatformHelp.ts`'s full set), not only ones with an existing
+  record, matching what the client actually sees. This is deliberately NOT a minted
+  client session or any form of impersonation: every interactive form
+  the real Portal has (submitting access, submitting payment proof) is
+  rendered here as a plain, non-interactive status readout instead, so
+  staff browsing this page can never accidentally submit or change
+  anything as if they were the client. A CEO-only **"Client Portal"**
+  panel in Admin/System Settings (`/dashboard/admin/client-portal`,
+  linked alongside Self-Marketing Approval) is the front door to this
+  across every client at once — every real Client Portal account and
+  every order linked to it, each with a "Preview →" straight into that
+  order's Preview Client Portal — so watching a specific client's
+  experience never requires first hunting through Clients & Orders to
+  find them.
 
 ### Client Support Module
 A public **`/support`** page — no login required, deliberately separate
@@ -357,22 +437,31 @@ video added to "SEMRS Client Support" appears on `/support`
 automatically; everything else on the channel is naturally excluded,
 with no fragile title-keyword guessing needed to tell them apart.
 
-**Creation and upload are currently a manual step, not an automated
-pipeline.** The Visual & Video Content Agent can produce the creative
-brief, script, and visual direction for a support video — same as any
-other creative-brief-level output it already handles — but this system
-still doesn't do full video editing/rendering (see Security & Misuse
-Guardrails, "Visual & Video Content Agent — licensed sources, and
-free-tier AI generation, only": "Animation/effect suggestions stay at
-the creative-brief level... this system doesn't do full video
-editing/rendering"). Nothing about that constraint changes here. A
-human produces the actual video from that brief and uploads it to the
-real SEMRS channel, into the "SEMRS Client Support" playlist,
-themselves — from there it appears on `/support` with no further
-staff action. If SEMRS later adopts a genuinely free avatar-video
-generation tool and a YouTube Data API upload integration, the upload
-step itself could become automated — that would be a real, separate
-scoping decision, not assumed here.
+**Creation is still manual; upload and playlist placement are real and
+automated.** Whenever the CEO asks for a support video, the Visual &
+Video Content Agent produces the creative brief, script, and visual
+direction only — same as any other creative-brief-level output it
+already handles — since this system still doesn't do full video
+editing/rendering (see Security & Misuse Guardrails, "Visual & Video
+Content Agent — licensed sources, and free-tier AI generation, only":
+"Animation/effect suggestions stay at the creative-brief level... this
+system doesn't do full video editing/rendering"). Nothing about that
+constraint changes here, and the Visual & Video Content Agent itself
+never uploads anything — that's outside its defined Responsibilities.
+A human produces the actual video FILE from that brief. From there,
+though, it's a real, working pipeline, not a manual hand-off: staff
+uploads that file once through SEMRS-Dashboard's real "YouTube
+Connection" upload form (`/dashboard/admin`, `lib/youtubeUpload.ts`),
+which genuinely uploads it to the real SEMRS channel AND automatically
+adds it to the "SEMRS Client Support" playlist in the same action
+(`SUPPORT_PLAYLIST_ID`, confirmed correctly configured 2026-08-18) —
+no separate manual playlist step. Uploads default to Private; staff
+makes it Public in YouTube Studio once reviewed, same "nothing goes
+live without a human deciding to" pattern as every other channel in
+this system. The video is always hosted on the real channel, never
+inside this app, and `/support` picks it up automatically from there
+(YouTube's free playlist RSS feed) the moment it's Public — no further
+staff action needed at that point.
 
 System-wide, not per-client — every visitor sees the same support
 library, the same way pricing is one shared catalog rather than
@@ -527,6 +616,159 @@ capability, not something to build from scratch.
 Every deliverable in any of these formats still goes through the same
 Review Agent and CEO approval gates as any other content — a different
 format is not a different set of rules.
+
+## Technical On-Page SEO Checklist (RankMath-Aligned)
+Every Website/Blog post (and, where the same structure applies, a
+WordPress page draft) is built to satisfy RankMath's free on-page SEO
+analysis checklist before hand-off — not because SEMRS runs RankMath
+itself (RankMath is a WordPress plugin the client's or semrs.com's own
+site may or may not have installed), but because matching its actual
+scoring criteria is a concrete, verifiable proxy for genuine on-page
+SEO quality, on top of — never instead of — the existing "Content
+quality and Google-penalty avoidance" guardrail required of every piece
+(see Security & Misuse Guardrails). Free-only, per the Hard Constraint:
+this checklist covers RankMath's free analysis criteria only.
+**RankMath's own "Content AI" (a paid RankMath add-on) is explicitly
+declined, not adopted** — the Content Agent, powered by Claude, already
+writes and optimizes the post itself for free, so there is nothing
+Content AI would add.
+
+**Normal Blog Post vs. SEO Blog Post — two real, differently-priced
+products, one form.** SEMRS-Dashboard's pricing catalog
+(`data/pricingCatalog.ts`) already sells two distinct blog-content
+line items at two different prices: a plain **"Blog post"** ($19 each,
+pack of 4 for $69/mo) and a **"1000-word SEO content article"** ($25
+each, `contentPerArticle`) — the heavier-priced product specifically
+for the extra on-page SEO work this checklist describes. The Channel
+Draft form (`components/dashboard/ChannelDrafts.tsx`) reflects this
+directly: staff picks **Blog Post Type** (Normal / SEO) when drafting
+a Website/Blog post (`ChannelDraft.blogPostType`). The underlying
+fields and every compulsory requirement (categories, real internal +
+external anchor-text links, image alt text) are identical either
+way — a Normal Blog Post is never a lower-quality or less-compliant
+piece. The only difference is informational: for an SEO Blog Post,
+each field in the form is labeled with the exact RankMath checklist
+point it satisfies (e.g. Meta Description is labeled "RankMath: Focus
+Keyword in meta description"), so the pricier tier visibly shows what
+its price is actually paying for. A Normal Blog Post's form has no
+such labels — same form, same fields, just without the checklist
+annotations.
+
+**Basic SEO** — the SEO & GEO Agent sets exactly one Focus Keyword per
+content piece (distinct from its broader 5–10 keyword list — see its
+Process); the Content Agent and Website/Blog Draft Agent apply it:
+- Focus Keyword appears in the SEO title.
+- Focus Keyword appears in the SEO meta description.
+- Focus Keyword appears in the URL/slug.
+- Focus Keyword appears at the very beginning of the content.
+- Focus Keyword appears in the body content.
+- Content is 600–2,500 words long — tracked live in SEMRS-Dashboard's
+  Channel Draft form as a real word count under the Body field, not
+  just a written rule staff estimate by eye.
+
+**Additional** — the Content Agent and Visual & Video Content Agent:
+- Focus Keyword appears in at least one subheading (H2/H3/H4).
+- At least one image carries the Focus Keyword as its alt text (Visual
+  & Video Content Agent's job — see its Responsibilities).
+- Keyword density lands around 1% — present, never stuffed (this
+  system's existing "avoid keyword-stuffing" rule sets the ceiling;
+  this ~1% target sets the floor).
+- The URL/slug is short.
+- At least one external link to a real, authoritative source, **as real
+  anchor text inside the body content** — never just listed in the
+  separate Link field. Compulsory: SEMRS-Dashboard's Channel Draft form
+  blocks Save for a Website/Blog draft until the body contains at least
+  one external anchor-text link (`components/dashboard/
+  ChannelDrafts.tsx`, `lib/blogContentChecks.ts` — enforced server-side
+  too, in `app/api/briefs/[id]/channel-drafts/route.ts`, never trusting
+  the form's own UI alone).
+- At least one of those external links is DoFollow — no blanket
+  `nofollow` on a genuinely authoritative citation.
+- At least one internal link to a real, existing page on the client's
+  (or semrs.com's own) site, **as real anchor text inside the body
+  content** — same compulsory enforcement as the external link above.
+  Use a relative href (e.g. `/blog/other-post`) so it resolves
+  correctly regardless of which site the post ends up on.
+- A Focus Keyword is set for every piece — never published without one.
+- At least one Category is selected, from a suggested SMMA-relevant
+  list (`lib/blogCategories.ts`: SEO & GEO, Social Media Marketing,
+  Paid Ads (SEM), Content Marketing, Lead Generation & Conversion,
+  Analytics & Reporting, Case Studies, Company News, Guides &
+  How-Tos, Industry Trends) — also compulsory, same enforcement as the
+  links above. Each selected category is looked up or created as a
+  real WordPress category and assigned on publish
+  (`lib/publishers/wordpress.ts`), never just a label sitting unused.
+
+**Title Readability** — the Content Agent, when writing the SEO title:
+- Focus Keyword appears near the beginning of the SEO title.
+- The title carries a positive or negative sentiment word.
+- The title carries at least one power word.
+- The title contains a number.
+
+**Content Readability** — the Content Agent and Visual & Video Content
+Agent together:
+- Longer posts use a Table of Contents to break down the text.
+- Paragraphs are short and concise.
+- The post includes a few images and/or videos for visual appeal (see
+  Visual & Video Content Agent, Responsibilities).
+
+**Pillar content** — a comprehensive, cornerstone piece other content
+links back to — is flagged as such by the Strategy Agent on the
+content calendar (matching RankMath's own "Pillar Content" flag), so
+the Website/Blog Draft Agent marks it accordingly when preparing the
+final WordPress draft.
+
+**Delivered structure — distinct sections, never one raw blob.** A
+Website/Blog piece is never handed off, entered, or published as one
+undifferentiated wall of text. Every piece carries these as separate,
+clearly-labeled sections all the way through Content Agent → Visual &
+Video Content Agent → Website/Blog Draft Agent → the real
+SEMRS-Dashboard Channel Draft form (`components/dashboard/
+ChannelDrafts.tsx`) → the actual RankMath metabox fields on the live
+WordPress post (`lib/publishers/wordpress.ts`, per-field, never
+guessed out of a paragraph): Title, Meta Description, Focus Keyword,
+LSI & Related Keywords, Semantic SEO Words, Feature Image (+ alt
+text), then the body content itself.
+
+**Image placement within the body:** the Feature Image is placed
+inline in the body immediately after the first H2 heading's paragraph
+— in addition to being set as the post's real Featured Image, not
+instead of it — and every subsequent image lands roughly every 600
+words through the rest of the piece, per the Visual & Video Content
+Agent's image count and the Content Agent's section breaks. This is a
+concrete authoring rule the Content Agent and Visual & Video Content
+Agent follow when composing the body, not a placement staff re-derive
+by hand afterward.
+
+**Publish-time behavior — filled fields are actually set, unavailable
+fields are left alone.** When Save Draft or Publish Post is clicked,
+every field that was actually filled in is genuinely set on the real
+WordPress post and its RankMath metabox on the target site (client's
+or semrs.com's own) — Category, alt text, Feature Image, in-body
+images with alt text, internal/external links, Title, Meta
+Description, and Focus Keyword all really land there, not simulated.
+A field this app didn't collect is left exactly as WordPress/RankMath
+would default it — never sent as an empty override
+(`lib/publishers/wordpress.ts`).
+
+**Review decisions on a draft itself** (SEMRS-Dashboard's Channel
+Draft form): beyond Save Draft (blue) and Publish Post (green), staff
+can mark a draft **Rejected** (amber — requires remarks explaining what
+needs fixing; the draft stays visible with those remarks for
+reference) or **Dismiss Forever** (red — permanent from the UI's
+perspective, filtered out of every view; the record itself is kept,
+never truly deleted, same convention as `DirectPublishAccess.revoked`
+elsewhere in this system).
+
+This checklist governs Website/Blog content specifically. It does not
+extend to SEM/paid ads (the Ads Campaign Agent's own policy-compliance
+duties already cover that separately — see Security & Misuse
+Guardrails, "Platform policy checks must be current, not stale") or to
+non-WordPress social channels, whose own per-platform norms already
+govern format (see Content Agent, Responsibilities) — considered and
+declined rather than silently ignored, since RankMath's checklist is a
+WordPress-specific on-page tool with no equivalent meaning on a social
+platform or an ad.
 
 ## Approval Gates (five possible, in this order — never skip or merge; gates 4 and 5 only apply in their respective scopes)
 1. CEO Order Approval Checkpoint — a real human decision by the SEMRS
@@ -886,7 +1128,43 @@ approval gate because of which one it is.
   changes any text content.
 - Review Agent: SEMRS's internal quality gate — scores and improves all
   channel content AND checks every suggested visual before anything
-  goes to the CEO for final delivery approval.
+  goes to the CEO for final delivery approval. For Website/Blog
+  specifically, strict compliance: a piece missing any required field
+  from CLAUDE.md's Technical On-Page SEO Checklist (SEO title, meta
+  description, Focus Keyword, LSI & Related Keywords, Semantic SEO
+  Words, Feature Image + alt text, alt text on every other image, at
+  least one internal and one external anchor-text link, at least one
+  Category, 600–2,500 words) is sent back to the Content Agent for
+  completion — the same "flagged section back to the responsible
+  agent for a rewrite" path already used for a low content score (see
+  Error Handling), not a new mechanism. This is a real gate, not just
+  written policy: the dashboard's Channel Draft form independently
+  enforces categories, in-body links, and image alt text itself
+  before a draft can even be saved (`components/dashboard/
+  ChannelDrafts.tsx`, `lib/blogContentChecks.ts`). The score and
+  improvement notes this Output Format section has always required get
+  real, dedicated storage too, not free text buried in an approval's
+  summary — `ReviewRecord` (append-only, a new record per scoring pass,
+  same as every other quality/approval record in this system), entered
+  via `components/dashboard/RecordReviewForm.tsx` on the brief's
+  dashboard page, compiled into a real, printable **Audit Report**
+  (`/dashboard/briefs/[id]/audit-report`) alongside every CEO approval
+  record and a channel-draft status summary, and included automatically
+  in the Final Delivery notification email to the CEO
+  (`lib/notifyEmail.ts`). The Audit Report also gives the CEO a real,
+  computed **checklist score** for every Website/Blog draft — a
+  genuine pass/fail per item against this Technical On-Page SEO
+  Checklist (Focus Keyword set, in the meta description, in the SEO
+  title; word count 600–2,500; a real internal and a real external
+  anchor-text link; every image has alt text; Feature Image + alt text
+  set; at least one Category), shown as a real checkbox list with an
+  "X/10" score (`lib/rankMathChecklist.ts`, reusing the exact same
+  live checks `components/dashboard/ChannelDrafts.tsx` already runs
+  while authoring — never a separate, possibly-drifting copy of the
+  logic), in both the Audit Report page and its PDF download.
+  Deliberately doesn't attempt checklist items this system has no way
+  to actually verify (keyword-at-the-very-start, keyword density,
+  DoFollow) — an unverifiable checkbox would be worse than no checkbox.
 - Website/Blog Draft Agent: prepares a final, publish-ready DRAFT of the
   blog content only — never connects to or publishes on the client's
   actual website.
@@ -901,11 +1179,17 @@ approval gate because of which one it is.
   ready-to-use DRAFT (with subject line options) only — never connects
   to or sends via any live email account.
 - Analytics Agent: reports on real, available performance data per
-  channel only, once the client shares it back for organic channels
-  (see note below — since SEMRS doesn't publish organic content,
-  performance data comes from the client). For paid ads specifically,
-  the Ads Agent pulls real performance data directly via the client's
-  granted agency access.
+  channel only, once the client shares it back for organic channels,
+  OR once the client has granted SEMRS direct read-only access to
+  their own Search Console and/or GA4 property via the Client Portal's
+  "Connect Analytics" section (real, official Viewer access through
+  Google's own sharing UI — never a credential this app stores; see
+  `AnalyticsPropertyAccess`, `lib/searchConsole.ts`,
+  `lib/analyticsGA4.ts`). That connection currently only establishes
+  and verifies access — the actual data-pulling/reporting pipeline on
+  top of it is separate, not-yet-built follow-up work, not assumed
+  here. For paid ads specifically, the Ads Agent pulls real
+  performance data directly via the client's granted agency access.
 - Ads Campaign Agent (only for orders that include ads management):
   inspects the client's actual website and social pages for targeting
   context, proposes a campaign plan and transparent budget/commission
@@ -1279,7 +1563,77 @@ that applied to this engagement (order, final delivery, and where
 relevant budget/self-marketing),
 the full client message log, and (once available) the analytics
 summary per channel. This package is shown on the dashboard AND emailed
-to purfits@gmail.com once it's ready.
+to purfits@gmail.com once it's ready. Once CEO Final Delivery Approval
+AND payment are both recorded (brief status reaches "finalized"), the
+client also gets instant, self-serve access to their own content
+directly on their own device — the same "Your Deliverables" content
+already shown in their Client Portal — via a **Download menu** there
+offering **PDF, Word (.docx), Excel (.xlsx), Google Sheet, and Google
+Slides**, not a single fixed format (`/api/portal/briefs/[id]/
+deliverables/{pdf,docx,xlsx,google-sheet,google-slides}`, every route
+session-scoped to that client's own account). PDF/Word/Excel are real
+files generated on the spot (`pdfkit` / `docx` / `exceljs` — free,
+no headless browser, not a browser print dialog); Google Sheet/Slides
+create (or reuse, if already created — cached on
+`ClientBrief.deliverablesGoogleSheetUrl`/`deliverablesGoogleSlidesUrl`)
+a real file in SEMRS's connected Google account, shared view-only
+(the client can use Google's own "File > Make a copy" there for their
+own editable copy — same sharing model as every other Google file this
+system creates, see Deliverable Formats). Internal CEO approval
+notes/summaries are never included in any client-facing format — same
+"finished deliverable content only, never internal commentary" rule as
+the rest of the Client Portal (see Client Portal Access, above). Staff
+get the PDF equivalent for the internal Audit Report (review score,
+every CEO approval record including internal notes, channel-draft
+status) via its own "Download PDF" button on
+`/dashboard/briefs/[id]/audit-report`.
+
+**The actual per-channel content, not just links or a summary, is
+downloadable in the same five formats — this is the real, required
+mechanism for a client who did not hire SEMRS as a Virtual
+Assistant.** For a Draft-Only Handoff client (Path 1, the default —
+see Delivery Model, above), this download menu on their own finished
+content IS the delivery: the moment payment is confirmed, they get
+instant results — their blog posts and social content, ready to open
+and post themselves, no waiting on staff to manually compile
+anything. The Client Portal's "Your Deliverables" section includes a
+"Your Content" list, one row per real, non-rejected/non-dismissed
+Channel Draft in scope, each with the same Download menu
+(`/api/portal/briefs/[id]/channel-drafts/[draftId]/{pdf,docx,xlsx,
+google-sheet,google-slides}`) built from that draft's own real
+structured fields (title, meta description, Focus Keyword,
+LSI/Semantic SEO words, categories, tags, hashtags, CTA, feature image
++ alt text, body — one shared field list, `lib/content/
+draftContent.ts`, so every format reads identically) — plus a "View
+Doc ↗" link when staff has already turned it into a Google Doc
+(`ChannelDraft.googleDocUrl`). For a Virtual Assistant client (opted
+in — see Delivery Model, above), any draft SEMRS actually published
+live for them shows a green "Published live" badge with the real live
+URL — the Download menu still sits right alongside it, never replaced
+by the badge, per explicit instruction that a Virtual Assistant client
+gets everything: the live link AND a full downloadable copy in every
+format, always. WhatsApp and Email drafts stay in this downloadable
+list even for an opted-in Virtual Assistant client, since those two
+channels remain draft-only regardless (see Delivery Model, above).
+
+**The same Download menu sits with every individual piece of content,
+not just at the top of the page.** Per explicit instruction, this
+isn't one menu for the whole package — each Performance Summary and
+each Ads Performance Report entry gets its own Download menu right
+next to it (`/api/portal/briefs/[id]/analytics-summaries/[summaryId]/
+{pdf,docx,xlsx,google-sheet,google-slides}` and .../ads-performance-
+reports/[reportId]/..., same five formats, same field list every
+format reads from — `lib/content/adsReportFields.ts` for ads reports;
+both use the shared generic single-item builder,
+`lib/pdf/textBlockPdf.ts` + its Word/Excel/Sheet/Slides equivalents,
+rather than one-off generators per content type). Ads Performance
+Reports carry the same CEO Budget & Campaign Approval gate here as
+they do everywhere else in the Portal — never downloadable before
+that's granted. Delivered Links are the one exception: each is already
+a direct link to real content staff placed elsewhere (typically a
+Google Doc), so there's no separate structured content on this side to
+regenerate a PDF/Word/Excel copy of — the link itself is the access
+mechanism for that piece.
 
 ## Quality Standards
 - Content must match the client's stated tone exactly.
@@ -1429,12 +1783,12 @@ semrs-multi-agent-marketing/
     self-marketing-approval-summary.md → template for the CEO's Self-Marketing Approval decision (semrs.com only)
     client-messages.md              → the message templates the Client Communication Agent sends at each stage
     order-index-template.md         → reusable per-order index (brief, approvals, message log, delivered package) — copy to outputs/<client-order-id>/README.md per real order
-    client-help-meta-ads-integration.md → client-facing step-by-step guide for granting SEMRS Meta Business Manager access, shown in SEMRS OS > Ads Campaigns > Client Help
+    client-help-meta-ads-integration.md → client-facing step-by-step guide for granting SEMRS Meta Business Manager access — the underlying content shown both in SEMRS OS > Ads Campaigns > Client Help (staff) and directly to the client in their own Client Portal's "Ad Account Access" section (2026-08-18, closing a previously-flagged gap where it was written to be client-facing but was staff-only)
   outputs/
     client-message-log/             → per-order message logs (see README.md there for the convention); (planned) per-order subfolders — nothing fabricated ahead of a real order
     system-changelog.md             → CEO-only internal record of system changes (new agents, workflow edits) — never client-visible
   docs/
-    org-chart.md                    → the formal 17-agent, 7-department organizational chart (Mermaid diagram) — CEO-only reference, shown in SEMRS OS's Admin/System Settings view; never client-visible
+    org-chart.md                    → the formal 17-agent, 7-department organizational chart (Mermaid diagram) — CEO-only reference, shown in SEMRS OS's Admin/System Settings → Agents Organization view; never client-visible
   sample-request.md                 → one fictional example client order, used to trace the system end-to-end
   sample-request-ads.md             → a second fictional example client order (ads-scoped), used to trace the Ads Track end-to-end
 ```

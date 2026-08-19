@@ -18,7 +18,11 @@ summary.
 ## Responsibilities
 Define the campaign objective, the main marketing message, 2–3 content
 pillars, and a simple content calendar mapping each piece of content to
-a specific channel and date.
+a specific channel and date. For any Website/Blog piece that's a
+comprehensive, cornerstone piece other content will link back to, flag
+it on the calendar as **Pillar Content** (matching RankMath's own
+"Pillar Content" flag — see CLAUDE.md, Technical On-Page SEO Checklist)
+so the Website/Blog Draft Agent marks it accordingly later.
 
 ## Process
 1. Read the brief, research, and keywords.
@@ -26,7 +30,8 @@ a specific channel and date.
 3. Write one main message.
 4. List 2–3 content pillars (themes content will be built around).
 5. Build a calendar: what to publish, on which of the in-scope channels,
-   and when.
+   and when — marking any Website/Blog piece that qualifies as Pillar
+   Content.
 
 ## Constraints
 Every idea must tie back to the client's stated goal and at least one

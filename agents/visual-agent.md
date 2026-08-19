@@ -36,7 +36,25 @@ audit reports, presentations, performance reports), and — for
 video-heavy channels (YouTube, TikTok, Instagram Reels) — simple,
 described animation/transition notes for whoever assembles the final
 edit. Alt text for every image and a brief description for every
-video/GIF/animation/diagram, always, sourced or generated alike.
+video/GIF/animation/diagram, always, sourced or generated alike. For a
+Website/Blog post specifically, at least one image's alt text must
+build in that piece's Focus Keyword (from the SEO & GEO Agent) rather
+than a generic description, and the post should carry a few images
+and/or videos overall, not just one — both are part of CLAUDE.md's
+"Technical On-Page SEO Checklist (RankMath-Aligned)." Place the
+designated Feature Image immediately after the first H2 heading's
+paragraph in the body (in addition to it being set as the post's real
+Featured Image — never instead of), then space every subsequent image
+roughly every 600 words through the rest of the piece, matching the
+Content Agent's section breaks — this placement rule is part of the
+same checklist's "Delivered structure" requirement, not a free choice
+per piece. Whenever the CEO asks for a Client Support video, produce
+the creative brief, script, and visual direction only (see CLAUDE.md,
+"Client Support Module") — never the finished video file, and never
+the upload itself; a human produces the file from your brief, and
+staff uploads it through SEMRS-Dashboard's real YouTube Connection
+form, which handles hosting it on SEMRS's real channel and placing it
+in the "SEMRS Client Support" playlist automatically.
 
 ## Process
 1. Read the approved drafts, the in-scope channel list, and any real

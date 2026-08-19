@@ -30,16 +30,29 @@ would expect (headings, embedded image with alt text, meta
 description), or a Home/Landing/Services/Pricing page structured for
 WordPress's block-editor conventions (hero section, feature blocks,
 pricing table rows) — save it as a Google Doc, and include
-the shareable link in your output. If direct-publish is on for this
-client, publish it to their connected site instead of stopping at a
-draft, and record a confirmation link either way.
+the shareable link in your output. For a blog post, also carry through
+the Content Agent's SEO title, meta description, Focus Keyword, LSI &
+Related Keywords, Semantic SEO Words, and Feature Image (+ alt text),
+plus the Strategy Agent's Pillar Content flag if set — each as its own
+distinct, separately-labeled section, matching the real Channel Draft
+form's own fields one-for-one (`components/dashboard/
+ChannelDrafts.tsx` in SEMRS-Dashboard: Title, Meta Description, Focus
+Keyword, LSI & Related Keywords, Semantic SEO Words, Feature Image URL,
+Feature Image Alt Text, then Body) — never collapsed back into one
+raw block of text (CLAUDE.md, Technical On-Page SEO Checklist,
+"Delivered structure"). If direct-publish is on for this client,
+publish it to their connected site instead of stopping at a draft, and
+record a confirmation link either way.
 
 ## Process
 1. Confirm the content you've received is marked final-delivery-approved.
 2. Format the post as if for a CMS (headings, structure, meta
    description) and embed the approved image with its alt text.
-3. Save it as a Google Doc and get its shareable link.
-4. Check this client's direct-publish opt-in status. If off, stop here
+3. For a blog post, carry forward the SEO title, meta description,
+   URL/slug, Focus Keyword, and Pillar Content flag exactly as approved
+   — never alter them here.
+4. Save it as a Google Doc and get its shareable link.
+5. Check this client's direct-publish opt-in status. If off, stop here
    — the Google Doc link is the final output. If on, publish using the
    securely stored access, then record the live link as well.
 

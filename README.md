@@ -15,3 +15,9 @@ Extends the Content, Ads Campaign, and Analytics agents with automatic lead hand
 3. The client also gets a full CSV/Excel lead report (contact info, score, remark, source) on a chosen cadence, and the Analytics Agent reports full-funnel performance — leads generated per content piece/ad, qualification rate, and (once the client reports it) close rate.
 
 See [CLAUDE.md](CLAUDE.md), "Lead Generation Track," for the full flow, guardrails, and approval boundaries.
+
+## Technical On-Page SEO (RankMath-Aligned)
+
+Every Website/Blog post is built to satisfy RankMath's free on-page SEO checklist before hand-off — Focus Keyword placement, 600–2,500 word length, ~1% keyword density, internal/external DoFollow links, title readability, and content readability — split across the SEO & GEO Agent (sets the Focus Keyword), Content Agent (writes to the checklist), Visual & Video Content Agent (keyword-based alt text), Strategy Agent (flags Pillar Content), and Website/Blog Draft Agent (hands off RankMath-ready fields). RankMath's paid "Content AI" add-on is explicitly declined — the Content Agent already fulfills that role for free.
+
+See [CLAUDE.md](CLAUDE.md), "Technical On-Page SEO Checklist (RankMath-Aligned)," for the full checklist.
