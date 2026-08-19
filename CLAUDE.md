@@ -394,14 +394,23 @@ gets:
   `components/dashboard/PreviewYourContentPicker.tsx` on the staff
   Preview Client Portal, same pairing as every other picker on that
   page.
-- **VA Clients visible on the main staff dashboard.** Every client on
-  SEMRS as Virtual Assistant (Delivery Model, "Path 2," above) is
-  listed directly on the staff landing page (`/dashboard`) — status,
-  linked client contact info (or a clear "not yet linked" flag),
-  channels in scope, and the recorded VA fee, one click from managing
-  that brief. Per explicit instruction, this sits on the main
-  dashboard itself, not behind Admin/System Settings — it's a list
-  staff need to triage day to day, not a CEO-only concern.
+- **VA Clients visible on the main staff dashboard, grouped by who's
+  actually being managed.** Every client on SEMRS as Virtual Assistant
+  (Delivery Model, "Path 2," above) is listed directly on the staff
+  landing page (`/dashboard`) — status, linked client contact info (or
+  a clear "not yet linked" flag), channels in scope, and the recorded
+  VA fee, one click from managing that brief. Per explicit instruction,
+  this sits on the main dashboard itself, not behind Admin/System
+  Settings — it's a list staff need to triage day to day, not a
+  CEO-only concern. Also per explicit instruction, the list is grouped
+  into one foldable subsection per client rather than one flat list —
+  and the CEO Self-Marketing Approval Checkpoint's own page (see
+  Approval Gates, gate 5) is one of those subsections: SEMRS's own
+  self-marketing is, structurally, SEMRS hiring itself as its own
+  Virtual Assistant client, the same direct-publish pattern as every
+  paying VA client beneath it. This replaces the prior location of
+  that link under Admin/System Settings — it belongs with the rest of
+  this pattern, not off on its own.
 - **CEO/staff visibility into the Portal, without ever touching a
   client's login.** The CEO doesn't have (and shouldn't need) a client
   account to check whether a client's Portal experience is actually

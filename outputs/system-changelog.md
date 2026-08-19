@@ -10,6 +10,25 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-20 (VA Clients grouped by client; Self-Marketing moved into it)
+- Per explicit instruction, the "VA Clients" section on the main staff
+  dashboard is now grouped into one foldable subsection per client,
+  rather than one flat list — real clients grouped by their linked
+  account (each unlinked brief gets its own subsection, since there's
+  no stable account identity to group multiple unlinked briefs under).
+- Per explicit instruction, SEMRS's own self-marketing is now the
+  first, permanent subsection in that same VA Clients list — framed
+  as SEMRS hiring itself as its own Virtual Assistant client, the same
+  direct-publish pattern as every paying VA client below it. The
+  "Self-Marketing Approval" section previously on `/dashboard/admin`
+  was removed entirely; the underlying page
+  (`/dashboard/self-marketing`) is unchanged, only its entry point
+  moved.
+- Verified live: the dashboard now shows a "SEMRS — Self-Marketing"
+  subsection plus one subsection per real client (confirmed against a
+  real linked client and two unlinked test briefs), and the Admin page
+  confirmed to no longer reference Self-Marketing at all.
+
 ## 2026-08-20 ("Your Content" picker style; VA Clients dashboard section)
 - Per explicit instruction, brought the Client Portal's "Your Content"
   section (per-channel content downloads) into the same single-picker
