@@ -10,6 +10,36 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-20 ("Your Content" picker style; VA Clients dashboard section)
+- Per explicit instruction, brought the Client Portal's "Your Content"
+  section (per-channel content downloads) into the same single-picker
+  style already used everywhere else a client picks one item from
+  several (status badges + one dropdown, one item's detail shown at a
+  time) — it had been left as a stacked list. Since a brief can carry
+  multiple drafts on the same channel (e.g. several blog posts over
+  time), the picker is keyed by draft, not channel, with the badge
+  label naming the specific draft whenever a channel has more than
+  one. Mirrored read-only in the staff Preview Client Portal, same
+  "no live form, no network call" rule as every other Preview
+  component.
+- Per explicit instruction ("VA CLIENT SECTION STILL NOT SHOWN, BUILD
+  IT IN MAIN DASHBOARD"), added a "VA Clients" section directly on the
+  main staff dashboard landing page — every client on SEMRS as Virtual
+  Assistant (CLAUDE.md, Delivery Model, "Path 2"), with status, linked
+  client contact info (or a clear "not yet linked" flag), channels,
+  and the recorded VA fee, one click from "Manage brief." Previously
+  this required navigating into Admin/System Settings or an individual
+  brief to see at all — not acceptable for something staff need to
+  triage daily.
+- Verified live: real click and dropdown-change events confirmed the
+  picker's detail panel actually switches (not just the initial
+  server-rendered state); the existing per-draft PDF/Word/Excel/Google
+  Sheet/Slides downloads confirmed still working through the new
+  picker; the staff Preview mirror confirmed to render both drafts
+  with no download form present; the new dashboard section confirmed
+  against real Virtual Assistant briefs, covering both a linked and an
+  unlinked client account. Test data removed after verification.
+
 ## 2026-08-20 (Real "Your Plan & Billing" section; walkthrough default fixed)
 - Per direct user testing/correction: the real Client Portal had no
   billing information at all, and no dedicated section confirming a

@@ -383,7 +383,25 @@ gets:
   walkthrough content from one shared renderer
   (`components/shared/DirectPublishWalkthroughContent.tsx`), so the
   guidance text can never drift apart between surfaces even as it's
-  shown four different ways.
+  shown four different ways. The Client Portal's "Your Content" list
+  (the client's actual channel-drafted content, see Output Format,
+  below) uses the same badges-plus-one-dropdown picker shape too —
+  `components/portal/YourContentPicker.tsx` — keyed by each draft's own
+  id rather than by channel, since a brief can carry more than one
+  draft on the same channel (e.g. several blog posts over time); the
+  badge names the specific draft whenever a channel has more than one.
+  Mirrored read-only (no download form, no network call) as
+  `components/dashboard/PreviewYourContentPicker.tsx` on the staff
+  Preview Client Portal, same pairing as every other picker on that
+  page.
+- **VA Clients visible on the main staff dashboard.** Every client on
+  SEMRS as Virtual Assistant (Delivery Model, "Path 2," above) is
+  listed directly on the staff landing page (`/dashboard`) — status,
+  linked client contact info (or a clear "not yet linked" flag),
+  channels in scope, and the recorded VA fee, one click from managing
+  that brief. Per explicit instruction, this sits on the main
+  dashboard itself, not behind Admin/System Settings — it's a list
+  staff need to triage day to day, not a CEO-only concern.
 - **CEO/staff visibility into the Portal, without ever touching a
   client's login.** The CEO doesn't have (and shouldn't need) a client
   account to check whether a client's Portal experience is actually
