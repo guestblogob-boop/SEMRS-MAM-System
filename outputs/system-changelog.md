@@ -10,6 +10,22 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-20 (VA Clients moved to its own dedicated page)
+- Per explicit instruction, the VA Clients section is no longer shown
+  inline on the main staff dashboard — it's now a single link out to
+  a new dedicated page, exactly mirroring the pattern Admin/System
+  Settings already uses for its Agents Organization link: one entry
+  point on the front page, the real grouped/foldable content one
+  click behind it. Keeps the front page from growing crowded as more
+  VA clients sign on, without moving the concern into the CEO-only
+  Admin section — still reachable in one click from the main
+  dashboard.
+- Verified live: the main dashboard now shows a single "VA Clients"
+  link; the new page renders all current subsections (SEMRS
+  Self-Marketing, and every real/test client) folded by default, with
+  a working back link, and a real click still correctly expands a
+  subsection.
+
 ## 2026-08-20 (VA Clients subsections folded by default, link-button toggle)
 - Per explicit instruction, every subsection in the VA Clients list
   (SEMRS's own self-marketing, each real client, and any future one —
