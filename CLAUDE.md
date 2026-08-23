@@ -120,16 +120,28 @@ managing anything on their behalf:
   actively managing and posting to the client's own live accounts on a
   standing basis, not a one-time drafting cost, and is distinct from
   the Paid Media Model's ad-spend commission below (that's for running
-  ad campaigns; this is for organic/social account management). No
-  standard default rate is established yet — the CEO sets and confirms
-  the actual agreed fee, billing cycle (monthly or, using the same
-  "pay 10 months, get 12" mechanic as Conversion & Lead Generation's
-  annual option — not a separately-invented discount — yearly), and
-  which channels it covers, recorded per client on the client brief
-  (see prompts/client-brief.md, "SEMRS Virtual Assistant Service Fee").
-  Same "no invented number, CEO confirms per client" treatment as the
-  Ads Commission Rate and Data Retention defaults (see Operational
-  Policies, below).
+  ad campaigns; this is for organic/social account management).
+  **Starting reference pricing, confirmed 2026-08-20** (same "starting
+  default, CEO confirms or changes per client" treatment as the Ads
+  Commission Rate and Data Retention defaults, below — this is a
+  reference price shown publicly, not a fixed non-negotiable rate):
+  the client picks one of two options. **Option 1** — a flat $500/mo
+  covering every channel in scope. **Option 2** — a per-channel rate,
+  deliberately set equal to that same channel's own existing content
+  price rather than a newly invented number (Blog $69/mo, Facebook/
+  Instagram/LinkedIn/X/Pinterest $15/mo, TikTok/YouTube $25/mo, Google
+  Business Profile $10/mo) — the client pays only for the specific
+  channels they want SEMRS actually publishing to live, nothing else.
+  Shown on the public pricing page (SEMRS-Dashboard's
+  `data/pricingCatalog.ts` → `virtualAssistant`, rendered in
+  `components/pricing/PricingTable.tsx`). The billing cycle (monthly
+  or, using the same "pay 10 months, get 12" mechanic as Conversion &
+  Lead Generation's annual option — not a separately-invented
+  discount — yearly) and the actual agreed fee for a specific client
+  are still recorded on that client's brief (see
+  prompts/client-brief.md, "SEMRS Virtual Assistant Service Fee") —
+  this pricing is the reference point, not a substitute for that
+  per-client record.
 
 Once both are in place, the Website and Social Draft Agents may
 upload/publish directly to that client's platforms immediately after

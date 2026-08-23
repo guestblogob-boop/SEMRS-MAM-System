@@ -10,6 +10,32 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-20 (VA Service Fee reference pricing; Conversion/LeadGen exclusions spelled out)
+- Per explicit instruction, the Virtual Assistant Service Fee (Delivery
+  Model, "Path 2") now has real starting reference pricing instead of
+  "no standard default rate established yet": Option 1, a flat
+  $500/mo covering every channel in scope; Option 2, a per-channel
+  rate set equal to that channel's own existing content price (not a
+  new invented number, per explicit instruction — "according to
+  platform charges") — Blog $69/mo, Facebook/Instagram/LinkedIn/X/
+  Pinterest $15/mo, TikTok/YouTube $25/mo, Google Business Profile
+  $10/mo. Same "starting default, CEO confirms per client" treatment
+  as the Ads Commission Rate — doesn't replace the per-client
+  `virtualAssistantFee` record on the brief. Shown on the real public
+  pricing page for the first time (`data/pricingCatalog.ts` →
+  `virtualAssistant`, `components/pricing/PricingTable.tsx`).
+- Per explicit instruction, also spelled out unambiguously that the
+  $249/mo Conversion & Lead Generation plan charges for Conversion
+  tracking, Lead Generation, and Sales Agent qualification ALONE —
+  Social/organic channels, Blog, SEO, and Ads are never included and
+  always stay separately charged, whether bought before, after, or
+  alongside this plan. Also clarified the two different reasons
+  Analytics & Reporting is free either way (already a Phase 2
+  client's standing duty vs. baked into the $249 for a standalone
+  client) — this reasoning already existed in CLAUDE.md but wasn't
+  reflected on the actual pricing page copy until now.
+- Verified live on the real `/pricing` page.
+
 ## 2026-08-20 (Conversion & Lead Generation: standalone-price clarification)
 - Per a user-flagged gap ("Lead Generation price not included in
   pricing page"): investigated live and confirmed the combined
