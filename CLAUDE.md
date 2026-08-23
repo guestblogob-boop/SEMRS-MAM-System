@@ -121,27 +121,32 @@ managing anything on their behalf:
   standing basis, not a one-time drafting cost, and is distinct from
   the Paid Media Model's ad-spend commission below (that's for running
   ad campaigns; this is for organic/social account management).
-  **Starting reference pricing, confirmed 2026-08-20** (same "starting
+  **Starting reference pricing, revised 2026-08-24** (same "starting
   default, CEO confirms or changes per client" treatment as the Ads
   Commission Rate and Data Retention defaults, below — this is a
   reference price shown publicly, not a fixed non-negotiable rate):
   the client picks one of two options. **Option 1** — a flat $500/mo
-  covering every channel in scope. **Option 2** — a per-channel rate,
-  deliberately set equal to that same channel's own existing content
-  price rather than a newly invented number (Blog $69/mo, Facebook/
-  Instagram/LinkedIn/X/Pinterest $15/mo, TikTok/YouTube $25/mo, Google
-  Business Profile $10/mo) — the client pays only for the specific
-  channels they want SEMRS actually publishing to live, nothing else.
-  Shown on the public pricing page (SEMRS-Dashboard's
-  `data/pricingCatalog.ts` → `virtualAssistant`, rendered in
-  `components/pricing/PricingTable.tsx`). The billing cycle (monthly
-  or, using the same "pay 10 months, get 12" mechanic as Conversion &
-  Lead Generation's annual option — not a separately-invented
-  discount — yearly) and the actual agreed fee for a specific client
-  are still recorded on that client's brief (see
+  covering every channel in scope. **Option 2** — a fee tiered by how
+  many channels are under management, fully independent of that
+  channel's own content price (an earlier 2026-08-20 draft incorrectly
+  set the per-channel VA rate equal to the channel's content price —
+  corrected here): **1–3 channels** (including Blog alone) **$300/mo**
+  flat floor — the fee doesn't shrink for a smaller scope, since the
+  real cost is mostly account-access/monitoring overhead, not a
+  per-post marginal cost — and **4–10 channels $500/mo**, capped to
+  match Option 1's flat rate so Option 2 never costs more than the
+  all-inclusive plan. Shown on the public pricing page
+  (SEMRS-Dashboard's `data/pricingCatalog.ts` → `virtualAssistant`,
+  rendered in `components/pricing/PricingTable.tsx`). The billing cycle
+  (monthly or, using the same "pay 10 months, get 12" mechanic as
+  Conversion & Lead Generation's annual option — not a
+  separately-invented discount — yearly) and the actual agreed fee for
+  a specific client are still recorded on that client's brief (see
   prompts/client-brief.md, "SEMRS Virtual Assistant Service Fee") —
   this pricing is the reference point, not a substitute for that
-  per-client record.
+  per-client record. Ad-account setup (see Paid Media Model, below) is
+  free either way, not its own billed line item — absorbed into this
+  fee's margin.
 
 Once both are in place, the Website and Social Draft Agents may
 upload/publish directly to that client's platforms immediately after

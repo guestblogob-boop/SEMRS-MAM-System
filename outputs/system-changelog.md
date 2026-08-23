@@ -10,6 +10,46 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-24 (Social — Organic re-priced per-post; VA fee tiered by channel count)
+- Full re-pricing of Social — Organic content, implemented in
+  SEMRS-Dashboard after extensive iterative design review — including
+  a standalone mockup artifact (rate card + a worked sample quotation)
+  the business owner reviewed and revised several times before any
+  code was touched. Replaces the old flat monthly-price-per-channel
+  model, which never specified how many posts a client actually got —
+  the gap that started this whole pass.
+- Channels now priced per post, in three tiers: Light $3/post (Google
+  Business Profile, Threads, WhatsApp Channel), Standard $5/post
+  (Facebook, Instagram, LinkedIn, X, Pinterest), Video $12/post
+  (TikTok, YouTube Shorts — one post = up to ~1 minute, short-form
+  only). 5-post/month minimum across all three. Started as low as
+  $1/post to aggressively undercut other agencies, then raised in
+  stages once checked against real published agency and productized
+  plan rates — still well under the cheapest market floor found
+  (~$7–10/post) at every tier.
+- Bundle tiers re-priced as a deliberately separate, fixed lane (2ch
+  $55/mo, 3ch $80/mo, 5ch $130/mo, 10ch/all $230/mo), each now stating
+  its own posts/channel/month explicitly (10 each) — this was the
+  original, narrowly-scoped complaint that kicked off the whole
+  re-pricing conversation.
+- WhatsApp Channel (an organic broadcast post) and WhatsApp (a direct
+  message to the client's own contacts, priced separately alongside
+  Email) were flagged as confusingly identical-looking line items —
+  now explicitly disambiguated everywhere both appear.
+- Ads setup fee ($19/platform or $49 flat) removed as its own charge —
+  now free, absorbed into the VA Service Fee's margin instead.
+- VA Service Fee Option 2 corrected: no longer sums a rate equal to
+  each channel's own content price (a mistake from the 2026-08-20
+  pass, corrected the same day it was caught). Now tiered by channel
+  count: 1–3 channels $300/mo flat floor (applies even to one channel,
+  including Blog alone), 4–10 channels $500/mo (matching Option 1's
+  flat rate, so per-channel selection never costs more than the
+  all-inclusive plan).
+- Verified live: real server-rendered HTML fetched directly from the
+  actual `/pricing` page confirms every tier, bundle price, VA fee
+  tier, and the ads-setup-free note render correctly; `npx tsc
+  --noEmit` clean across the full change.
+
 ## 2026-08-20 (VA Service Fee reference pricing; Conversion/LeadGen exclusions spelled out)
 - Per explicit instruction, the Virtual Assistant Service Fee (Delivery
   Model, "Path 2") now has real starting reference pricing instead of
