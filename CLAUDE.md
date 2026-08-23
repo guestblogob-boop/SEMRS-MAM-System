@@ -55,7 +55,11 @@ Conversion without Lead Generation (e.g. to see which organic post,
 platform, ad, or landing page actually drives sales, while still
 handling follow-up themselves) or Lead Generation without Conversion
 (e.g. just wanting leads captured and AI-qualified, without a
-full cross-channel performance rollup). See agents/analytics-agent.md,
+full cross-channel performance rollup). This is a scope choice, not a
+pricing split: ordering only one half still costs the same flat plan
+price as ordering both (see "Conversion & Lead Generation Pricing
+Model," below) — there is no cheaper standalone rate for either alone.
+See agents/analytics-agent.md,
 agents/content-agent.md, and agents/ads-agent.md's "Conversion
 Integration" sections for how each agent supports this.
 

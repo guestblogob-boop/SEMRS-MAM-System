@@ -10,6 +10,23 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-20 (Conversion & Lead Generation: standalone-price clarification)
+- Per a user-flagged gap ("Lead Generation price not included in
+  pricing page"): investigated live and confirmed the combined
+  "Conversion & Lead Generation" $249/mo plan does render on the
+  public pricing page and does mention Lead Generation — but nowhere
+  stated whether ordering just Lead Generation, or just Conversion,
+  alone costs less, which is a real ambiguity given this document
+  explicitly allows ordering either one alone (see "What 'Conversion'
+  means," above).
+- Confirmed with the business owner: this is a flat price either way,
+  by deliberate design — not a missing standalone tier. Added a
+  clarifying sentence to CLAUDE.md itself (see "What 'Conversion'
+  means") and a matching callout on the real pricing page
+  (`conversionLeadGen.standaloneNote` in SEMRS-Dashboard's
+  `data/pricingCatalog.ts`, rendered in `PricingTable.tsx`) so this
+  is unambiguous everywhere a client or staff member might read it.
+
 ## 2026-08-20 (VA Clients moved to its own dedicated page)
 - Per explicit instruction, the VA Clients section is no longer shown
   inline on the main staff dashboard — it's now a single link out to
