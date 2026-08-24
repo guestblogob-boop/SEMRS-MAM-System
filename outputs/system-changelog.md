@@ -10,6 +10,34 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-24 (Real onboarding status + Analytics/Ads wiring for Conversion & Lead Generation)
+- Per explicit instruction to build out the Conversion & Lead
+  Generation dashboard module further, first confirmed by direct code
+  investigation (not assumption) that no Lead model, no HOT/WARM/COLD
+  scoring, and no Invoice system exist anywhere in SEMRS-Dashboard —
+  matching what this document already says about both being
+  not-yet-built. Neither was fabricated to fill the request; both
+  remain real, separately-scoped features for later.
+- What already existed for real — Analytics Summaries and Ads
+  Performance Reports, both genuinely built per-client-brief — is now
+  linked directly from the new module (with live counts) instead of
+  being duplicated, since CLAUDE.md already treats real reporting data
+  as something this system reports on, never invents.
+- Added the real onboarding status this module was missing:
+  WhatsApp Business verification (the hard gate described in "AI-Led
+  WhatsApp Sales Agent instantly notifies the client," above),
+  AI Sales Agent notification-channel preferences (email default,
+  WhatsApp optional), and the plan's billing cycle — now tracked per
+  client and editable by staff, not just described in prose.
+- Also confirmed: the Client Portal signup flow is already the exact
+  same for every client regardless of VA status — there is no separate
+  "VA client signup," matching how Delivery Model, "Path 2," already
+  describes VA as a flag on an existing engagement, not a different
+  onboarding door.
+- Verified live end-to-end against the real running app, including
+  reading the database directly after a real form submission to
+  confirm the save persisted correctly.
+
 ## 2026-08-24 (Conversion & Lead Generation moved to its own dashboard module)
 - Reverted the same-day quote-calculator addition, per correction from
   the business owner: this service needs a real onboarding/integration
