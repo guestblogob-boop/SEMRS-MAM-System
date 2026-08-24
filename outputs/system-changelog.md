@@ -10,6 +10,22 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-24 (New Services page in SEMRS-Dashboard — process/deliverables guide)
+- Per explicit instruction, SEMRS-Dashboard's public `/services` page
+  no longer duplicates `/pricing`'s price tables and calculator. It's
+  now a separate, CLAUDE.md-grounded guide explaining how the agency
+  works and what a client actually receives per service — process
+  overview, Normal vs SEO Blog Post, one card per social channel
+  (grouped by the Light/Standard/Video content tiers), SEO, Email &
+  WhatsApp, Analytics & Reporting, Conversion & Lead Generation with
+  the AI-Led WhatsApp Sales Agent's boundaries stated explicitly, Ads
+  Management's commission model worked through a real example, Bundle
+  Discount & Annual Billing mechanics, and a deep dive on SEMRS as
+  Virtual Assistant (access required, the two ways to pay). No dollar
+  figures except conceptual percentages — exact pricing stays on
+  `/pricing` only, linked from every relevant section.
+- Verified live against the real running pages, not just a code read.
+
 ## 2026-08-24 (Per-channel quantity picker in SEMRS-Dashboard)
 - Per explicit instruction, the Bundle Builder's shared "posts/month"
   quantity (one number applied to every selected channel) is replaced
