@@ -10,6 +10,29 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-24 (Conversion & Lead Generation now addable in the public quote calculator)
+- Per explicit instruction, fixed a real gap flagged by the business
+  owner: SEMRS-Dashboard's public pricing calculator showed Conversion
+  & Lead Generation informationally but had no way to actually add it
+  to a quote — an earlier implementation-level decision (not a CLAUDE.md
+  rule) had deliberately left it out of the self-serve calculator,
+  since the plan is priced/onboarded per client; that no longer
+  justified making it completely unrequestable.
+- A client can now check a box to add the flat $249/mo plan to their
+  quote request — still one flat price whether they want Lead
+  Generation alone, Conversion alone, or both (unchanged rule). The
+  real onboarding gate (the client's WhatsApp Business number needing
+  Meta verification before Lead Generation goes live) is unchanged and
+  still happens after the draft quote reaches a human, not before.
+- Two related gaps this surfaced were also fixed: a submitted quote
+  requesting this now correctly pre-checks "Lead Generation" and
+  "Conversion" on the Order Intake form for staff, and shows up when
+  staff review the quote/order — previously it would have silently
+  vanished between the client's request and what staff saw.
+- Verified live: adding the toggle correctly totals $249/mo, and
+  $2,490 on annual billing (confirming the existing "pay 10, get 12"
+  mechanic applies correctly to this newly-addable item).
+
 ## 2026-08-24 (New Services page in SEMRS-Dashboard — process/deliverables guide)
 - Per explicit instruction, SEMRS-Dashboard's public `/services` page
   no longer duplicates `/pricing`'s price tables and calculator. It's
