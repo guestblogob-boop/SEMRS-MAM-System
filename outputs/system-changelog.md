@@ -10,6 +10,23 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-24 (Bundles: percentage discount + client-chosen quantity picker)
+- Per explicit instruction, Social — Organic bundles in SEMRS-Dashboard
+  no longer charge a fixed dollar amount that only worked at one
+  specific quantity — replaced with a percentage discount (2 channels
+  10% off, 3 channels 12%, 5 channels 15%, 10/all channels 20%) applied
+  to the sum of each selected channel's own per-post rate at a
+  client-chosen quantity, with a new 20-posts/channel/month minimum for
+  any bundle (higher than a single channel's 5-post minimum).
+- New quantity picker added to the Bundle Builder, mirroring the
+  existing Blog quantity input mechanic — client types one number,
+  applied uniformly across every selected channel.
+- Same day, reverted an intermediate change: Light/Standard per-post
+  minimums moved back to 5 posts/month (the 20-post bundle minimum is
+  now the only elevated floor).
+- Verified live end-to-end via real DOM interaction on the actual
+  pricing page, not just a code read.
+
 ## 2026-08-24 (Light/Standard per-post minimums adjusted)
 - Per explicit instruction, raised the per-post minimum order for two
   of the three organic content tiers: Light from 5 to 10 posts/month
