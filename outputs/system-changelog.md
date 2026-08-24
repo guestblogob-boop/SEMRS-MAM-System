@@ -10,6 +10,17 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-24 (Bundle minimum reverted to 5 posts/channel)
+- Per explicit instruction, removed the higher 20-post/channel/month
+  bundle-only minimum added earlier the same day in SEMRS-Dashboard —
+  now 5, identical to a single channel's own minimum, no extra volume
+  floor to bundle.
+- Verified live via real DOM interaction: 1 Standard channel at 20
+  posts = $100/mo (no bundle discount, correctly, since only 1 channel
+  is selected); annual billing correctly shows $1,000 (10 × $100) —
+  confirming the existing "pay 10 months, use 12" mechanic already
+  applies to the new per-post pricing without any extra code.
+
 ## 2026-08-24 (Bundles: percentage discount + client-chosen quantity picker)
 - Per explicit instruction, Social — Organic bundles in SEMRS-Dashboard
   no longer charge a fixed dollar amount that only worked at one
