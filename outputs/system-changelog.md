@@ -10,6 +10,27 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-24 (Conversion & Lead Generation moved to its own dashboard module)
+- Reverted the same-day quote-calculator addition, per correction from
+  the business owner: this service needs a real onboarding/integration
+  step (WhatsApp Business verification, the AI-Led WhatsApp Sales
+  Agent going live) and, for the default Phase 2 path, links
+  automatically to whatever channels/analytics a client already has
+  from an existing engagement — a pick-and-total quote flow was the
+  wrong model for it, confirming the reasoning already documented in
+  "Onboarding a Conversion & Lead Generation-Only Client," above.
+  `/pricing` is back to informational-only for this plan.
+- New dashboard module in SEMRS-Dashboard
+  (`app/dashboard/conversion-leadgen`), the same pattern as the
+  existing VA Clients module: every client with Conversion and/or
+  Lead Generation ordered, one click from the main staff dashboard.
+  Deliberately doesn't fabricate a WhatsApp verification status field
+  that doesn't exist in the data model yet — states plainly that it
+  isn't tracked rather than inventing an indicator.
+- Verified live against the real running app on both the pricing page
+  (checkbox confirmed removed) and the new dashboard page (loads and
+  shows its real, correct empty state).
+
 ## 2026-08-24 (Conversion & Lead Generation now addable in the public quote calculator)
 - Per explicit instruction, fixed a real gap flagged by the business
   owner: SEMRS-Dashboard's public pricing calculator showed Conversion
