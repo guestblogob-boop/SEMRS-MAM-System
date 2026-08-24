@@ -10,6 +10,31 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-25 (Demo/Sample Data section + real-listing cleanup)
+- The CEO flagged that the dashboard looks empty before any real order
+  has been received, and asked for a demo section so it's clear what's
+  actually built — and separately, for a way a client unfamiliar with
+  this system can see the full order lifecycle (intake through AI
+  Sales Agent scoring and a closed deal) without signing up first.
+- Built as ONE curated, clearly-fabricated example order run through
+  every real stage SEMRS-Dashboard implements (not a mockup UI) —
+  visible to staff in a dedicated Demo/Sample Data section, and shown
+  publicly with no login required so a prospective client can see
+  exactly what a real order produces before committing to sign up.
+  Per explicit instruction, nothing on the public view is downloadable
+  or saveable — it's for understanding the system, not for taking the
+  sample content itself.
+- Reaffirms and satisfies the Hard Constraint (free tools only) for
+  this specific build: sample images are self-generated placeholder
+  graphics with zero external API calls and zero cost, for the demo
+  and for real client work alike — no paid image-generation tool used.
+- While building this, discovered that the real Client Briefs list
+  already had 4 old test/E2E artifacts left over from earlier
+  development work, mixed in with real orders — exactly the kind of
+  confusion the CEO was describing. These were moved into the new
+  Demo/Sample Data section (not deleted) so the real order list is now
+  genuinely clean.
+
 ## 2026-08-24 (Real Invoicing/Billing module)
 - Part B of the two-part Lead + Invoicing plan (Part A is the entry
   directly below). Builds the real "Invoice section" this document
