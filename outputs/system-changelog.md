@@ -10,6 +10,42 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-24 (Real Invoicing/Billing module)
+- Part B of the two-part Lead + Invoicing plan (Part A is the entry
+  directly below). Builds the real "Invoice section" this document
+  already describes as target functionality for SEMRS's commission
+  (see Paid Media Model, "Invoicing") — now generic enough to cover
+  any billable item: the initial package, a Virtual Assistant fee, an
+  ads commission period, the Conversion & Lead Generation plan.
+- Generation is a deliberate staff action, never automatic at order
+  intake — consistent with this document's Approval Gates: nothing is
+  actually priced-and-owed until real work has passed CEO approval.
+- The settlement path for an invoice is a genuinely separate route
+  from the existing one-shot delivery-payment flow, specifically
+  because the two have different real-world meanings: the original
+  payment route unlocks a Draft-Only client's first delivery and
+  always finalizes that brief; an invoice (e.g. a recurring ads
+  commission bill) can apply to a client whose engagement is already
+  finalized and ongoing, so settling it must never re-trigger delivery
+  logic that already happened. Verified as a real regression check
+  against the running app, not assumed from reading the code alone.
+- Client-facing invoice access follows the same real, official
+  document-generation mechanism already used for every other
+  deliverable in this system (Deliverable Formats — PDF/Word/Excel via
+  Claude Code's own free document-creation skills, Google Sheet/Slides
+  via SEMRS's connected Google account, shared view-only) — no new
+  mechanism invented, and confirmed access is gated strictly to the
+  invoice's own client, matching every other Client Portal record.
+- The "prefill from a matching quote" convenience surfaces a real,
+  pre-existing gap rather than hiding it: `Order` (the public/staff
+  quote calculator's record) has never had a link to `ClientBrief`, so
+  matching is necessarily best-effort text matching, not a guaranteed
+  join — documented as a limitation in the code itself.
+- Staff now get one cross-client Billing overview (status-filterable,
+  live outstanding total) alongside the existing per-client VA Clients
+  and Conversion & Lead Generation modules — the "monitored" billing
+  requirement this task was built to satisfy.
+
 ## 2026-08-24 (Real Lead capture, scoring, and client-facing lead reporting)
 - Part A of a two-part plan (Lead module + Invoicing/Billing module),
   built after formal Plan Mode review: two Explore-agent audits first
