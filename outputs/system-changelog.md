@@ -10,6 +10,46 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-24 (Real Lead capture, scoring, and client-facing lead reporting)
+- Part A of a two-part plan (Lead module + Invoicing/Billing module),
+  built after formal Plan Mode review: two Explore-agent audits first
+  confirmed neither a `Lead` model nor an `Invoice` model existed
+  anywhere in SEMRS-Dashboard, matching what this document's Lead
+  Generation Track and Paid Media Model sections already describe as
+  real capabilities with no implementation yet built. This entry
+  covers Part A (Lead) only; Invoicing/Billing is separate, later work.
+- The Lead Generation Track's capture → score → notify pipeline (see
+  "Lead Generation Track," steps B–C) is now real: a signed public
+  webhook for any future real lead source, plus a staff manual-entry
+  path, both funnel through one shared flow so they can't drift apart.
+  HOT/WARM/COLD scoring is a deterministic, explainable rule set (not
+  a live AI call — none is configured), staff-overridable.
+- The hard architectural boundary — this system never contacts a lead
+  directly, ever (see Security & Misuse Guardrails, "No AI-led
+  conversations with leads") — was verified by grepping the actual
+  diff for every use of a lead's phone/email, confirming neither is
+  ever used as an outbound send target, only as display data or
+  content embedded in the notification sent to the CLIENT's own
+  contact address.
+- Instant client notification is real via email (reusing the existing
+  `lib/notifyEmail.ts` mechanism); WhatsApp notification remains a
+  documented no-op pending a real Meta WhatsApp Business API
+  connection, consistent with the Hard Constraint's "WhatsApp Business
+  API costs" section — no real per-conversation cost is being incurred
+  anywhere in this build.
+- The client's own captured-leads view and CSV/Excel download
+  ("the client also gets a full lead report," Conversion & Lead
+  Generation Pricing Model) is now real on the Client Portal, scoped
+  strictly to that client's own brief, gated on Lead Generation being
+  in scope rather than on the standard delivery-approval gate — since
+  this track runs continuously once live, independent of draft
+  delivery.
+- Verified live end-to-end against the real running app: unsigned
+  webhook rejected, signed webhook accepted and scored, manual entry
+  and score override both persisted correctly, and both portal
+  downloads confirmed as genuine files (not stubs) before test data
+  was cleaned up.
+
 ## 2026-08-24 (Real onboarding status + Analytics/Ads wiring for Conversion & Lead Generation)
 - Per explicit instruction to build out the Conversion & Lead
   Generation dashboard module further, first confirmed by direct code
