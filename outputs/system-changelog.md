@@ -10,6 +10,19 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-24 (Per-channel quantity picker in SEMRS-Dashboard)
+- Per explicit instruction, the Bundle Builder's shared "posts/month"
+  quantity (one number applied to every selected channel) is replaced
+  with a real quantity picker next to each individual channel — a
+  client can now order different volumes per channel within the same
+  selection.
+- Confirmed the automatic annual-billing compounding (bundle discount
+  percentage first, then the existing "pay 10 months, get 12"
+  mechanic) stays unchanged — no separate annual-only rate was needed.
+- Verified live via real DOM interaction on the actual pricing page:
+  two channels at different quantities compute correctly together
+  before the bundle discount is applied.
+
 ## 2026-08-24 (Bundle minimum reverted to 5 posts/channel)
 - Per explicit instruction, removed the higher 20-post/channel/month
   bundle-only minimum added earlier the same day in SEMRS-Dashboard —
