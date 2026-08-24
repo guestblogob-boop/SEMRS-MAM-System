@@ -10,6 +10,13 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-24 (Light/Standard per-post minimums adjusted)
+- Per explicit instruction, raised the per-post minimum order for two
+  of the three organic content tiers: Light from 5 to 10 posts/month
+  ($15 → $30/mo minimum), Standard from 5 to 6 posts/month ($25 →
+  $30/mo minimum). Video's minimum is unchanged at 5 posts/month
+  ($60/mo). Verified live on the real `/pricing` page.
+
 ## 2026-08-24 (Social — Organic re-priced per-post; VA fee tiered by channel count)
 - Full re-pricing of Social — Organic content, implemented in
   SEMRS-Dashboard after extensive iterative design review — including
