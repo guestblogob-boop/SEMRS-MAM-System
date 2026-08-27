@@ -10,6 +10,30 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-28 (SEMRS Reports + real Conversations)
+- Per explicit instruction: built a SEMRS Reports view (every order
+  bucketed Completed/Pending/In Progress/Rejected, read directly from
+  each order's real Status Tracker stage) and a real Conversations
+  feature.
+- Conversations is the actual implementation of what this document's
+  Client Contact Channel section already described as target behavior
+  ("the dashboard's view of an order should surface the client brief
+  AND that order's live conversation side by side") but flagged as not
+  yet built. Built honestly to match what this system can actually do
+  today: there is still no real inbound WhatsApp or Email webhook, so
+  every inbound message is logged by a staff member relaying what the
+  client actually said — the same "a human at SEMRS relays messages...
+  manually" interim state this document already names, just given a
+  real dashboard UI instead of only the outputs/client-message-log/
+  file convention.
+- "AI-handled" is reserved strictly for the two real automated
+  client-facing sends that already exist in SEMRS-Dashboard (the
+  delivery email and the lead notification email) — nothing was
+  fabricated to make more of the log look automated than it is.
+- Verified live end-to-end against the real running app, including
+  confirming the automated delivery email genuinely auto-logs itself
+  into the conversation record on send.
+
 ## 2026-08-25 (Demo/Sample Data section + real-listing cleanup)
 - The CEO flagged that the dashboard looks empty before any real order
   has been received, and asked for a demo section so it's clear what's
