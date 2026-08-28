@@ -10,6 +10,25 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-28 (Lead Analytics — score breakdown + 4 real daily/hourly charts)
+- CEO reported not being able to see HOT/WARM/COLD in the Conversion &
+  Lead Generation section — confirmed by investigation that zero real
+  leads existed anywhere yet, so there was nothing to show a score on;
+  the individual score badges were already real. Fixed the empty state
+  to point at the Demo/Sample Data example instead, and added a real
+  aggregate score breakdown to the Analytics dashboard.
+- Finished building out the remaining sections of the reference
+  dashboard shared for this build: Daily Inbound Messages, Daily
+  Conversions, and Hot Leads by Hour are all real, computed from
+  genuine Lead/ClientMessage data.
+- The reference's "Daily AI Messages" chart needed a real substitution,
+  not a straight copy: that concept implies AI-to-lead conversation
+  volume, which this document's Security & Misuse Guardrails
+  permanently forbid. Built "Daily Automated Notifications" instead —
+  real counts of this system's own automated sends, always to the
+  CLIENT, never to a lead — labeled clearly so the distinction can't
+  be lost.
+
 ## 2026-08-28 (Lead pipeline stages + real Lead Analytics dashboard)
 - Per explicit instruction, referencing a real competing product's
   analytics page as a layout model: added pipeline stages
