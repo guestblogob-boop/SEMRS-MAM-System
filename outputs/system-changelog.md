@@ -10,6 +10,14 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-28 (Lead Analytics — always-render at zero, same as Conversion Funnel)
+- Per explicit clarification: "Leads by Score" and "Team Performance"
+  on the Lead Analytics dashboard now always render their real
+  structure at 0/0% when no data exists yet, instead of swapping to a
+  text message — matching how the Conversion Funnel section already
+  behaves. Both still recompute live from real data the instant it
+  exists; this is not a frozen placeholder.
+
 ## 2026-08-28 (Lead Analytics — score breakdown + 4 real daily/hourly charts)
 - CEO reported not being able to see HOT/WARM/COLD in the Conversion &
   Lead Generation section — confirmed by investigation that zero real
