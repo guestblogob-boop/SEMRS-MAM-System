@@ -10,6 +10,30 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-28 (Lead pipeline stages + real Lead Analytics dashboard)
+- Per explicit instruction, referencing a real competing product's
+  analytics page as a layout model: added pipeline stages
+  (new/qualified/proposal/won/lost, a separate dimension from the
+  existing HOT/WARM/COLD urgency score) and a real Lead Analytics
+  dashboard — total leads, conversion rate, average deal size, sales
+  cycle, a funnel, source attribution, and team performance, all
+  computed from genuine captured-lead data.
+- Deliberately did not build the reference's "AI vs Human Performance"
+  panel or any AI message-volume/activity charts — those describe an
+  AI system actively conversing with leads, which this document's
+  Security & Misuse Guardrails permanently forbid ("No AI-led
+  conversations with leads"). Flagged instead of built or faked.
+- **A real incident happened and was corrected the same session**: a
+  re-seeding script bug briefly matched on a shared flag alone instead
+  of the specific demo record it was scoped to own, and one
+  pre-existing QA/test business record from an earlier development
+  session was permanently deleted before the bug was caught and fixed.
+  No real client data was involved. Documented in SEMRS-Dashboard's
+  PROJECT_STATUS.md and in the dashboard's own Demo/Sample Data page
+  rather than left undisclosed — consistent with this document's own
+  "append-only, disclose rather than quietly correct" standard for
+  records.
+
 ## 2026-08-28 (SEMRS Reports + real Conversations)
 - Per explicit instruction: built a SEMRS Reports view (every order
   bucketed Completed/Pending/In Progress/Rejected, read directly from
