@@ -10,6 +10,42 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-08-29 (One-click Google Sign-In for Google-owned VA channels)
+- Per explicit instruction, after weighing options together: added a
+  real, additional onboarding path specifically for Google-owned
+  properties (Google Business Profile, YouTube, Search Console,
+  Google Analytics, AdSense) — a client can now connect all five in
+  one click via their own "Sign in with Google," rather than pasting a
+  credential per channel. This is genuinely new: every existing
+  access mechanism in this system (the "SMMA Requests Access"
+  partner-invite pattern for ad accounts and social channels, the
+  "client shares Viewer access to SEMRS's account" pattern for
+  Search Console/GA4) works by the client granting SEMRS's own
+  account access, never a client-side consent screen — this is the
+  first place that pattern is added, deliberately scoped to Google's
+  own ecosystem only.
+- Everything already built stays exactly as it is — the manual
+  credential-paste flow and the SMMA-request flow remain the working,
+  unchanged path for every other platform (Meta, LinkedIn, etc.), per
+  explicit instruction not to touch them. Meta Business Login and
+  LinkedIn OAuth self-serve were considered and explicitly deferred —
+  each needs its own separate, real app-review process with Meta/
+  LinkedIn before external clients could use it, a materially
+  different scope and timeline than this Google-only piece.
+- Google Business Profile also now has a genuine live-publish
+  integration (a real local post — text and photo, which this system
+  already produces). YouTube's upload capability was deliberately not
+  wired up alongside it — it would need an actual video file, which
+  this system still doesn't produce, matching CLAUDE.md's existing
+  "no full video editing/rendering" boundary.
+- Honest about what's still outside this session's control: a real,
+  externally-facing Google OAuth Client still needs Google's own app
+  verification review before any of SEMRS's actual clients can use the
+  button (real elapsed time, not guaranteed on first submission) — the
+  same category of dependency as every other "code built, real setup
+  still needed" feature already documented in this system, just a
+  bigger one this time.
+
 ## 2026-08-28 (Lead Analytics — always-render at zero, same as Conversion Funnel)
 - Per explicit clarification: "Leads by Score" and "Team Performance"
   on the Lead Analytics dashboard now always render their real
