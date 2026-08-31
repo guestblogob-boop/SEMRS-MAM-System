@@ -189,6 +189,38 @@ edit only for a client who opted into SEMRS as Virtual Assistant AND
 whose landing page is on a platform the Website/Blog Draft Agent can
 actually publish to.
 
+## Budget Guard System
+A third real, computed layer — this one continuous and reactive rather
+than a one-time or hourly-recomputed score — watching every live/
+launching campaign for wasted spend and anomalies, using only data
+SEMRS OS already has. Never a live ad-platform API poll, never a
+statistical/ML anomaly model — every one of its 10 checks is real
+threshold/percentage math against stored reports, attributed leads,
+funnel targeting, and the real landing-page reachability check:
+Broken Tracking, Conversion Leakage, Irrelevant Traffic, Low-Intent
+Traffic, Poor-Quality Leads (this system's own HOT/WARM/COLD scoring,
+never a universal standard), Duplicate Targeting (exact text match
+across this SAME client's other campaigns only, never fuzzy/semantic
+similarity), Inefficient Campaigns (compared against this same
+client's own other campaigns, never an ambiguous cross-client
+"account average"), Weak Creatives, Poor Landing Pages (real
+reachability + real response time only — this system has no bounce-
+rate data anywhere and never fabricates one), and Abnormal Spend
+Patterns (a real period-over-period spend swing, since this app has no
+"expected daily budget" concept to compare against).
+
+Each detected issue becomes a real, staff-visible alert (critical,
+warning, or info) with the real evidence, a recommended action, and a
+dollar estimate of spend at risk where one can be honestly computed —
+never auto-executed, never a substitute for a staff or CEO decision.
+An alert whose underlying condition clears on a later check
+auto-resolves itself, clearly labeled as a system action, not a human
+one. This build makes no claim about a false-positive rate (only
+measurable against real production usage this system doesn't have
+yet) and tracks only waste FLAGGED, never a "prevented" total, since
+there's no way to verify whether an alert was actually acted on before
+spend would otherwise have continued.
+
 ## Lead Gen Integration
 Only applies when Lead Generation is in this client's Service(s)
 Ordered (see the client brief).
