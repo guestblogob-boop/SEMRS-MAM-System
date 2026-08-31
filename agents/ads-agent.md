@@ -221,6 +221,41 @@ yet) and tracks only waste FLAGGED, never a "prevented" total, since
 there's no way to verify whether an alert was actually acted on before
 spend would otherwise have continued.
 
+## Ad Content Studio
+A real ad-creative authoring/review/approval workflow, layered on top
+of the funnel-stage VVO creative fields above rather than replacing
+them — modeled on a reference tool's field layout the CEO shared, but
+built to this system's own honesty standard rather than assuming a
+live AI-and-platform-API backend it doesn't have:
+- **Extract page info** ("Extract DNA" in the UI) is a real fetch of a
+  pasted website plus a basic parse of its title, meta description,
+  and first H1 — genuine, verifiable page metadata, never an AI-driven
+  "brand voice/DNA" analysis (no paid AI API is wired into this build
+  by default — Hard Constraint).
+- **Generate** opens a real staff authoring form for a new ad-creative
+  variant (headline, primary text, description, visual direction
+  notes) — it does not call a live AI text/image generator, same
+  disclosed gap as Campaign Command Center's Recommendations panel.
+  Visual direction notes stay at the creative-brief level, coordinated
+  with the Visual & Video Content Agent the same way any other
+  creative note is — this system still doesn't do full image
+  generation or editing.
+- **Swipe Studio** is a real staff Save/Skip review of each variant.
+- **Send for Client Approval** sends a REAL message to the client —
+  reusing this system's already-connected email (CAN-SPAM compliant)
+  and, where genuinely connected, the real Meta WhatsApp Business
+  Cloud API — never simulated. A send honestly fails (e.g. "WhatsApp
+  isn't connected") rather than reporting false success when the real
+  precondition isn't met. A client's actual approval or change request
+  is recorded once a staff member relays what the client really said —
+  same interim-reality pattern as every other client-message channel
+  in this system (no inbound webhook exists for email or WhatsApp).
+- **Publish to Meta** is staff-ATTESTED only — no live Meta Marketing
+  (Ads) API exists in this build. Only usable for a client who opted
+  into SEMRS as Virtual Assistant AND has real, connected Meta ad
+  account access; the staff member publishes the creative live in Meta
+  Ads Manager themselves, then confirms it here.
+
 ## Lead Gen Integration
 Only applies when Lead Generation is in this client's Service(s)
 Ordered (see the client brief).
