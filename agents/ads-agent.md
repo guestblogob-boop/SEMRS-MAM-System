@@ -221,6 +221,37 @@ yet) and tracks only waste FLAGGED, never a "prevented" total, since
 there's no way to verify whether an alert was actually acted on before
 spend would otherwise have continued.
 
+## Optimization Engine
+A fourth real, computed layer — distinct from Budget Guard, not a
+duplicate of it. Budget Guard detects waste and problems; the
+Optimization Engine answers "what's the concrete next action,"
+cross-referencing Budget Guard's findings, Campaign Health, Content
+Studio, and Landing Page Fix Requests, plus one genuinely new positive
+signal: a real "increase budget" recommendation, computed only when
+this campaign's cost-per-lead is stable-or-improving AND below this
+SAME client's own other campaigns — never an ambiguous cross-client
+"account average." Its expected-outcome projection is a plain linear
+read of the campaign's own real historical CPA, explicitly labeled as
+not a statistical forecast. Creative and Landing Page recommendations
+reuse Budget Guard's own real fatigue/reachability signals but add a
+genuinely new check first — is a fresh creative variant already queued
+in Content Studio, or a landing-page fix already requested — before
+recommending the next step. Audience Optimization mostly declines (no
+lookalike/interest/geo/device data exists in this build) beyond
+cross-referencing Budget Guard's Duplicate Targeting alert. Bid
+Strategy Optimization is not built at all — no live ad-platform
+bidding data exists in this build.
+
+Confidence on every recommendation reflects how much real data backs
+it (report count, trend consistency) — never a formal statistical
+significance test, and this system makes no claim about false-positive
+rate, average ROI improvement, or acceptance rate, all unmeasurable
+without real production usage. There is no live A/B-testing/traffic-
+splitting capability in this build; what exists instead is real
+Recommendation Tracking — a genuine staff decision (implemented/
+rejected) plus an optional real, staff-recorded before/after outcome
+judgment, never an automated measurement.
+
 ## Ad Content Studio
 A real ad-creative authoring/review/approval workflow, layered on top
 of the funnel-stage VVO creative fields above rather than replacing
