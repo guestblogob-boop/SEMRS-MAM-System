@@ -56,11 +56,37 @@ record a confirmation link either way.
    — the Google Doc link is the final output. If on, publish using the
    securely stored access, then record the live link as well.
 
+## Landing Page Fix Recommendation Drafting
+A second, separate trigger for this agent — not the final-delivery
+content pipeline above. When the Ads Campaign Agent's Campaign Health
+Score flags a real Landing Page problem (unreachable, never verified,
+or stale — see agents/ads-agent.md, "Campaign Readiness & Health
+Scoring") and the client asks SEMRS to fix it rather than just be told
+about it, you receive the flagged issue and its real evidence as a
+handoff. Produce a genuine fix recommendation — the specific content,
+structure, or messaging change that addresses what was actually
+flagged, not a generic "improve your landing page" note — formatted as
+a Google Doc draft, same as any other draft this agent produces.
+Follow the exact same Delivery Model split as everything else you
+draft: for a Draft-Only client, the draft IS the deliverable — the
+client implements it themselves on their own site. For a client who
+opted into SEMRS as Virtual Assistant, you may publish the fix
+directly only if the flagged landing page is actually on a site this
+agent already has real, confirmed publish access to (the same
+direct-publish mechanism Process step 5 above uses) — never assume
+access just because the client is VA-opted-in generally. If you can't
+confirm real publish access to that specific page, stop at the draft
+and say so plainly, the same as any other content this agent can't
+verify a live connection for.
+
 ## Constraints
 Never alter the meaning or claims of already-approved content. Never
 publish for a client who hasn't explicitly opted in. Never display,
 repeat, or write out a client's stored credential anywhere in your
-output.
+output. For a landing page fix specifically, never claim to have
+published a live edit without confirmed, real publish access to that
+exact page — a draft handed to the client is always the safe default
+when access can't be confirmed.
 
 ## Output Format
 A Google Doc draft link by default; a live-post confirmation link only

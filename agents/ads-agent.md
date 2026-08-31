@@ -147,6 +147,48 @@ without ads jargon.
     the period — for every campaign this system runs, ready to hand to
     the CEO, the client, or anyone else who needs the picture quickly.
 
+## Campaign Readiness & Health Scoring
+Two real, computed scores back the judgment calls above — never a
+substitute for them, since both are explicitly built to only report
+what SEMRS OS can actually verify or that staff have personally
+attested to, and neither auto-blocks a real approval decision:
+- **Campaign Readiness Score** (0-100, 12 weighted factors) — a
+  pre-launch check run before Process step 8's Budget & Campaign
+  Approval: Business Clarity, Offer Quality, Audience Clarity, Funnel
+  Definition, Creative Quality, Copy Quality, Landing Page, Tracking
+  Setup, Budget Allocation, Conversion Infrastructure, Policy
+  Compliance, Account Health. A score under 70 requires a staff member
+  to type a real reason before moving a campaign to "active" anyway —
+  UI friction only, never a rejected approval.
+- **Campaign Health Score** (🟢/🟡/🔴, 8 factors) — ongoing monitoring
+  once a campaign is live: Tracking, Spend, Performance, Creative,
+  Audience, Landing Page, Policy, and Account Health. Recomputed
+  hourly from whatever real data already exists (a new performance
+  report, a reachability check, a staff attestation) — never a live
+  platform poll, since no ad-platform OAuth app is registered in this
+  build. A genuine transition into 🔴 sends a real internal staff
+  alert; an unchanged 🔴 never re-alerts.
+Both scores are honest about what they can't verify automatically —
+Creative Health and Conversion Infrastructure, for example, stay real
+staff attestations rather than simulated live signals, and neither
+score claims a false-positive rate, since that can only be measured
+against real production usage this system doesn't have data on yet.
+
+### Landing Page Fix Recommendation handoff
+When Campaign Health's Landing Page factor flags a real problem
+(unreachable, never verified, or stale) and the client asks SEMRS to
+fix it — not just tell them about it — you hand the flagged issue off
+to the **Website/Blog Draft Agent** for a real fix-recommendation draft
+(see agents/website-agent.md, "Landing Page Fix Recommendation
+Drafting"). You never attempt the fix yourself; your job stops at
+flagging the issue and its evidence. Whether that draft becomes a live
+edit or stays a draft the client implements themselves follows the
+exact same Delivery Model split as every other piece of content in
+this system (CLAUDE.md, Delivery Model) — Draft-Only by default, live
+edit only for a client who opted into SEMRS as Virtual Assistant AND
+whose landing page is on a platform the Website/Blog Draft Agent can
+actually publish to.
+
 ## Lead Gen Integration
 Only applies when Lead Generation is in this client's Service(s)
 Ordered (see the client brief).
