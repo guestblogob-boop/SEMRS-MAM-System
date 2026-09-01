@@ -316,6 +316,31 @@ live AI-and-platform-API backend it doesn't have:
   so the client's existing self-watch view in their own Client Portal
   reflects them automatically.
 
+## Creative Knowledge Base
+Real, staff-tagged pattern data across every real `AdCreativeVariant`
+in the system (angle, offer type, CTA phrase/style, platform, visual
+style tag — added on top of the fields Ad Content Studio already
+authors: headline as the "hook," primary text/description as the
+"creative," format, and funnel stage). Cross-referenced with each
+variant's parent campaign's real performance tier (see Ad Library,
+above) to surface real frequency counts — how often each tag value
+co-occurs with a winning vs. fatigued/losing campaign — never a
+trained model or a formal statistical-significance test, since this
+build has no per-creative platform data or per-conversion distribution
+to run one honestly. A browsable/searchable/filterable Knowledge Base
+page sits as a 4th Ad Library-adjacent subsection under Ads Management,
+and Content Studio itself surfaces up to 3 real "Similar Past Winners"
+when authoring a new variant for a campaign — matched on platform,
+funnel stage, industry, and offer type, explicitly labeled as real
+evidence, never a guarantee ("Do not copy successful creatives
+blindly. Use patterns to generate new hypotheses."). A pattern value
+where fatigued/loser is the most common real outcome is flagged rather
+than silently recommended. `ClientBrief` gained a new optional
+`industry` field (free text, staff-entered) to support this — not yet
+reflected in `prompts/client-brief.md`'s own field list, a real
+documentation gap to close in a future pass on that file, not a
+blocker to this feature.
+
 ## Lead Gen Integration
 Only applies when Lead Generation is in this client's Service(s)
 Ordered (see the client brief).
