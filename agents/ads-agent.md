@@ -252,6 +252,24 @@ Recommendation Tracking — a genuine staff decision (implemented/
 rejected) plus an optional real, staff-recorded before/after outcome
 judgment, never an automated measurement.
 
+## Ad Library
+A real, searchable library of staff-authored creative content (real
+`AdCreativeVariant` rows from Content Studio) browsable by real
+filters (platform, client, campaign, funnel stage, format, status,
+date range, and performance tier). The source prompt asks to classify
+individual creatives by ROAS/CPA/CTR — this build has no per-creative
+platform data anywhere (no live ad-platform API, no per-variant
+impressions/clicks/conversions), so classification runs at the real
+CAMPAIGN level instead, using the prompt's own Winner/Promising/
+Neutral/Fatigued/Loser thresholds against real spend/lead/won-value
+data. Every creative card and detail view shows its parent campaign's
+real tier and metrics, clearly attributed as campaign-level, never a
+fabricated per-creative score. Device breakdown and geographic
+performance are not shown — no live platform data exists to pull them.
+A real CSV export produces the "winners list for production" — the
+literal creatives from real Winner-tier campaigns, respecting whatever
+real filters are applied.
+
 ## Ad Content Studio
 A real ad-creative authoring/review/approval workflow, layered on top
 of the funnel-stage VVO creative fields above rather than replacing
