@@ -341,6 +341,30 @@ reflected in `prompts/client-brief.md`'s own field list, a real
 documentation gap to close in a future pass on that file, not a
 blocker to this feature.
 
+## Revenue Attribution Engine
+Real Contribution/Profit and Attribution reporting (master prompt
+Sections 59 "Revenue Engine" and 31 "Attribution"): Ad Spend + SEMRS
+Management Fee = Total Marketing Cost; Confirmed Revenue (this
+client's real won-deal value, from the same real Lead pipeline as
+everywhere else in this system) − Total Marketing Cost = Contribution
+— always labeled CONFIRMED. A single, narrow ESTIMATED open-pipeline
+projection (real historical close rate × real open leads × real
+average deal size) is shown only once there's a real closed-deal
+sample (>=3 won+lost leads) to derive an honest rate from, always
+labeled ESTIMATED and never presented as confirmed. CAC/CPA/CPL/ROAS/
+ROI are all computed from real stored numbers, never a live platform
+pull. The Attribution layer tracks confirmed single-touch source
+(first-touch and last-touch are the same real touch in this system —
+no multi-touchpoint tracking exists, so they're reported as one real
+number, not fabricated as two different ones), platform-reported
+conversions (staff-entered from `AdsPerformanceReport`), and CRM
+conversions (this system's own real `Lead.stage` pipeline — there is
+no separate external CRM to integrate with). GA4 and assisted
+conversions are explicitly marked unavailable with their real reason,
+never faked. The same real computation and component render on both
+the staff Campaign Command Center and the client's own Client Portal —
+one number, shown to both sides, never two different figures.
+
 ## Lead Gen Integration
 Only applies when Lead Generation is in this client's Service(s)
 Ordered (see the client brief).
