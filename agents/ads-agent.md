@@ -365,6 +365,35 @@ never faked. The same real computation and component render on both
 the staff Campaign Command Center and the client's own Client Portal —
 one number, shown to both sides, never two different figures.
 
+## Client Reporting System
+Real reporting per master prompt Section 60 ("Client Reporting") and
+Section 61 ("Why Did We Spend This Money?") — almost entirely an
+assembly of evidence this system already computes elsewhere (Command
+Center metrics, Revenue Attribution, Attribution layer, Health Score,
+Ad Library's tier classification, Optimization recommendations), never
+a second, differently-computed version of any of it. Executive
+Summary, Funnel, Creative best/worst, Budget planned-vs-actual, and
+Recommendations render together on both a staff Client Report page and
+the client's own Client Portal (same shared component, same real
+numbers). Every campaign also gets a real "Why Did We Spend This
+Money?" answer to all 8 of Section 61's questions, assembled from real
+evidence — "what should scale"/"what should stop" only appear when a
+campaign's real performance tier actually is winner/loser/fatigued,
+using that tier's own already-written real recommendation text, never
+a new classifier. Audience "best/worst segments" is a real, honest
+limit: this system has no live platform demographic API, so only real
+planned-targeting text is shown, explicitly labeled as planned, never
+as measured segment performance. Downloadable in all 5 real formats
+(PDF/Word/Excel/Google Sheet/Google Slides) via the same generic
+builder every other Portal deliverable uses. A weekly/monthly email
+summary is sent by a real, `CRON_SECRET`-protected cron route (same
+pattern as the other scheduled sweeps in this system) via the
+existing real client-email sender — SEMRS's own external scheduler
+decides the actual cadence; nothing in this codebase schedules itself.
+SMS alerts are declined — a new paid third-party API this build's
+Hard Constraint (free-tools-only by default) doesn't allow without a
+client explicitly funding it, which none has.
+
 ## Lead Gen Integration
 Only applies when Lead Generation is in this client's Service(s)
 Ordered (see the client brief).
