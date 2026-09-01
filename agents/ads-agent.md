@@ -304,6 +304,17 @@ live AI-and-platform-API backend it doesn't have:
   into SEMRS as Virtual Assistant AND has real, connected Meta ad
   account access; the staff member publishes the creative live in Meta
   Ads Manager themselves, then confirms it here.
+- **Landing Page Audit** ("landing page DNA") — a real, narrow
+  technical checklist parsed from the SAME real fetch() the reachability
+  check already performs, never a second live request and never a
+  Lighthouse-style score: reachable, response time, HTTPS, a mobile
+  viewport tag, a real H1, a real form. Findings feed the SAME
+  Landing Page Fix Request mechanism already documented above — a
+  "Send to Client as Fix Request" action, never a second parallel
+  client-facing surface. The two most decision-relevant facts (HTTPS,
+  viewport tag) also enrich Campaign Health's own Landing Page factor,
+  so the client's existing self-watch view in their own Client Portal
+  reflects them automatically.
 
 ## Lead Gen Integration
 Only applies when Lead Generation is in this client's Service(s)
