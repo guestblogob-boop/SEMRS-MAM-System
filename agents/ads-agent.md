@@ -209,6 +209,21 @@ rate data anywhere and never fabricates one), and Abnormal Spend
 Patterns (a real period-over-period spend swing, since this app has no
 "expected daily budget" concept to compare against).
 
+Two more real checks (2026-09-02, master prompt Section 62 — closing
+that same "no expected daily budget" gap now that real planned-budget
+data exists): **Budget Cap Progress** (real cumulative spend vs. the
+real planned budget — sum of the campaign's own funnel-stage budgets
+— warns at 90%, flags critical at 100%+) and an optional **CPA/ROAS
+Threshold Guardrail** (real cumulative CPA vs. a client-set maximum,
+real cumulative spend-to-won-value ratio vs. a client-set minimum —
+only evaluated when the client/staff has actually set a real
+threshold). Both alert-only like every other rule here — this system
+has no "automation level" that executes a change without a human
+(master prompt Section 63; Section 52 forbids exactly that for
+pausing campaigns or changing bids). Cumulative, not a "3/5
+consecutive days" streak, since this system's performance reports are
+irregular staff-entered periods, not daily-cadence data.
+
 Each detected issue becomes a real, staff-visible alert (critical,
 warning, or info) with the real evidence, a recommended action, and a
 dollar estimate of spend at risk where one can be honestly computed —
