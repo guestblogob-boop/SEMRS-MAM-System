@@ -366,6 +366,25 @@ mechanism this system has (one shared staff/CEO login, not the 5
 role-gated approval gates a pasted prompt once asked for — audited and
 confirmed not real for this system in the Security build).
 
+## Campaign Launch Checklist
+Real gate on the one action that actually moves a campaign to
+`"active"` in this build — no live platform launch integration exists
+or is faked here (master prompt Section 86, "Do Not Build Fake
+Integrations"; a pasted prompt once asked for "Status: Active, begins
+spending immediately" defaults and "spending begins within 5 minutes
+of launch," both declined as directly contradicting Section 51's "AI
+must not bypass the approved human authority" and Section 78,
+"Human-Controlled Execution"). Staff attempting to set a campaign's
+status to `"active"` sees a real, computed 2-item checklist: Readiness
+Score ≥ 70 (the same real `CampaignReadinessScore` used everywhere
+else — already covering tracking, compliance, budget allocation,
+creative quality, landing page, and account access) AND the real CEO
+Budget & Campaign Approval actually recorded for this brief. Either
+item failing shows the exact checklist with a pass/fail per item and
+requires a real written reason before staff can override and launch
+anyway — never a silent bypass, and never a live spend triggered by
+this system regardless of the override.
+
 ## Creative Knowledge Base
 Real, staff-tagged pattern data across every real `AdCreativeVariant`
 in the system (angle, offer type, CTA phrase/style, platform, visual
