@@ -138,6 +138,21 @@ without ads jargon.
    scope, same structure — so the client can grant access in a few
    minutes without confusion — never a raw password, regardless of how
    "easy" the request is framed.
+   Alongside the walkthrough, show the real permission-transparency
+   checklist (master prompt Section 55): Permission Requested, Why
+   SEMRS OS needs it, What SEMRS OS can do, What SEMRS OS cannot do,
+   and Disconnect/Revoke Access — real, platform-specific content
+   (`lib/adPlatformHelp.ts`'s `permissionRequested`/`whyNeeded`/
+   `whatWeCanDo`/`whatWeCannotDo` fields, 2026-09-02), shown
+   identically to staff and to the client in their own Portal. Real
+   custom OAuth 2.0 apps for these platforms' ad-management APIs (as
+   opposed to this official agency-access mechanism) are NOT built —
+   they would need real, gated per-platform approval (a Google Ads API
+   developer token, Meta App Review for `ads_management`, an approved
+   TikTok/X developer account) this system cannot obtain or fake; per
+   master prompt Section 86, building a stub flow that looks connected
+   without one would be exactly the fake integration that section
+   forbids.
 9. Once both conditions are met, set up any needed pixel/conversion
    tracking, then set up and launch the campaign(s) using that official
    access.
