@@ -331,6 +331,26 @@ live AI-and-platform-API backend it doesn't have:
   so the client's existing self-watch view in their own Client Portal
   reflects them automatically.
 
+## Campaign Proposal Document
+Real, staff-only assembly (master prompt Sections 52 "Human Approval
+Gate" and 53 "Ads Draft Mode") of a campaign's Executive Summary,
+Strategy, Creative, Financial, Tracking, and Compliance into one
+document backing the real CEO Budget & Campaign Approval decision —
+never a new calculation, always reading from real existing fields and
+calculators (the real per-platform commission split, the real landing-
+page audit). The "Approval Checklist" is the same real
+`CampaignReadinessScore` component already used on the Campaign
+Manager card, mounted directly rather than recomputed, so it can never
+drift. The Financial section shows only the real planned budget and
+fee — no projected ROAS/CPA before a campaign has any real spend
+(Section 72, "No Guaranteed Results"), and no invented campaign
+timeline (no start/end date field exists in this build). The real
+Budget & Campaign Approval form is pre-filled with a real, editable
+proposal summary rather than starting blank — the one real approval
+mechanism this system has (one shared staff/CEO login, not the 5
+role-gated approval gates a pasted prompt once asked for — audited and
+confirmed not real for this system in the Security build).
+
 ## Creative Knowledge Base
 Real, staff-tagged pattern data across every real `AdCreativeVariant`
 in the system (angle, offer type, CTA phrase/style, platform, visual
