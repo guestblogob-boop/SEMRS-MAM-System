@@ -374,16 +374,100 @@ Integrations"; a pasted prompt once asked for "Status: Active, begins
 spending immediately" defaults and "spending begins within 5 minutes
 of launch," both declined as directly contradicting Section 51's "AI
 must not bypass the approved human authority" and Section 78,
-"Human-Controlled Execution"). Staff attempting to set a campaign's
-status to `"active"` sees a real, computed 2-item checklist: Readiness
-Score ≥ 70 (the same real `CampaignReadinessScore` used everywhere
-else — already covering tracking, compliance, budget allocation,
-creative quality, landing page, and account access) AND the real CEO
-Budget & Campaign Approval actually recorded for this brief. Either
-item failing shows the exact checklist with a pass/fail per item and
-requires a real written reason before staff can override and launch
-anyway — never a silent bypass, and never a live spend triggered by
-this system regardless of the override.
+"Human-Controlled Execution"). Extended 2026-09-03, per explicit
+instruction, from 2 to 4 real conditions: Readiness Score ≥ 70 (the
+same real `CampaignReadinessScore` used everywhere else), the Policy
+Guard's overall status is PASS or WARNING (see Compliance Agent,
+below — FAIL/NEEDS_REVIEW/UNKNOWN block), the real CEO Budget &
+Campaign Approval recorded for this brief, and the client's own real
+recorded approval on this specific campaign (see Client Campaign
+Approval, below). One shared function
+(`lib/campaignLaunchGate.ts`) computes this identically in three
+places — the dashboard UI, the server-side PATCH enforcement, and the
+auto-launch attempt — so none of them can drift from what the others
+would decide. Any item failing shows the exact checklist with a
+pass/fail per item and requires a real written reason before staff can
+override and launch anyway — never a silent bypass, and never a live
+spend triggered by this system regardless of the override. As of
+2026-09-03 this is also enforced server-side, not just in the
+dashboard's own UI (closing a gap an earlier build deliberately left
+open, once real automation started depending on the gate being
+trustworthy).
+
+## Compliance Agent (Policy Guard)
+Real, rule-based pre-flight scanner (master prompt Section 42 "Policy
+Compliance Engine," 43 "Google Policy Protection," 44 "Meta Policy
+Protection," 46 "Client / Business Industry Risk") — the 14th of
+Section 50's 18 conceptual sub-agents, folded into this build the same
+way Budget Guard, Optimization Engine, and the others already are:
+one real capability inside the single Ads Campaign Agent, not a
+separate top-level agent or account (this system has one shared staff/
+CEO login — no per-role accounts, confirmed in this session's own
+Security audit). Never a trained model, never a live external
+threat-intel/malware API (none exists here), and never a claimed
+detection rate — a pasted prompt once asked for ">90% detection,
+<10% false positive," an unverifiable ML-accuracy claim with no
+labeled violation dataset to validate against; declined for the same
+reason as every other unfakeable-accuracy ask this session.
+- Checks: restricted-industry match against `ClientBrief.industry`
+  (Section 46's real list), a real keyword/pattern scan of the ad copy
+  draft for health/before-after claims, financial claims, and
+  discriminatory targeting language, the landing page's real HTTPS
+  audit result (Section 43's destination/crawlability requirement),
+  the staff-attested `AdComplianceChecklist` fields, and the Policy
+  Version Manager's own freshness (below).
+- Produces the real 5-value taxonomy from Section 42 — PASS, WARNING,
+  NEEDS_REVIEW, FAIL, UNKNOWN — per check and overall, and NEVER says
+  "Policy compliant," per Section 42's own required wording: "No known
+  issue detected based on the current policy checks; platform review
+  may still apply." Anything this system genuinely cannot evaluate
+  (malware/phishing scanning, an unset client industry, an unrun
+  landing page audit) is UNKNOWN, not silently passed.
+- Shown on the real Campaign Proposal page next to the Readiness
+  Score, and its overall status feeds the Launch Checklist above as a
+  real, non-bypassable-without-a-reason gate condition.
+
+## Policy Version Manager
+Real, staff-maintained log (master prompt Section 45, "Platform Policy
+Versioning") of when each platform's official policy docs were
+actually last checked — platform, policy name, source, last-checked
+date, next-review date, and affected campaign types/industries/
+targeting/creatives, exactly the fields Section 45 asks for. Never an
+automatic feed — no platform publishes a policy-change subscription
+API this system could connect to; staff records a new entry each time
+they actually re-check. Staleness (>30 days since last checked, or
+past its own next-review date) feeds the Policy Guard's freshness
+check directly. Lives at `/dashboard/ads-management/policy-versions`,
+its own subsection alongside Budget Guard and the Optimization Engine.
+
+## Client Campaign Approval
+Real, client-authenticated decision on a campaign proposal — per
+explicit instruction, distinct from and in addition to the CEO's own
+Budget & Campaign Approval Checkpoint (gate 4). The existing gate 4
+decision is SEMRS checking the work and forwarding it; this is the
+client's own separate act of actually approving it, entered through
+their own real Client Portal session (`CampaignClientDecision`,
+append-only) — never inferred from paying an invoice or granting ad
+account access alone. Only reachable once SEMRS has already recorded
+its own Budget & Campaign Approval as "approve" for that brief — the
+same "SEMRS checks first, then forwards to the client" sequencing this
+document already establishes for every other approval. The client sees
+the same real Campaign Proposal figures (platforms, targeting, planned
+budget, SEMRS fee, total cost) SEMRS already reviewed, and can Approve,
+Request Changes, or Decline, with an optional note. A landing-page-
+specific "Request Changes" is a candidate for the existing
+`LandingPageFixRequest` flow — staff judgment call, not automatic.
+- Real automation, not a bypass (`lib/campaignAutoLaunch.ts`): once
+  BOTH real approvals exist — the CEO's Budget & Campaign Approval and
+  the client's own Campaign Approval — AND the campaign already
+  genuinely passes the Launch Checklist's readiness and Policy Guard
+  conditions, the campaign launches immediately with no further manual
+  click, regardless of which of the two approvals landed second. A
+  campaign missing any real condition still requires the existing
+  manual override path with a written reason — this collapses a
+  redundant third click when everything is already genuinely green, it
+  never substitutes for either real human decision or for the
+  readiness/policy checks.
 
 ## Creative Knowledge Base
 Real, staff-tagged pattern data across every real `AdCreativeVariant`
