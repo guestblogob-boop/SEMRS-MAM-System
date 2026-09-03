@@ -254,9 +254,12 @@ attested to, and neither auto-blocks a real approval decision:
   Audience, Landing Page, Policy, and Account Health. Recomputed
   hourly from whatever real data already exists (a new performance
   report, a reachability check, a staff attestation) — never a live
-  platform poll, since no ad-platform OAuth app is registered in this
-  build. A genuine transition into 🔴 sends a real internal staff
-  alert; an unchanged 🔴 never re-alerts.
+  platform poll, since no ad platform has yet granted this build live
+  `ads_management`-scope API access (a Meta Developer App named "SEMRS"
+  exists, but its Business Verification and App Review are still
+  pending — see `agents/ads-platform-agent.md`, Context). A genuine
+  transition into a red status sends a real internal staff alert; an
+  unchanged red status never re-alerts.
 Both scores are honest about what they can't verify automatically —
 Creative Health and Conversion Infrastructure, for example, stay real
 staff attestations rather than simulated live signals, and neither

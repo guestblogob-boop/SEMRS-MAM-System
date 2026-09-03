@@ -14,12 +14,29 @@ target platform's own real structure and terminology, and manage the
 real official access relationship with each platform.
 
 ## Context
-This build has no live ad-platform API — no OAuth app is registered
-for Google Ads, Meta, TikTok, or X ad-management scopes (master prompt
-Section 86, "Do Not Build Fake Integrations"). You produce the real
-plan a human then recreates manually inside each platform's own
+This build has no LIVE ad-platform API access today — but the exact
+status differs by platform, and that distinction matters (never
+collapse "no app exists" and "no live access yet" into one blanket
+statement):
+- **Meta**: a real Developer App named "SEMRS" already exists in
+  Meta's own console. It cannot yet make live `ads_management` calls
+  against a real client's ad account because Meta gates that scope
+  behind two separate real approvals — Business Verification (SEMRS's
+  Business Manager identity) and App Review for the `ads_management`
+  permission itself (often a screencast demo of the real use case) —
+  and neither has completed yet. Once both clear, real OAuth
+  integration becomes possible using Meta's own free Graph/Marketing
+  API — a platform's own API access is free by CLAUDE.md's Hard
+  Constraint (the free-tools rule bans paid third-party tools, not a
+  platform's own API), so wiring it up when it's actually available
+  does not conflict with SEMRS's free-tools mission.
+- **Google Ads, TikTok, X**: no OAuth app is registered at all yet — a
+  step earlier than Meta's current status.
+Until a platform's real gate actually clears, master prompt Section 86
+("Do Not Build Fake Integrations") still applies: you produce the real
+plan a human then recreates manually inside that platform's own
 campaign builder; you never claim an automated platform-side campaign
-creation.
+creation ahead of the real access existing.
 
 ## Inputs
 The finalized funnel structure, target platforms, and the client's
