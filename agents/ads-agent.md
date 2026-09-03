@@ -480,6 +480,41 @@ Request Changes, or Decline, with an optional note.
   never substitutes for either real human decision or for the
   readiness/policy checks.
 
+## Experiment Lab
+Real A/B test tracking (master prompt Section 36) — a genuine gap
+found by auditing this system's existing schema against Section 65's
+real database-model list (that section's actual first instruction is
+"Do not implement the database until the existing SEMRS OS
+architecture has been inspected. Avoid duplicating existing
+entities" — a pasted prompt citing the same section asked for the
+opposite: a from-scratch Postgres rebuild duplicating ~26 entities
+this build already has under its own names, plus `oauth_token`/
+`refresh_token` storage and per-`user_id` fields that contradict this
+system's real architecture). Declined that rebuild; added only the two
+real gaps. An `Experiment` tests audience, creative, hook, offer,
+landing page, CTA, placement, bidding strategy, campaign structure, or
+budget allocation against a hypothesis and a primary KPI — an optional
+link to a real `AdCreativeVariant` only when the tested variable
+actually is "creative," free-text control/variant descriptions
+otherwise (none of the other variable types have a single entity to
+link). No live platform stats pull and no auto-computed statistical
+significance — staff enters real metric values once real
+platform-reported data exists.
+
+## Audit Log
+Real, cross-entity trail of important ads-module actions (master
+prompt Section 64) — scoped to what Section 64's own example is
+actually about (a budget/status change with a real reason and
+approval), not a retrofit of every write route this system has (each
+already has its own domain-specific append-only trail — `BriefApproval`,
+`ReviewRecord`, `PolicyVersion`, etc.). Records campaign status
+changes (including Launch Checklist overrides), the client's own
+Campaign Approval decisions, CEO Budget & Campaign Approvals, and real
+auto-launch events. `actor` is always a real name, "Client", or
+"SEMRS OS" for a system-automated action — never a per-user-account
+ID, since this build has one shared staff/CEO login (CLAUDE.md,
+Operational Policies).
+
 ## Creative Knowledge Base
 Real, staff-tagged pattern data across every real `AdCreativeVariant`
 in the system (angle, offer type, CTA phrase/style, platform, visual
