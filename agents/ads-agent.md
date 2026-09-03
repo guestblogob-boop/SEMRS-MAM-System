@@ -454,9 +454,20 @@ same "SEMRS checks first, then forwards to the client" sequencing this
 document already establishes for every other approval. The client sees
 the same real Campaign Proposal figures (platforms, targeting, planned
 budget, SEMRS fee, total cost) SEMRS already reviewed, and can Approve,
-Request Changes, or Decline, with an optional note. A landing-page-
-specific "Request Changes" is a candidate for the existing
-`LandingPageFixRequest` flow — staff judgment call, not automatic.
+Request Changes, or Decline, with an optional note.
+- "Request Changes" is real, not just a logged note (per explicit
+  instruction): it auto-creates a real `LandingPageFixRequest`, already
+  `delivered`, whose `draftRecommendation` is assembled purely from
+  this campaign's own already-approved creative package —
+  `lib/landingPageFixRecommendation.ts` pulls the top `AdCreativeVariant`'s
+  headline/primary text/CTA plus every funnel stage's offer and values
+  notes, and points the client at aligning the landing page's headline,
+  copy, and CTA to match, "for the client to discuss when relevant."
+  Never new unreviewed content (every quoted fact already passed the
+  real Budget & Campaign Approval gate) and never a live edit
+  (`wasPublishedLive` stays false) — `resolvedBy: "SEMRS OS"` marks it
+  as the standing automated-action identity, same as elsewhere in this
+  system.
 - Real automation, not a bypass (`lib/campaignAutoLaunch.ts`): once
   BOTH real approvals exist — the CEO's Budget & Campaign Approval and
   the client's own Campaign Approval — AND the campaign already
