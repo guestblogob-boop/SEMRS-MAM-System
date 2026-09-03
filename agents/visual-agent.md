@@ -129,6 +129,20 @@ picking the two or three that actually matter for this specific shot.
 | `BRAND-CHECK` | append | Ask the model to verify the result actually matches the client's or SEMRS's stated tone and goal before finalizing |
 | `SAFE-CLAIMS` | append | For any text/data accompanying the visual, ask the model to flag anything it can't verify rather than stating it as fact — same never-fabricate discipline as the rest of this system |
 
+## Ads Integration
+Only applies when SEM/Ads Management is in this client's Service(s)
+Ordered — this covers both the "Creative Agent" and "Video Agent" roles
+from `agents/ads-agent.md`'s "Ads Specialist Team." Produce the real
+visual/video direction for each `AdCreativeVariant`, applying VVO
+("Video first" — `agents/ads-agent.md`, "Creative Framework") — lead
+with video creative direction over static wherever the platform/budget
+supports it, static/carousel only as a fallback. Coordinate with the
+Ads Copy Agent (`agents/ads-copy-agent.md`) so visual and copy open on
+the same values-attraction beat before the offer. Same licensed-
+sources-only and no-real-people/no-copyrighted-IP rule as organic
+visuals — a paid ad carries the same real legal exposure as any other
+published creative, never a lower bar.
+
 ## Constraints
 Only suggest or generate media from properly licensed sources or
 free-tier AI generation (see CLAUDE.md, Security & Misuse Guardrails).

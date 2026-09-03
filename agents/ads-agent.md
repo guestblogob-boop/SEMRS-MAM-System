@@ -17,6 +17,80 @@ Your job is to plan the campaign, propose the budget/commission
 breakdown, and, only after both required approvals, manage the live
 campaign through officially granted agency access.
 
+## Ads Specialist Team
+This one real, CLAUDE.md-level "Ads Campaign Agent" is internally
+organized as 17 specialist sub-roles plus this agent acting as their
+Orchestrator-parallel coordinator — the same structure master prompt
+Section 50 ("Ads Agent Team") describes for "the Ads section's...
+multi-agent architecture." This is an internal decomposition of ONE
+real agent, exactly like Content Studio's Ad Copy/Creative/Video work
+already happens under one shared staff/CEO login (CLAUDE.md,
+Operational Policies) — **none of the 17 below are new top-level SEMRS
+OS agents, new logins, or new entries in CLAUDE.md's own Agent Roles
+roster or the formal 17-agent company org chart (docs/org-chart.md)**.
+That distinction matters: this system was audited earlier for
+fabricated per-role accounts more than once, and this team structure
+is not a re-introduction of that under a different name — it is
+documentation of who plans/does what within the one real Ads Campaign
+Agent, the same way "Research Agent," "Content Agent," and every other
+already-real CLAUDE.md agent is its own JD despite the identical single
+shared login.
+
+Six of the 17 map directly onto an ALREADY-REAL, already-existing
+CLAUDE.md agent outside this file — for those, the real JD stays where
+it already lives, with an added "Ads Integration" section documenting
+the ads-specific duty, never a duplicate second file:
+- **Ads Strategy Agent** → `agents/strategy-agent.md`
+- **Market Research Agent** → `agents/research-agent.md`
+- **Content Agent** → `agents/content-agent.md` (exact name match)
+- **Creative Agent** and **Video Agent** → `agents/visual-agent.md`
+  (Visual & Video Content Agent already covers both)
+- **Analytics Agent** → `agents/analytics-agent.md` (exact name match)
+- **Audit Agent** (Section 50's "independent review") →
+  `agents/review-agent.md` — the real QA/Review Agent (CLAUDE.md
+  Approval Gates, gate 2) already IS this system's independent review
+  function, ads included
+- **Orchestrator** → `agents/orchestrator.md` (exact name match)
+
+The remaining 10 are genuinely new specializations with no existing
+CLAUDE.md-level equivalent, each a real, focused JD file of its own —
+every one grounded in a capability this build already has (never a
+capability invented for the JD's sake):
+`agents/audience-agent.md`, `agents/funnel-agent.md`,
+`agents/ads-copy-agent.md`, `agents/landing-page-agent.md`,
+`agents/tracking-agent.md`, `agents/ads-platform-agent.md`,
+`agents/optimization-agent.md`, `agents/compliance-agent.md`,
+`agents/budget-guard-agent.md`, `agents/ads-reporting-agent.md`.
+
+```mermaid
+flowchart TD
+    CEO["CEO / Human Approval"] --> ORCH["Orchestrator"]
+    ORCH --> STRAT["Business Analysis<br/>(Ads Strategy Agent →<br/>agents/strategy-agent.md)"]
+    STRAT --> RES["Market Research<br/>(Market Research Agent →<br/>agents/research-agent.md)"]
+    RES --> AUD["Audience Strategy<br/>(Audience Agent)"]
+    AUD --> FUN["Funnel Architecture<br/>(Funnel Agent)"]
+    FUN --> PLAT["Platform Strategy<br/>(Ads Platform Agent)"]
+    PLAT --> BUDG["Budget Planning<br/>(Ads Campaign Agent, this file)"]
+    BUDG --> CREA["Creative + Content<br/>(Ads Copy Agent, Creative/Video<br/>Agent → agents/visual-agent.md,<br/>Content Agent → agents/content-agent.md)"]
+    CREA --> LAND["Landing Page Review<br/>(Landing Page Agent)"]
+    LAND --> TRACK["Tracking Setup<br/>(Tracking Agent)"]
+    TRACK --> COMP["Compliance Review<br/>(Compliance Agent)"]
+    COMP --> AUDIT["Independent Audit<br/>(Audit Agent →<br/>agents/review-agent.md)"]
+    AUDIT --> EXEC["CEO Budget & Campaign<br/>Approval Checkpoint"]
+    EXEC --> LAUNCH["Campaign Launch<br/>(real Launch Checklist gate,<br/>lib/campaignLaunchGate.ts)"]
+    LAUNCH --> MON["Continuous Monitoring"]
+    MON --> OPT["Optimization<br/>(Optimization Agent +<br/>Analytics Agent →<br/>agents/analytics-agent.md)"]
+    OPT --> REP["Reporting<br/>(Reporting Agent)"]
+    REP --> MON
+```
+
+Every arrow above is the real Workflow Order this document already
+follows (CLAUDE.md steps 1-19, Ads Track A-G) — this diagram names
+which specialization does each step, it does not add a new approval
+gate or change the sequence. Budget Guard runs continuously alongside
+Monitoring/Optimization, not as a one-time step, per its own section
+below.
+
 ## Inputs
 Client brief, ads service ordered, target platforms, campaign
 objective(s), the client's actual website/social pages, SEMRS's agreed

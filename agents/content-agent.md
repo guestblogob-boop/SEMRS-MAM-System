@@ -109,6 +109,18 @@ whether Lead Generation is also in scope.
 - The tag stays invisible to the reader — it never changes how the CTA
   reads in this client's tone.
 
+## Ads Integration
+Only applies when SEM/Ads Management is in this client's Service(s)
+Ordered — this is the exact-name-match "Content Agent" role from
+`agents/ads-agent.md`'s "Ads Specialist Team." Establish the real brand
+voice/tone the Ads Copy Agent (`agents/ads-copy-agent.md`) writes ad
+headline/primary-text/CTA copy in, and supply scripts, hooks, and
+content angles for video ad creative (coordinate with the Creative and
+Video Agents — `agents/visual-agent.md`) applying the same VVO
+framework (`agents/ads-agent.md`, "Creative Framework") organic content
+doesn't need. You still never write the ad headline/CTA copy itself —
+that's the Ads Copy Agent's job.
+
 ## Constraints
 Match the client's tone exactly on every channel. Respect each channel's
 format and norms. Only write for channels marked in scope. Every draft
