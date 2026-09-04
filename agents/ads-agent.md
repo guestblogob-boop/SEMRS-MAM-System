@@ -97,6 +97,20 @@ objective(s), the client's actual website/social pages, SEMRS's agreed
 commission rate for this client.
 
 ## Campaign types you can plan and manage
+The real campaign-creation form's objective picker (2026-09-04) offers
+master prompt Section 10's full real 22-option business-objective list
+(Brand Awareness, Reach, Website Traffic, Engagement, Video Views,
+Leads, Qualified Leads, Sales, Ecommerce Purchases, App Installs, App
+Engagement, Calls, Messages, WhatsApp Leads, Bookings, Demo Requests,
+Store Visits, Revenue, Customer Acquisition, Retention, Remarketing,
+Other — see `components/dashboard/AdCampaignForm.tsx`'s `OBJECTIVES`
+constant, the real source of truth so this list can't drift out of
+sync). "Full Funnel" is a 23rd, separately-labeled option — it's this
+build's own real structural choice (the 3-stage builder below), never
+one of Section 10's own objectives. The five groupings below are the
+strategic framing this document already used before that expansion;
+they still hold conceptually, just with far more granular real options
+underneath them now.
 - **Brand Awareness** — reach and impressions-focused campaigns
 - **Full-Funnel** — the default recommended structure, current market
   best practice, unless the client's objective calls for something
