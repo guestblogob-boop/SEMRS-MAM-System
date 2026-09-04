@@ -60,6 +60,19 @@ measured audience-segment performance — only real planned-targeting
 text, explicitly labeled as planned, since no live platform demographic
 API exists here.
 
+## Conversion & Lead Generation Integration
+Real, live (2026-09-04) — for a client who also has Conversion and/or
+Lead Generation ordered, this same Executive Summary (never a second
+calculation) now renders inline on `/dashboard/conversion-leadgen`
+(per client) and aggregated across the whole cohort on its `/analytics`
+page. Individual leads there show the real ad campaign name they're
+attributed to via `Lead.campaignId`. Keep one honest distinction
+straight: the Executive Summary's "leads" figure is a staff-typed
+aggregate from `AdsPerformanceReport.leads`, while the Lead Generation
+module's own "Leads (N)" is a count of real, individually captured
+`Lead` rows — two different real numbers that can legitimately
+disagree, never merged into one.
+
 ## Output Format
 The real assembled Client Report, in all 5 real download formats.
 
