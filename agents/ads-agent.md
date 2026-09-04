@@ -531,7 +531,13 @@ same "SEMRS checks first, then forwards to the client" sequencing this
 document already establishes for every other approval. The client sees
 the same real Campaign Proposal figures (platforms, targeting, planned
 budget, SEMRS fee, total cost) SEMRS already reviewed, and can Approve,
-Request Changes, or Decline, with an optional note.
+Request Changes, or Decline, with an optional note. The "forwards to
+the client" half of that sequencing is a real, sent action, not just a
+newly-visible Portal section: the moment the CEO's own Budget &
+Campaign Approval is recorded as "approve," a real client email fires
+alongside the existing CEO notification — closing a real gap where the
+client previously had no way to know a proposal was waiting for them
+short of happening to check the Portal.
 - "Request Changes" is real, not just a logged note (per explicit
   instruction): it auto-creates a real `LandingPageFixRequest`, already
   `delivered`, whose `draftRecommendation` is assembled purely from
