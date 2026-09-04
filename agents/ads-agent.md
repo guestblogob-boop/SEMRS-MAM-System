@@ -449,7 +449,14 @@ live AI-and-platform-API backend it doesn't have:
   client-facing surface. The two most decision-relevant facts (HTTPS,
   viewport tag) also enrich Campaign Health's own Landing Page factor,
   so the client's existing self-watch view in their own Client Portal
-  reflects them automatically.
+  reflects them automatically. A reachability FAILURE (2026-09-04
+  audit fix) is categorized from the real thrown error, not just a
+  bare "did not load": a genuine HTTP status (even a 404/500 — the
+  fetch still resolves for those), a real timeout, a real SSL/TLS
+  certificate error, or a real DNS/connection failure — each shown as
+  its own honest sentence everywhere reachability is reported (Campaign
+  Health, Budget Guard, Readiness Score), never collapsed back into one
+  undifferentiated boolean.
 
 ## Campaign Proposal Document
 Real, staff-only assembly (master prompt Sections 52 "Human Approval
