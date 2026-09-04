@@ -41,6 +41,38 @@ detail isn't available yet, leave it blank rather than guessing; the
 Content Agent should flag the gap rather than fabricate a specific.
 
 
+## Business Context
+Master prompt Section 11 — real, staff-collected facts about this
+client's business, distinct from Key Business Details above (which is
+specifically what the Content Agent needs for E-E-A-T/tone). Every
+field here is free text and optional, per Section 11's own
+instruction: "If information is missing, allow the user to complete it
+later" — fill in only what the client actually said in the real
+meeting, and complete the rest as it comes up on a later call. Also
+directly feeds the Ads Platform Agent's Platform Recommendation Engine
+(agents/ads-platform-agent.md) for ads-scoped orders.
+
+- Website:
+- Business Model:
+- Product/Service:
+- Offer:
+- Pricing:
+- Average Order Value:
+- Gross Margin (if available):
+- Target Revenue:
+- Sales Cycle:
+- Lead-to-Sale Rate:
+- Customer Lifetime Value:
+- Geographic Market:
+- Service Area:
+- Operating Hours:
+- Sales Capacity:
+- Existing Customers:
+- Competitors:
+- Differentiators:
+- USP:
+- Constraints:
+
 ## Channels in Scope
 Select all that apply — no agent may draft or publish to a channel not
 checked here:

@@ -61,10 +61,16 @@ Recommended — per platform, with real reasons:
 - **General guidance is always labeled as such** when no real data
   exists yet — objective-to-platform fit is well-documented industry
   positioning, never presented as measured for this specific client.
-- **Two of Section 69's nine factors are honestly out of scope today**:
-  geography and sales cycle have no structured field anywhere in this
-  system — named explicitly as "not evaluated," never guessed from
-  free text.
+- **Geography and sales cycle are real Business Context fields**
+  (`ClientBrief.geographicMarket`/`salesCycle`, master prompt Section
+  11) once recorded — surfaced as real, client-provided context
+  alongside the recommendation, never algorithmically turned into a
+  fit judgment: this build has no reliable, current platform-
+  availability-by-country data, and classifying a sales cycle as
+  "short"/"long" from arbitrary free text would be exactly the kind of
+  invented precision this system's honesty rules exist to prevent.
+  Named explicitly as "not evaluated yet" only when the client brief
+  hasn't recorded either field at all.
 - Real budget guidance follows: splitting a planned budget across every
   Recommended platform is checked against each platform's own real
   $30/month SEMRS commission floor, flagging when a budget is too thin
