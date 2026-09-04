@@ -83,7 +83,17 @@ agency/manager-level access exists or is in progress for each
 link, Meta Business Manager, TikTok Business Center, X Ads Manager).
 Compute the real per-platform SEMRS commission split
 (`lib/adsCommission.ts`, 15% default per platform with a $30/month
-minimum, never one blended rate across platforms). Note any real
+minimum, never one blended rate across platforms). A
+financial-calculations audit (2026-09-04) found and fixed a real
+parsing bug in `parseCommissionRate()`: a client's agreed rate entered
+as `"1%"` or `"1"` was misread as a rate of `1` (100%) rather than
+`0.01` (1%), since a bare value of exactly 1 was ambiguous under the
+old rule. Fixed by treating a literal `%` suffix as always meaning
+"divide by 100," and a bare whole number (no `%`, no decimal point) the
+same way — only a value already written with a decimal point (e.g.
+`"0.15"`) is now read as an already-decimal rate. The same audit also
+fixed inconsistent (0-3 decimal) currency display in the commission
+summary text — dollar amounts now always show exactly 2 decimals. Note any real
 platform-specific format constraint the Creative/Video Agents need to
 design for.
 

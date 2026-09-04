@@ -318,17 +318,25 @@ Patterns (a real period-over-period spend swing, since this app has no
 Two more real checks (2026-09-02, master prompt Section 62 — closing
 that same "no expected daily budget" gap now that real planned-budget
 data exists): **Budget Cap Progress** (real cumulative spend vs. the
-real planned budget — sum of the campaign's own funnel-stage budgets
-— warns at 90%, flags critical at 100%+) and an optional **CPA/ROAS
-Threshold Guardrail** (real cumulative CPA vs. a client-set maximum,
-real cumulative spend-to-won-value ratio vs. a client-set minimum —
-only evaluated when the client/staff has actually set a real
-threshold). Both alert-only like every other rule here — this system
-has no "automation level" that executes a change without a human
-(master prompt Section 63; Section 52 forbids exactly that for
-pausing campaigns or changing bids). Cumulative, not a "3/5
-consecutive days" streak, since this system's performance reports are
-irregular staff-entered periods, not daily-cadence data.
+real planned budget — sum of the campaign's own funnel-stage budgets,
+computed once by the shared `computePlannedBudgetTotal()` helper and
+reused by Budget Guard, the Campaign Proposal, and Client Reporting
+alike so the three can never drift apart — warns at 90%, flags
+critical at 100%+) and an optional **CPA/ROAS Threshold Guardrail**
+(real cumulative CPA vs. a client-set maximum, real cumulative
+spend-to-won-value ratio vs. a client-set minimum — only evaluated
+when the client/staff has actually set a real threshold, AND only when
+this campaign has at least one real logged conversion — a
+financial-calculations audit (2026-09-04) found and fixed this check
+comparing the threshold against spend/LEADS instead of real
+spend/CONVERSIONS, which could let a genuinely-over-threshold campaign
+pass silently; it now uses the real `conversions` field already
+present on every performance report). Both alert-only like every other
+rule here — this system has no "automation level" that executes a
+change without a human (master prompt Section 63; Section 52 forbids
+exactly that for pausing campaigns or changing bids). Cumulative, not
+a "3/5 consecutive days" streak, since this system's performance
+reports are irregular staff-entered periods, not daily-cadence data.
 
 Each detected issue becomes a real, staff-visible alert (critical,
 warning, or info) with the real evidence, a recommended action, and a
@@ -383,7 +391,13 @@ platform data anywhere (no live ad-platform API, no per-variant
 impressions/clicks/conversions), so classification runs at the real
 CAMPAIGN level instead, using the prompt's own Winner/Promising/
 Neutral/Fatigued/Loser thresholds against real spend/lead/won-value
-data. Every creative card and detail view shows its parent campaign's
+data. The threshold numbers themselves are real cost-per-LEAD (spend /
+leads) — `AdsPerformanceReport`-level classification has no
+per-creative conversions field to compute a true CPA from — labeled
+CPL throughout the UI and CSV export, not CPA, since a
+financial-calculations audit (2026-09-04) found this had been
+mislabeled "CPA" in both the internal field name and the user-facing
+text. Every creative card and detail view shows its parent campaign's
 real tier and metrics, clearly attributed as campaign-level, never a
 fabricated per-creative score. Device breakdown and geographic
 performance are not shown — no live platform data exists to pull them.
