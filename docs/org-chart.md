@@ -56,7 +56,10 @@ flowchart TD
     end
 
     subgraph PM["Paid Media"]
+        direction TB
         ADS["Ads Campaign Agent<br/>(ads-scoped orders only)"]
+        SPEC["Ads Specialist Team — 10 internal specializations:<br/>Audience · Funnel · Copy · Landing Page · Tracking<br/>Platform · Optimization · Compliance · Budget Guard · Reporting<br/><i>not separate agents, logins, or roster entries</i>"]
+        ADS --- SPEC
     end
 
     subgraph LG["Lead Generation and Sales"]
@@ -88,7 +91,8 @@ flowchart TD
   (Research, SEO & GEO, Strategy); Creative (Content, Visual & Video
   Content); Quality and Compliance (Review); Distribution (Website/Blog
   Draft, Social Content Draft, WhatsApp Draft, Email Draft); Paid Media
-  (Ads Campaign — ads-scoped orders only); Lead Generation and Sales
+  (Ads Campaign — ads-scoped orders only — plus its 10-strong Ads
+  Specialist Team, see below); Lead Generation and Sales
   (Lead Capture Agent, Qualification + AI Sales Agent — both run for
   any Lead Generation order; the AI Sales Agent scores and notifies the
   client only, never contacts the lead itself); Self-Marketing (SEMRS
@@ -108,3 +112,22 @@ flowchart TD
   Generation pair, and SEMRS Communicator remain conditional/on-demand
   agents (CLAUDE.md, Context) — shown here for organizational
   completeness, not implying they're active on every order.
+- **The Ads Specialist Team is deliberately NOT counted in that 17.**
+  `agents/` currently holds 27 job-description files, but 10 of them
+  (Audience, Funnel, Ads Copy, Landing Page, Tracking, Ads Platform,
+  Optimization, Compliance, Budget Guard, Ads Reporting) are internal
+  specializations OF the Ads Campaign Agent — each file says so in its
+  own header: "not a new top-level SEMRS OS agent, login, or roster
+  entry." They are real, readable job descriptions that shape how ads
+  work is actually done; they are not separate agents, and counting
+  them as such would overstate this organization's real size. The
+  17-agent / 7-department structure above is the top-level shape; the
+  specialist team sits inside Paid Media.
+- **Where each surface reads this from, so they can't drift apart:**
+  SEMRS-Dashboard's Virtual Office and Agents Organization views read
+  `agents/*.md` LIVE (`lib/specRepo.ts`), so a new JD file appears in
+  both immediately — but its department must be declared in that file's
+  `DEPARTMENT_BY_FILE` map, or it renders as "(unmapped)". That drift
+  happened once, when these 10 files were added without the mapping;
+  `tests/a11y/roster.spec.ts` in that repo now fails loudly if it
+  recurs, rather than leaving it to be spotted by eye.

@@ -1407,7 +1407,10 @@ flowchart LR
         AN2["Analytics Agent"]
     end
     subgraph PM["Paid Media (ads-scoped orders only)"]
+        direction TB
         ADS2["Ads Campaign Agent"]
+        SPEC2["+ Ads Specialist Team (10 internal specializations:<br/>Audience · Funnel · Copy · Landing Page · Tracking · Platform<br/>Optimization · Compliance · Budget Guard · Reporting)<br/>see agents/ads-agent.md — not separate agents or logins"]
+        ADS2 --- SPEC2
     end
     subgraph LG["Lead Generation (Lead Generation orders only)"]
         direction TB
