@@ -41,6 +41,38 @@ detail isn't available yet, leave it blank rather than guessing; the
 Content Agent should flag the gap rather than fabricate a specific.
 
 
+## Business Context
+Master prompt Section 11 — real, staff-collected facts about this
+client's business, distinct from Key Business Details above (which is
+specifically what the Content Agent needs for E-E-A-T/tone). Every
+field here is free text and optional, per Section 11's own
+instruction: "If information is missing, allow the user to complete it
+later" — fill in only what the client actually said in the real
+meeting, and complete the rest as it comes up on a later call. Also
+directly feeds the Ads Platform Agent's Platform Recommendation Engine
+(agents/ads-platform-agent.md) for ads-scoped orders.
+
+- Website:
+- Business Model:
+- Product/Service:
+- Offer:
+- Pricing:
+- Average Order Value:
+- Gross Margin (if available):
+- Target Revenue:
+- Sales Cycle:
+- Lead-to-Sale Rate:
+- Customer Lifetime Value:
+- Geographic Market:
+- Service Area:
+- Operating Hours:
+- Sales Capacity:
+- Existing Customers:
+- Competitors:
+- Differentiators:
+- USP:
+- Constraints:
+
 ## Channels in Scope
 Select all that apply — no agent may draft or publish to a channel not
 checked here:
@@ -61,13 +93,37 @@ checked here:
 ## Delivery Path
 Select one (see CLAUDE.md, Delivery Model):
 - [ ] Draft-Only Handoff (default) — client publishes the approved
-      content themselves
-- [ ] SEMRS as Virtual Assistant (opt-in) — client grants scoped
-      platform access (never a raw password) and SEMRS publishes
-      directly per the agreed upload/posting plan
+      content themselves. Once payment is confirmed, the client
+      downloads their finished content directly (PDF, Word, Excel,
+      Google Sheet, Google Slides, or a Google Drive doc link) from
+      their own Client Portal — see CLAUDE.md, Output Format.
+- [ ] SEMRS as Virtual Assistant (opt-in) — client grants/requests
+      scoped platform access (never a raw password) and SEMRS manages
+      the account directly (draft AND publish) on an ongoing basis —
+      this is a separate, additional recurring service, not a one-time
+      deliverable; see "SEMRS Virtual Assistant Service Fee," below.
 
 If SEMRS as Virtual Assistant is selected, note the client's granted
 access per platform here once provided:
+
+
+## SEMRS Virtual Assistant Service Fee
+Only fill in if SEMRS as Virtual Assistant was selected above (see
+CLAUDE.md, Delivery Model, "Path 2"). This is a separate, additional
+fee on top of whatever base engagement (SEO/Content/Social/etc.) this
+client already ordered — it pays for SEMRS staff actively managing and
+posting to the client's own live accounts on a standing, ongoing
+basis, not a one-time drafting cost. No standard default rate is
+established yet (unlike the Ads Commission Rate below, which has one)
+— the CEO sets and confirms the actual agreed fee per client here:
+- Agreed fee: ___________ per [ ] month / [ ] year (if billed
+  annually, the standard "pay 10 months, get 12" mechanic applies —
+  same as Conversion & Lead Generation's annual option, not a
+  separately-invented discount)
+- Channels covered by this fee: ___________ (only channels the client
+  has actually granted/requested access for — see above; WhatsApp and
+  Email stay draft-only regardless, per CLAUDE.md)
+- Confirmed by (CEO): ___________
 
 
 ## Client Contact Channel

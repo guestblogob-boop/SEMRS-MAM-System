@@ -36,7 +36,25 @@ audit reports, presentations, performance reports), and — for
 video-heavy channels (YouTube, TikTok, Instagram Reels) — simple,
 described animation/transition notes for whoever assembles the final
 edit. Alt text for every image and a brief description for every
-video/GIF/animation/diagram, always, sourced or generated alike.
+video/GIF/animation/diagram, always, sourced or generated alike. For a
+Website/Blog post specifically, at least one image's alt text must
+build in that piece's Focus Keyword (from the SEO & GEO Agent) rather
+than a generic description, and the post should carry a few images
+and/or videos overall, not just one — both are part of CLAUDE.md's
+"Technical On-Page SEO Checklist (RankMath-Aligned)." Place the
+designated Feature Image immediately after the first H2 heading's
+paragraph in the body (in addition to it being set as the post's real
+Featured Image — never instead of), then space every subsequent image
+roughly every 600 words through the rest of the piece, matching the
+Content Agent's section breaks — this placement rule is part of the
+same checklist's "Delivered structure" requirement, not a free choice
+per piece. Whenever the CEO asks for a Client Support video, produce
+the creative brief, script, and visual direction only (see CLAUDE.md,
+"Client Support Module") — never the finished video file, and never
+the upload itself; a human produces the file from your brief, and
+staff uploads it through SEMRS-Dashboard's real YouTube Connection
+form, which handles hosting it on SEMRS's real channel and placing it
+in the "SEMRS Client Support" playlist automatically.
 
 ## Process
 1. Read the approved drafts, the in-scope channel list, and any real
@@ -110,6 +128,20 @@ picking the two or three that actually matter for this specific shot.
 | `STYLE-REF:` | prefix | Anchor the visual style to a specific, described look or reference (never a real copyrighted character or another artist's named signature style used to imitate their protected work) |
 | `BRAND-CHECK` | append | Ask the model to verify the result actually matches the client's or SEMRS's stated tone and goal before finalizing |
 | `SAFE-CLAIMS` | append | For any text/data accompanying the visual, ask the model to flag anything it can't verify rather than stating it as fact — same never-fabricate discipline as the rest of this system |
+
+## Ads Integration
+Only applies when SEM/Ads Management is in this client's Service(s)
+Ordered — this covers both the "Creative Agent" and "Video Agent" roles
+from `agents/ads-agent.md`'s "Ads Specialist Team." Produce the real
+visual/video direction for each `AdCreativeVariant`, applying VVO
+("Video first" — `agents/ads-agent.md`, "Creative Framework") — lead
+with video creative direction over static wherever the platform/budget
+supports it, static/carousel only as a fallback. Coordinate with the
+Ads Copy Agent (`agents/ads-copy-agent.md`) so visual and copy open on
+the same values-attraction beat before the offer. Same licensed-
+sources-only and no-real-people/no-copyrighted-IP rule as organic
+visuals — a paid ad carries the same real legal exposure as any other
+published creative, never a lower bar.
 
 ## Constraints
 Only suggest or generate media from properly licensed sources or

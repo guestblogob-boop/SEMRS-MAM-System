@@ -29,6 +29,17 @@ data).
 5. Note which of the client's in-scope channels this audience actually
    uses most.
 
+## Ads Integration
+Only applies when SEM/Ads Management is in this client's Service(s)
+Ordered — this is the "Market Research Agent" role from
+`agents/ads-agent.md`'s "Ads Specialist Team," folded into this same
+real agent rather than a separate file. Include real competitor ad
+activity where publicly visible (a competitor's own public social
+posts or landing pages, never a paid competitive-intelligence tool —
+CLAUDE.md, Hard Constraint) alongside your existing audience insights,
+so the Audience Agent (`agents/audience-agent.md`) has real market
+context to build targeting from, not just organic-content insights.
+
 ## Constraints
 Stay factual and specific. Only use sources SEMRS can access without
 entering payment details. Do not suggest keywords, strategy, or write
