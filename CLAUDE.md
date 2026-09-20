@@ -818,6 +818,57 @@ responsible for getting it into the form; the Orchestrator does not
 prepare a Final Delivery or Self-Marketing Approval Summary for any
 piece that is not in the form yet.
 
+**The full RankMath checklist is computed, not eyeballed — and every
+item on it is enforced in the form.** Standing rule, set by the CEO on
+2026-09-20, who supplied RankMath's own error list as the requirement.
+SEMRS-Dashboard's `lib/seoChecks.ts` computes the six items this system
+previously could not verify — keyword density (counted as a phrase, not
+as loose words), Focus Keyword at the start of the content, Focus
+Keyword in a subheading, Table of Contents presence, DoFollow external
+links, long paragraphs and media count — plus the three Title
+Readability tests (sentiment word, power word, number).
+`lib/rankMathChecklist.ts` assembles all of them into RankMath's own
+four groups (Basic SEO, Additional, Title Readability, Content
+Readability), each failing item carrying the number that explains it,
+and the SAME function runs in three places — the live Channel Draft
+form, the Audit Report, and its PDF — so a piece can never pass while
+authoring and fail in the audit. RankMath's own paid **Content AI**
+remains explicitly declined (see above). The sentiment and power word
+lists are SEMRS's own curated equivalents, not copies of RankMath's
+GPL data files: an unusual word may disagree, and the live plugin is
+the final word on a published post.
+
+**Every Website/Blog draft carries a real URL slug.** The checklist has
+always required "The URL/slug is short," but nothing collected one —
+WordPress invented a long slug from the title, which also meant a
+social post had no stable URL to link to before the article existed.
+The form now auto-fills the slug from the Focus Keyword first (which is
+what RankMath actually tests for), adds only as many title words as fit
+inside 75 characters, and stops auto-filling the moment staff type in
+it. It is sent as the real WordPress `slug` on publish. **Once social
+posts link to that slug, it is a contract** — changing it later breaks
+every link pointing at the article.
+
+**GEO / AI answer-engine visibility is a real set of fields, not
+advice.** CLAUDE.md sells GEO/AEM as a service; until 2026-09-20 the
+Channel Draft form collected nothing an answer engine reads differently
+from ordinary prose. Every Website/Blog draft now carries: an
+**answer-first summary** (the short, self-contained answer an assistant
+lifts and attributes — a page that buries its answer 600 words down
+gets summarised instead of cited), **FAQ question/answer pairs**, a
+**schema type**, a **named author and credentials** (E-E-A-T — an
+unattributed page is a weaker citation), an optional **canonical URL**,
+and RankMath's real **Pillar Content** flag. On publish,
+`lib/publishers/blogEnrichment.ts` turns these into actual markup on
+the live post: an "In short" block at the top, a Table of Contents
+built from the H2s with real anchor ids, an FAQ section, and FAQPage
+JSON-LD. Every block is skipped when its field is empty, so a post
+without them publishes exactly as before. FAQ schema goes out as a
+JSON-LD script tag rather than into a RankMath meta key — RankMath's
+schema storage is internal and version-dependent, and writing a
+malformed value there would be worse than serving valid JSON-LD the
+page carries itself.
+
 **Image placement within the body:** the Feature Image is placed
 inline in the body immediately after the first H2 heading's paragraph
 — in addition to being set as the post's real Featured Image, not
@@ -895,6 +946,33 @@ All CEO gates are NEVER simulated, assumed, or auto-granted by any
 agent. The Orchestrator's only job at each gate is to prepare a
 complete, clear summary and then pause until an actual decision is
 entered.
+**A "Request Changes" decision returns to the brief as a real thread —
+never an email, never a dead end.** Standing rule, set by the CEO on
+2026-09-20 after a real Self-Marketing change request was recorded and
+reached nobody. Recording `request_changes` or `need_more_info` on any
+gate opens a **Change Request** on that brief (SEMRS-Dashboard's
+`ChangeRequest` / `ChangeRequestReply`), seeded with the CEO's own
+remarks verbatim rather than a paraphrase. The Orchestrator answers in
+that thread and resubmits from it, which is what puts the work back in
+front of the CEO. The thread sits on the brief, directly above Channel
+Drafts, so the conversation and the content it is about are never in
+two places, and replies are **never emailed** — the brief is the
+record (see Security & Misuse Guardrails, "Append-only approval and
+message records"). A later approval on the same gate closes the thread;
+closing is a status change, never a delete, and every message stays
+readable. A decline/reject opens nothing: those end the work (see Error
+Handling), they do not ask for a revision.
+
+**Resubmitting is not approving, and a resubmission always says what
+changed.** Resubmitting only means the work is ready to be looked at
+again — the CEO still records the real decision through the approval
+form, exactly as Approval Gates requires ("All CEO gates are NEVER
+simulated, assumed, or auto-granted by any agent"). A resubmission with
+an empty note is refused by both the form and the API: marking work
+ready without saying what changed leaves a thread where the CEO asked
+for changes and nobody answered, which is the precise failure this
+mechanism exists to prevent.
+
 
 ## Client Communication
 A dedicated Client Communication Agent is the only agent that talks to
