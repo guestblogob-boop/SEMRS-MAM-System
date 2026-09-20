@@ -946,6 +946,7 @@ All CEO gates are NEVER simulated, assumed, or auto-granted by any
 agent. The Orchestrator's only job at each gate is to prepare a
 complete, clear summary and then pause until an actual decision is
 entered.
+
 **A "Request Changes" decision returns to the brief as a real thread —
 never an email, never a dead end.** Standing rule, set by the CEO on
 2026-09-20 after a real Self-Marketing change request was recorded and
