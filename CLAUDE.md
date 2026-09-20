@@ -1690,6 +1690,41 @@ F. Once approved, the SEMRS Communicator may post directly to
    these are SEMRS's own, officially-controlled accounts, not a
    third-party client's, so the client opt-in mechanism (Delivery
    Model, above) doesn't apply.
+F1. **Every self-marketing piece is drafted into that channel's own
+   composer on `/dashboard/self-marketing` first, and stays there until
+   the CEO acts on it.** Standing rule, set by the CEO on 2026-09-20.
+   The Self-Marketing page's Channel Drafts section is the CEO's review
+   surface for semrs.com's own content exactly as a client brief's is
+   for client work (see Technical On-Page SEO Checklist, "Every draft
+   is entered into the built-in Channel Draft form") — the SEMRS
+   Communicator never hands semrs.com content over as raw text, and
+   never publishes from anywhere else. A draft sits in **In Progress**
+   until it is genuinely published; a FAILED publish attempt leaves it
+   in In Progress with the platform's own error on the card, because a
+   failure is the opposite of done and the piece still needs someone.
+   Only a real, successful publish moves it to **Completed**.
+
+F2. **Facebook and Instagram have no draft mode — publishing there is
+   irreversible and public immediately.** Confirmed live on 2026-09-20:
+   Instagram's Content Publishing API has never supported unpublished
+   posts, and Meta removed `published=false` for Pages on the New Pages
+   Experience, which SEMRS's own Page is on. Neither is a credential
+   problem — both tokens verified working. So for these two channels
+   there is no preview step: Save Draft cannot work, and Publish Post
+   goes live at once. The CEO clicks it personally; no agent publishes
+   to them on its own, and the draft still passes CEO Self-Marketing
+   Approval (gate 5) first like everything else.
+
+F3. **Publish the blog post BEFORE the social posts that link to it.**
+   Learned the hard way on 2026-09-20: Facebook and Instagram went live
+   carrying a CTA to `semrs.com/blog/organic-traffic-fixes` while that
+   post was still an unpublished WordPress draft, so every click landed
+   on a 404 — the one outcome that wastes the traffic the posts exist
+   to create. The blog post is the destination; a destination that does
+   not resolve makes the whole set worse than not posting. Publish the
+   article, confirm the real URL loads, then publish the social posts
+   pointing at it.
+
 G. Once monthly, the SEMRS Communicator runs a full site audit
    (technical SEO, content gaps, link health, DA/DR/TF/CF trend using
    whatever free-tier access is available) and hands findings to the
