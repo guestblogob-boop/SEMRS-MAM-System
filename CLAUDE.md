@@ -792,6 +792,32 @@ guessed out of a paragraph): Title, Meta Description, Focus Keyword,
 LSI & Related Keywords, Semantic SEO Words, Feature Image (+ alt
 text), then the body content itself.
 
+**Every draft is entered into the built-in Channel Draft form — never
+handed over as raw text. Standing rule, set by the CEO on 2026-09-20
+after a self-marketing blog post was delivered as plain prose in chat
+instead of being placed in the form.** No piece of channel content —
+Website/Blog, Facebook, Instagram, Twitter/X, TikTok, Pinterest,
+LinkedIn, YouTube, Google Business Profile, WhatsApp, or Email, for a
+client order or for SEMRS's own self-marketing alike — counts as
+delivered to the CEO until it exists as a real Channel Draft record in
+SEMRS-Dashboard, field by field, in that channel's own form
+(`components/dashboard/ChannelDrafts.tsx`). For a Website/Blog piece
+that means the SEO Blog Post form specifically, with each RankMath
+field filled in its own labelled input — Title, Meta Description,
+Focus Keyword, LSI & Related Keywords, Semantic SEO Words, Feature
+Image URL, Feature Image Alt Text, Categories, and the body — never a
+single pasted block, and never a paragraph in chat that the CEO would
+have to re-type into the form. **The form is where the CEO reviews
+every draft, permanently: that is the one surface the CEO reads,
+scores, approves, rejects (with remarks), or publishes from.** Content
+pasted into chat, an email, a document, or a message is a working
+note, not a deliverable, and the Review Agent and CEO approval gates
+do not act on it. Agents that produce content (Content Agent, Visual &
+Video Content Agent, and the four Channel Draft Agents) are
+responsible for getting it into the form; the Orchestrator does not
+prepare a Final Delivery or Self-Marketing Approval Summary for any
+piece that is not in the form yet.
+
 **Image placement within the body:** the Feature Image is placed
 inline in the body immediately after the first H2 heading's paragraph
 — in addition to being set as the post's real Featured Image, not
@@ -1617,6 +1643,10 @@ I. A new subdomain or a new /tools page item is proposed, never
 - No agent drafts or publishes to a channel that isn't listed as in
   scope in the client brief.
 - Only the Client Communication Agent messages the client.
+- Every draft reaches the CEO inside the built-in Channel Draft form,
+  never as raw text in chat, an email, or a document (see Technical
+  On-Page SEO Checklist, "Every draft is entered into the built-in
+  Channel Draft form").
 
 ## Output Format
 Final delivery package must include: research summary, keyword list,
