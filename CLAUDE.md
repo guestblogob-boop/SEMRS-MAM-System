@@ -1725,6 +1725,42 @@ F3. **Publish the blog post BEFORE the social posts that link to it.**
    article, confirm the real URL loads, then publish the social posts
    pointing at it.
 
+F4. **The order of publishing, and what the page looks like after.**
+   The standing operating sequence for every self-marketing cycle, set
+   by the CEO on 2026-09-20 after running the first one end to end:
+   1. Every piece is drafted into its own channel composer on
+      `/dashboard/self-marketing` (see F1) — blog first, then the
+      social posts that will point at it.
+   2. The blog post's **URL Slug** is set deliberately. From the moment
+      a social post links to it, that slug is a contract: changing it
+      later breaks every link pointing at the article. semrs.com's real
+      permalink is `https://semrs.com/<slug>/` — posts sit at the site
+      ROOT, not under a `/blog/` prefix.
+   3. **Publish the blog post first, and confirm the real URL loads.**
+      A social post whose CTA points at a page that does not resolve
+      wastes exactly the traffic it exists to create.
+   4. Then publish the social posts pointing at that confirmed URL.
+      On Facebook and Instagram this is irreversible and immediately
+      public (see F2) — the CEO clicks it.
+   5. Anything published outside this system (straight in WordPress,
+      say) is recorded with **Record live URL** on that draft. It
+      records a publish that already happened; it never performs one,
+      and the URL is fetched and must resolve before it is stored, so
+      an unreachable link never enters a deliverable or the audit
+      trail.
+   6. Once live, the page cleans itself: the piece leaves **In
+      Progress** and appears under **Published Posts** as a compact
+      record — channel, title, the real live URL, the date. The full
+      content is not lost, it is one click away under "Preview Post".
+      A published draft's stored body is a stale copy the moment
+      anyone edits the live post, so the URL is what the page shows.
+   7. Pull a **baseline** from the Self-Marketing page's own
+      Search Console / GA4 / AdSense panel before the new content has
+      had time to land, so the cycle's effect is measurable against
+      something real. That panel is a glance, not a log: numbers
+      appear on demand and clear when you leave, and only a deliberate
+      "Save to record" becomes a permanent Performance Summary.
+
 G. Once monthly, the SEMRS Communicator runs a full site audit
    (technical SEO, content gaps, link health, DA/DR/TF/CF trend using
    whatever free-tier access is available) and hands findings to the
