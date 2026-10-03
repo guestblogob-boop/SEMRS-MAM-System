@@ -1761,6 +1761,48 @@ F4. **The order of publishing, and what the page looks like after.**
       appear on demand and clear when you leave, and only a deliberate
       "Save to record" becomes a permanent Performance Summary.
 
+F5. **Work moves desk to desk, through the work station's own stage
+   pages — and a stage never counts as passed by a record that never saw
+   the work.** Standing rule, set by the CEO on 2026-10-03, after eight
+   new drafts appeared on the work station under a pipeline reading **CEO
+   Approval: DONE**. Nothing had been faked: the approval was real, dated
+   2026-09-27, for the previous cycle. The stage asked only whether the
+   approval was newer than the review, and both were from that older
+   cycle — so a gate reported as granted over work it had never seen, and
+   a Google Business Profile post went live with no review score and no
+   fresh decision behind it.
+
+   Three parts, all enforced in SEMRS-Dashboard rather than only written
+   here (`lib/reviewGate.ts`, `lib/stageFlow.ts`, `lib/stageMailbox.ts`):
+
+   1. **An approval only counts for work it could actually have seen.** It
+      must post-date the work, not merely the review before it. This
+      applies to CEO Final Delivery Approval (gate 3) on client orders
+      exactly as it does to Self-Marketing Approval (gate 5).
+   2. **A draft reaches the CEO WITH its review remarks, or it does not
+      reach the CEO at all.** The Review Agent's score and remarks are
+      shown on the decision form and written into the approval record
+      itself, so the trail can never say "approved" without saying what
+      was reviewed. Approve is withheld — in the form and in the API —
+      while the work is unreviewed. Declining or requesting changes is
+      never blocked: the CEO must always be able to stop something, and
+      those decisions can wave nothing through.
+   3. **Each stage is a real page** — Drafted, Reviewed, CEO Approval,
+      Published, Measured — carrying an **Inbox** (what the previous desk
+      sent, with its remarks), **Work in hand** (what this desk holds and
+      still owes an answer on) and **Sent** (what it passed on, and what
+      it said, kept forever). A piece sits in exactly **two** places at
+      once: the sender's Sent and the receiver's Inbox. Every earlier
+      stage keeps its remarks and nothing else. Forwarding requires
+      remarks, and satisfies that desk's own gate before it is allowed;
+      sending work **back** for a fix never does. Agents work at these
+      desks — the Orchestrator, the SEMRS Communicator, the Review Agent,
+      Analytics — and each handoff records which role moved the work.
+
+   A handoff is a record, never a status column, for the same reason every
+   stage in this system is derived from real records: a stored stage can
+   drift from the work, and this rule exists because one did.
+
 G. Once monthly, the SEMRS Communicator runs a full site audit
    (technical SEO, content gaps, link health, DA/DR/TF/CF trend using
    whatever free-tier access is available) and hands findings to the
