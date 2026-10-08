@@ -10,6 +10,42 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-10-08 (Web Design & Development enters the governing document)
+- Closed a real gap, not a cosmetic one: SEMRS has been selling
+  websites since 2026-10-04 — live on `/pricing`, `/services/web-design`
+  and a public requirement form — while CLAUDE.md contained zero
+  mentions of web design. A service was orderable that this document
+  did not know existed, so no agent had a job description for it and no
+  rule governed it.
+- CLAUDE.md now carries: web design in the Project Purpose service list
+  with the reason it is in scope (every other service points at a
+  website); a new **Web Design & Development** section (pricing from the
+  single catalog source, hosting/domain staying with the client, care
+  plan vs Virtual Assistant fee, the two existing CEO gates and why an
+  unattached order has nowhere for an approval to exist, the requirement
+  form's client-supplies/SEMRS-produces split, and the append-only
+  `WebOrderEvent` trail); and a new **Web Design Track** (A–J) whose
+  stage names are the ones `lib/webDesignStages.ts` actually uses.
+- Stated at the top of that section, and repeated in the track, because
+  it is the thing most likely to drift: **SEMRS OS does not build the
+  website.** No renderer, no template library, no site generator, no
+  site JSON. Site Architect / UI Design / Web Builder / Web QA are
+  desks a human fills with the existing agents' help, never four new
+  agents. A person builds the site outside the app and records it here.
+- No new approval gate was created. A build uses gate 1 and gate 3 on
+  the client brief, unchanged.
+- `prompts/client-brief.md` gained "Web Design & Development" in the
+  Service(s) Ordered checklist, because the new track instructs staff to
+  tick it and it was not there.
+- Still outstanding: `agents/website-agent.md` has not been extended to
+  cover the build duty. Until it is, CLAUDE.md's Agent Roles entry
+  governs, and says so explicitly rather than leaving the gap silent.
+- Note on this changelog itself: entries stopped at 2026-08-29 while
+  CLAUDE.md kept changing through September and early October (RankMath
+  and GEO field rules, the change-request thread, the self-marketing
+  publishing sequence, the stage-handoff rule). Those gaps are not
+  backfilled here — this entry covers only today's change.
+
 ## 2026-08-29 (One-click Google Sign-In for Google-owned VA channels)
 - Per explicit instruction, after weighing options together: added a
   real, additional onboarding path specifically for Google-owned

@@ -23,19 +23,27 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 This project builds SEMRS's own AI-powered social media marketing
 agency production system (SEMRS OS) — the single system SEMRS uses to
 deliver SEO, SEM (paid ads), GEO/AEM (AI-answer-engine visibility),
-content creation, copywriting, social media management, analytics and
-reporting, lead generation, and conversion on behalf of its clients'
-businesses (research, strategy, content, visuals, website, social,
-WhatsApp, email, ads, reporting), while keeping the client clearly
-informed at every stage. This is a deliberate scope: SEMRS positions
-itself as a social media marketing agency, not a full-service
-SEO/link-building shop. Guest posting, link building, generic
-"authority building," and "AI Agent Services" were removed as
+content creation, copywriting, social media management, web design and
+development, analytics and reporting, lead generation, and conversion on
+behalf of its clients' businesses (research, strategy, content, visuals,
+website, social, WhatsApp, email, ads, reporting), while keeping the
+client clearly informed at every stage. This is a deliberate scope:
+SEMRS positions itself as a social media marketing agency, not a
+full-service SEO/link-building shop. Guest posting, link building,
+generic "authority building," and "AI Agent Services" were removed as
 client-orderable services for exactly that reason (see
 prompts/client-brief.md's Service(s) Ordered checklist) — SEO and
 GEO/AEM stay in scope since they shape how content and social profiles
 get found and cited, which is still squarely social-media-adjacent
-work. Guest posting and link building may still appear in SEMRS's own
+work. **Web Design & Development was added 2026-10-04 on that same
+logic, approached from the other direction:** every other service in
+this catalog points at a website — the blog needs somewhere to live, an
+ad needs a landing page to send its traffic to, lead generation needs a
+real capture form on a real page. A client without a site had to go
+elsewhere for the one asset the rest of the work depends on. See "Web
+Design & Development," below, for what SEMRS does and, just as
+importantly, does not do there. Guest posting and link building may
+still appear in SEMRS's own
 self-marketing for semrs.com (see Self-Marketing Track) — that is
 SEMRS growing its own site, a separate, internal decision from what is
 sold to clients, and this removal does not change it.
@@ -576,6 +584,117 @@ that an existing client already has channels/content live, so step 1's
 "Channels in Scope" update is smaller and steps 2-5 move faster since
 most of the client relationship is already established.
 
+## Web Design & Development — SEMRS Builds the Site, This System Records It
+Added 2026-10-04 and made operational in the dashboard 2026-10-06. A
+one-time website build at a fixed package price, with optional monthly
+care afterwards. It is the newest client-orderable service and the only
+one whose actual production happens outside this system.
+
+**The one thing this section must never drift on: SEMRS OS does not
+build the website.** There is no renderer, no template library, no site
+generator and no site JSON anywhere in SEMRS-Dashboard, and the desk
+names in the Web Design Track below — Site Architect, UI Design, Web
+Builder, Web QA — are desks, not software. A person builds the site
+outside this app, in WordPress or a code editor or with Claude Code, and
+records what happened here. This dashboard sells the work, captures the
+requirement, holds the two CEO approvals, and keeps the trail. That
+division is deliberate, and was chosen over building a block-template
+engine inside the app: an unconstrained builder produces a better
+website than a template engine would, and no rule in this file is
+satisfied by pretending otherwise. Changing it — a real renderer, real
+templates, four real web agents — is a separate CEO decision, never an
+extension of this one.
+
+### Pricing
+Seven one-time build packages, twelve add-ons and three monthly care
+plans. Every figure lives in SEMRS-Dashboard's
+`data/pricingCatalog.ts` → `webDesign`, the same single source the
+public `/pricing` and `/services/web-design` pages read, so a quoted
+price cannot drift from a published one. Launch, 1 page — **$149**.
+Starter, up to 5 — **$399**. Business, up to 12 — **$799**, the one
+marked most popular. Growth, up to 25 with blog/CMS — **$1,499**.
+E-commerce Starter, 10 pages and 50 products — **$1,799**. E-commerce
+Pro, 20 pages and 500 products — **$3,499**. Enterprise/Custom — **from
+$4,999, quote only**. Care Basic **$39/mo**, Care Growth **$119/mo**,
+Care Pro **$239/mo**. Deliberately below the market floor, the same way
+the rest of this catalog is priced: a comparable agency brochure site
+runs several thousand dollars.
+
+Three facts the public pages state in plain words, because each would
+otherwise read as a hidden charge or a double charge:
+- **Hosting and the domain are the client's own, paid directly to their
+  own host and registrar.** SEMRS never resells hosting — the same
+  principle as ad spend under the Paid Media Model, above: the client
+  funds it, SEMRS never holds or moves that payment, and the client is
+  never locked in and keeps the site.
+- **A care plan is not the Virtual Assistant fee.** Care looks after the
+  website — backups, updates, edits. The VA fee is for publishing to
+  the client's social accounts (see Delivery Model, "Path 2"). A client
+  who orders both really does pay both, and they are genuinely
+  different work.
+- **The blog posts inside Care Growth and Care Pro are included in that
+  monthly price** — never charged again under Blog & SEO Content.
+
+### No new approval gate — and nothing to approve on an unattached order
+A build runs through the gates that already exist: **CEO Order Approval
+(gate 1)** before any build work starts, and **CEO Final Delivery
+Approval (gate 3)** before anything reaches the client. There is no
+fourth, web-specific gate, and nothing about web design relaxes either
+one.
+
+Both gates live on the **client brief** (`BriefApproval`, types `order`
+and `final_delivery`), not on the web order — so a web order that has
+not been attached to a brief has literally nowhere for an approval to be
+recorded. Attaching it is a real step, the easiest one to skip and the
+most expensive to skip; the board flags an unattached order sitting on a
+gate. Everything derivable is still derived: the gates are read from
+`BriefApproval` and the revision count from `WebRevisionRequest` rows,
+never from a column anyone could set by hand. The single stored stage
+(`WebOrder.stage`) is a deliberate, narrow exception with a stated
+reason — "designing" and "building" leave behind no record to derive
+them from, unlike a draft, an approval or a handoff.
+
+### The requirement form, and who owes which content
+A client orders at **`/services/web-design/start`** — public, no account
+needed, rate-limited, every field length-capped, page ids validated
+against the real page library, and the price recomputed server-side so
+the figure the browser submitted is never trusted. It captures the page
+list, style notes, domain and hosting status, and content readiness.
+
+Its most important property: **for every page, it states separately
+what the client supplies and what SEMRS produces**
+(`lib/webDesignPages.ts`, per-page plus site-wide). A build stalls on
+missing client content far more often than on anything technical, so
+that split is agreed at order time rather than discovered at build
+time, and it stays visible on the order's card throughout. Chase the
+client's content before the build stage, never during it.
+
+### The trail
+Every movement on a web order is an appended `WebOrderEvent` — stage
+move, note, brief attachment, preview link, delivery, revision, hold.
+**A note is required on every one, including a plain stage move:** a log
+of state changes with no reasons is one nobody can use six weeks later
+when a client asks why something took three rounds. Nothing can be
+edited or deleted; recording the wrong thing is corrected by recording
+what actually happened next, including moving a stage backwards, which
+is allowed and normal. Same append-only convention as every approval and
+message record in this system (see Security & Misuse Guardrails,
+"Append-only approval and message records").
+
+Revision rounds are counted against the package's own allowance, and a
+round past that allowance is marked as the paid extra **at the moment it
+is recorded** — never discovered at invoicing.
+
+### Where it lives
+Staff run a build from **`/dashboard/web-design`** (the board) and read
+the process at **`/dashboard/admin/web-design-guide`** — order to
+delivery, step by step, with what to record at each one. Clients see
+**`/pricing#web-design`**, **`/services/web-design`**, the requirement
+form, and a Web Design tag in the Bundle Builder's Other Services
+section — a tag and not a checkbox, deliberately, since a one-time build
+cannot join a monthly subtotal or be multiplied by the annual "pay 10
+months, get 12" mechanic.
+
 ## CEO Correspondence Channel
 purfits@gmail.com is the designated backup channel between the
 Orchestrator and the CEO — used for anything the dashboard can't
@@ -667,7 +786,10 @@ capability, not something to build from scratch.
   prompt-engineering toolkit (agents/visual-agent.md).
 - **Website/Blog Draft Agent** — beyond blog posts: WordPress-ready
   page drafts for Home, Landing Pages, Services pages, and Pricing
-  tables, formatted for WordPress's block editor conventions.
+  tables, formatted for WordPress's block editor conventions. A page
+  draft is not a website build: a draft is content for a site that
+  already exists, whereas a build is the site itself, priced and run as
+  its own service (see Web Design & Development, above).
 - **File-format deliverables**, built using Claude Code's own skills:
   Excel/Google Sheets (keyword research, content calendars, meta-tag
   audits), PDF (SEO audit reports, ebooks/lead magnets, one-pagers),
@@ -1334,7 +1456,17 @@ approval gate because of which one it is.
   DoFollow) — an unverifiable checkbox would be worse than no checkbox.
 - Website/Blog Draft Agent: prepares a final, publish-ready DRAFT of the
   blog content only — never connects to or publishes on the client's
-  actual website.
+  actual website. **On a Web Design & Development order this agent's
+  scope is page content, never the build** (see Web Design &
+  Development, above): it drafts the copy and structure for each page in
+  the agreed sitemap, and a person assembles the actual site outside
+  this system. The four desks a build passes through — Site Architect,
+  UI Design, Web Builder, Web QA — are roles a human fills with these
+  existing agents' help, never four new agents with their own logins:
+  the Visual & Video Content Agent supplies a build's imagery under the
+  same licensed-sources rule as every other channel, and the Review
+  Agent is the QA gate. agents/website-agent.md has not yet been
+  extended to cover the build duty — until it is, this entry governs.
 - Social Content Draft Agent: formats final-delivery-approved content
   into ready-to-use DRAFTS for Facebook, Instagram, Twitter/X, TikTok,
   Pinterest, LinkedIn, and YouTube — never connects to or posts
@@ -1635,6 +1767,59 @@ G. The Analytics Agent's full-funnel reporting (see its "Lead Gen
    Integration" duty) draws on this track's records the same way it
    draws on client-shared data for organic channels and the Ads
    Agent's pulled data for paid channels.
+
+## Web Design Track (only when the order includes a website build — replaces the Core Content Pipeline's channel-drafting steps rather than running alongside them)
+Unlike the Ads Track (one launch-and-approval cycle) and the Lead
+Generation Track (ongoing and reactive), a build is a one-time project
+with a finish line. It uses the two CEO gates that already exist and
+introduces no new one (see Web Design & Development, above). The stage
+names below are the ones read live from SEMRS-Dashboard's
+`lib/webDesignStages.ts`, so this list and the board cannot end up
+describing two different pipelines.
+
+A. **Requirement in** (Orchestrator) — the client's requirement form
+   arrives from `/services/web-design/start` and lands on the board.
+   Confirm the page list against the package limit, confirm whether
+   anything they described is really an add-on, and agree the real price
+   with the client in writing. Record what was agreed.
+B. **Attach the order to a client brief** — before the gate, because
+   the gate has nowhere to exist otherwise (see Web Design &
+   Development, "No new approval gate"). Add "Web Design &
+   Development" to that brief's Service(s) Ordered.
+C. **CEO order approval** (gate 1) — a real human decision on whether
+   SEMRS takes this build on, made against what was actually discussed
+   with the client. Declining ends it here and no further work happens.
+D. **Sitemap & content map** (Site Architect) — page list against the
+   package limit, URL structure, and who owes which content, taken from
+   the form's own per-page split. Chase the client's content here.
+E. **Design** (UI Design with the Visual & Video Content Agent) —
+   template, palette, type, section layout. Licensed or free-tier-
+   generated imagery only, exactly as on every other channel, with the
+   same no-real-people and no-copyrighted-IP standard (see Security &
+   Misuse Guardrails, "Visual & Video Content Agent").
+F. **Build** (Web Builder) — the real pages, copy in place, forms
+   wired, store configured. **This happens outside this system, done by
+   a person.** Any page copy inside the build is still the Content
+   Agent's and Website/Blog Draft Agent's work, and a blog or content
+   page still meets the Technical On-Page SEO Checklist, above.
+G. **QA** (Web QA with the Review Agent) — speed, accessibility, broken
+   links, meta and schema, forms, a real phone. There is no automated
+   web QA in this system, so a human runs the checks and records them
+   as real numbers; a recorded Lighthouse score is worth more than a
+   thumbs-up, and a number that was not measured is never written down.
+H. **Preview and revisions** — the client gets a private preview link,
+   recorded. Each round of changes is recorded as a revision against the
+   package allowance (see Web Design & Development, "The trail").
+I. **CEO final delivery approval** (gate 3) — the second real decision,
+   taken with the QA report in view. Nothing reaches the client before
+   it is granted.
+J. **Delivered** (Orchestrator) — the live link and the export go to
+   the client, which stamps the delivery date in the same action, so a
+   finished build never sits on the board looking unfinished. A care
+   plan, if one was bought, runs from here.
+An order waiting on the client — content, a domain, a decision — is
+parked **On hold** rather than left looking active on a stage it is not
+really at.
 
 ## Self-Marketing Track (SEMRS's own marketing for semrs.com — a recurring weekly cycle, never client work, runs independently of any client order)
 **Free-only, standing rule (not just a testing-phase constraint).**

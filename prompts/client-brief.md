@@ -18,6 +18,7 @@ SEO/link-building shop). Select all that apply:
 - [ ] Content Writing
 - [ ] Copywriting
 - [ ] Social Media Management
+- [ ] Web Design & Development
 - [ ] Analytics & Reporting
 - [ ] Lead Generation
 - [ ] Conversion
