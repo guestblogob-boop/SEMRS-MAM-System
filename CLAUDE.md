@@ -1465,8 +1465,11 @@ approval gate because of which one it is.
   existing agents' help, never four new agents with their own logins:
   the Visual & Video Content Agent supplies a build's imagery under the
   same licensed-sources rule as every other channel, and the Review
-  Agent is the QA gate. agents/website-agent.md has not yet been
-  extended to cover the build duty — until it is, this entry governs.
+  Agent is the QA gate. This agent's own build duty is written out in
+  agents/website-agent.md, "Page Drafting on a Web Design Build" —
+  where the point that most needs stating is that on a build its draft
+  is input to a human build, not the client's deliverable, inverting
+  the assumption every other draft in this system relies on.
 - Social Content Draft Agent: formats final-delivery-approved content
   into ready-to-use DRAFTS for Facebook, Instagram, Twitter/X, TikTok,
   Pinterest, LinkedIn, and YouTube — never connects to or posts

@@ -10,6 +10,61 @@ and message records").
 Entries below are backfilled from this repository's git history at the
 point this changelog was created.
 
+## 2026-10-08 (Web design in the agent files — and two counting bugs it exposed)
+- Decided deliberately NOT to create agent files for the build itself.
+  No `site-architect.md`, no `web-builder.md`, no `web-qa.md`. An
+  agent file is an instruction read by an agent about to do work;
+  writing one for a job no agent in this system performs would be
+  fiction, and the specific fiction most likely to make a future reader
+  believe this app builds websites. Agent files follow real capability
+  here: the Lead Generation Track has two agent files because real code
+  does that work, and a build has no equivalent code.
+- `agents/website-agent.md` gained a third trigger instead — **"Page
+  Drafting on a Web Design Build"**, the same shape as its existing
+  "Landing Page Fix Recommendation Drafting" section. Four things it
+  states that nothing previously did: the page set comes from the
+  agreed sitemap and this agent never adds to it; one separately
+  labelled draft per page, not one document with twelve sections; draft
+  only the pages SEMRS owes, per the requirement form's own split, and
+  stop rather than invent a client's missing copy; and — the one that
+  matters most — **on a build the draft is NOT the deliverable**, it is
+  input to a build a person performs outside this system. That last
+  point inverts the assumption every other draft in this system relies
+  on. Constraints gained the matching rules.
+- The on-page SEO scoping was made explicit rather than left inferred:
+  a blog or article page inside a build meets the full Technical On-Page
+  SEO Checklist; a Home, Contact or Pricing page carries its own title,
+  meta description and slug without being scored against a checklist
+  written for articles.
+- `agents/orchestrator.md` gained **Web Design Track** as conditional
+  track 3, with the Orchestrator's real actions (a–h): confirm the page
+  list against the package limit, attach the web order to a brief
+  BEFORE the gate because both gates live on the brief, prepare gate 1
+  and gate 3, dispatch the existing agents, chase client content at the
+  sitemap stage, park On hold rather than fake progress, and require a
+  note on every recorded movement.
+- Two pre-existing counting bugs surfaced while editing that file, both
+  fixed: its Conditional Tracks section said *"If **neither** condition
+  is met"* when the Lead Generation Track had already made that false,
+  and its roster said *"**Two** additional on-demand agents"* while
+  omitting the Lead Capture and Qualification + AI Sales agents
+  entirely. The Lead Generation Track is now listed as conditional
+  track 4 — honestly noting that the Orchestrator's own step-by-step
+  for it has never been written out, rather than improvising one,
+  since its two agent files already define the real work.
+- Stated in that roster for the avoidance of doubt: **the Web Design
+  Track adds no agent at all.** The existing Content, Website/Blog
+  Draft, Visual & Video Content and Review agents do their normal jobs
+  on a build.
+- CLAUDE.md's Agent Roles entry no longer says the agent file "has not
+  yet been extended" — that was true this morning and is now stale, and
+  a stale "not yet" is worse than none. It points at the new section.
+- `agents/review-agent.md` was deliberately left alone: CLAUDE.md's
+  Agent Roles entry already carries the Review Agent's Website/Blog
+  compliance duty in detail, and web QA is measured by a human with
+  real tools rather than by that agent reading a checklist. A web
+  section there would restate CLAUDE.md without adding an instruction.
+
 ## 2026-10-08 (Web Design & Development enters the governing document)
 - Closed a real gap, not a cosmetic one: SEMRS has been selling
   websites since 2026-10-04 — live on `/pricing`, `/services/web-design`
